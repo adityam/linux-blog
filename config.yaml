@@ -1,0 +1,12 @@
+baseURL : "https://adityam.github.io/linux-blog"
+title   : Tinkering with linux
+theme   : hugo-theme-chunky-poster
+
+languageCode : "en-us"
+DefaultContentLanguage : "en-us"
+
+enableInlineShortcodes : true
+
+paginate : 2
+
+# Add Categories and All Posts to Menu
