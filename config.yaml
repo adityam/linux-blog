@@ -1,12 +1,18 @@
-baseURL : "https://adityam.github.io/linux-blog"
-title   : Tinkering with linux
-theme   : hugo-theme-chunky-poster
+baseURL       : "https://adityam.github.io/linux-blog"
 
-languageCode : "en-us"
-DefaultContentLanguage : "en-us"
+languageCode  : "en-us"
+title         : Tinkering with Linux
+author        : Aditya Mahajan
+theme         : homepage
 
-enableInlineShortcodes : true
+metaDataFormat: yaml
+publishDir    : docs
 
-paginate : 2
+rssLimit      : 10
 
-# Add Categories and All Posts to Menu
+params:
+  disqus : "random-determinism"
+
+markup:
+  defaultMarkdownHandler: "blackfriday"
+

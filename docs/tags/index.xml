@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Tinkering with Linux</title>
+    <link>https://adityam.github.io/linux-blog/tags/</link>
+    <description>Recent content in Tags on Tinkering with Linux</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 May 2020 00:00:51 -0400</lastBuildDate>
+    
+	<atom:link href="https://adityam.github.io/linux-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>awk</title>
+      <link>https://adityam.github.io/linux-blog/tags/awk/</link>
+      <pubDate>Sat, 09 May 2020 00:00:51 -0400</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/awk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>heredoc</title>
+      <link>https://adityam.github.io/linux-blog/tags/heredoc/</link>
+      <pubDate>Sat, 09 May 2020 00:00:51 -0400</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/heredoc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rofi</title>
+      <link>https://adityam.github.io/linux-blog/tags/rofi/</link>
+      <pubDate>Sat, 09 May 2020 00:00:51 -0400</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/rofi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xargs</title>
+      <link>https://adityam.github.io/linux-blog/tags/xargs/</link>
+      <pubDate>Sat, 09 May 2020 00:00:51 -0400</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/xargs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xclip</title>
+      <link>https://adityam.github.io/linux-blog/tags/xclip/</link>
+      <pubDate>Sat, 09 May 2020 00:00:51 -0400</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/xclip/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

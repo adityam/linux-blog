@@ -87,3 +87,20 @@ to `rofi`.
 ```
 
 [crystal]: https://crystal-lang.org/
+
+## Copying passwords
+
+I use [pass][pass] as a password manager. `pass` stores the passwords as
+encrypted files insider `~/.password-store`. The next selector reads the
+website/usernames for which a password is available, selects the username
+using `rofi` and passes the result to `pass -c`, which copies the password to
+clipboard for 45 sec.
+
+[pass]: https://www.passwordstore.org/
+
+```
+cd $HOME/.password-store && fd -t f  \
+    | sed 's/\.gpg$//'  \
+    | rofi -width 30 -dmenu -i -p "pass" \
+    | xargs pass -c 
+```

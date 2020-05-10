@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Tinkering with Linux </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Aditya Mahajan" />
+  <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/styles.css" type="text/css" />
+  <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/paperclear.css" type="text/css" />
+  
+</head>
+<body>
+  
+  
+  
+  <div id="container">
+    <div id="header" role="banner">
+      <span id="title"><a href="https://adityam.github.io/linux-blog">Tinkering with Linux</a></span><br />
+      
+    </div>
+    
+    
+    
+    <div id="menu" role="navigation">
+      <ul class="nav tree">
+        <li>
+        <strong>Recent Posts</strong>
+          <ul>
+            
+            
+            
+            <li><a href="/linux-blog/post/rofi-selectors/">Rofi Selectors</a></li>
+            
+            
+            
+            
+            
+          </ul>
+        </li>
+        <li><strong><a href="https://adityam.github.io/linux-blog/post">All Posts</a></strong></li>
+      </ul>
+    </div>
+    
+    
+    
+    <div id="content" role="main">
+
+
+<h1>Rofi Selectors</h1>
+<p class="post-time">Posted on May 9, 2020</p>
+
+<p><a href="https://github.com/davatorium/rofi">rofi</a> is perfect for creating interactive scripts, which I like to call <em>rofi selectors</em>.  Here are some examples:</p>
+
+<h2 id="connecting-to-bluetooth-devices">Connecting to bluetooth devices</h2>
+<pre><code>cat &lt;&lt;DEVICES | rofi -width 30 -dmenu -i -p &#34;Devices&#34;  \
+              | awk &#39;{printf $1}&#39; \
+              | xargs bluetoothctl connect \
+# List of devices to connect
+00:16:94:2F:AC:18 Sennheiser Headphone
+01:16:94:2F:AC:18 Anker Headphone
+DEVICES</code></pre>
+<p>First <code>rofi</code> displays the MAC addresses and names of the bluetooth headphones
+that I use, then <code>awk</code> parses the appropriate field (the MAC address in this
+case), and <code>xargs</code> call the appropriate command (<code>bluetoothctl</code> in this case)
+to connect to that headphone. I use <a href="https://linuxhint.com/bash-heredoc-tutorial/">heredocs</a>  so that I can add
+the list of devices at the end of the command. Note the trick of adding a <code>\</code>
+after the last command so that the comment <code># List of devices</code> is parsed as
+part of the command rather than part of the heredoc.</p>
+
+<p>I have stored this file as <code>~/bin/bt-connect</code>. To use it for the first time, I
+call <code>rofi -show run</code> (which is mapped to <code>MOD+p</code> in my setup) and type
+<code>/home/username/bin/bt-connect</code>. From then onwards, <code>rofi</code> remembers the
+previously typed command and I can simply do <code>MDO+p</code> and then type
+<code>bt-connect</code>, and select the appropriate headphone. No more fiddling around
+with <code>blueman-applet</code>!</p>
+
+<h2 id="accessing-frequently-used-information">Accessing frequently used information</h2>
+
+<p>I often have to fill forms where I need to know the project ids for the
+different projects that I am working on. So, I have created a command
+<code>~/bin/project-ids</code> as follows</p>
+<pre><code>cat &lt;&lt;PROJECTS | rofi -width 20 -dmenu -i -p &#34;Project&#34;  \
+               | awk &#39;{printf $1}&#39; \
+               | xclip -selection clipboard \
+# List of Projects
+123456 Project 1
+123456 Project 2
+123456 Project 3
+PROJECTS</code></pre>
+<p>The basic structure of the command is the same as before. Display the list of
+options (project-id and project-name) using <code>rofi</code>, parse the appropriate
+field using <code>awk</code>, but in this case, I copy the parsed field to the clipboard.
+This way I can simply paste it in the form where I need it.</p>
+
+<h2 id="parsing-dynamic-information">Parsing dynamic information</h2>
+
+<p>Again, I need to fill forms with student ids. I have an XML file which
+contains details of students, including student ids. It is easy to use <code>rofi</code>
+selectors for this situation. I have written a script (written in
+<a href="https://crystal-lang.org/">crystal</a>, but it can be written in your favorite language), which
+simply outputs the list of student-ids and names, and then I pass the output
+to <code>rofi</code>.</p>
+<pre><code>/path-to-script/student-id
+    | rofi -width 40 -dmenu -i -p &#34;Name&#34;  \
+    | awk &#39;{printf $1}&#39; \
+    | xclip -selection clipboard</code></pre>
+<h2 id="copying-passwords">Copying passwords</h2>
+
+<p>I use <a href="https://www.passwordstore.org/">pass</a> as a password manager. <code>pass</code> stores the passwords as
+encrypted files insider <code>~/.password-store</code>. The next selector reads the
+website/usernames for which a password is available, selects the username
+using <code>rofi</code> and passes the result to <code>pass -c</code>, which copies the password to
+clipboard for 45 sec.</p>
+<pre><code>cd $HOME/.password-store &amp;&amp; fd -t f  \
+    | sed &#39;s/\.gpg$//&#39;  \
+    | rofi -width 30 -dmenu -i -p &#34;pass&#34; \
+    | xargs pass -c </code></pre>
+
+<hr />
+
+<p class="nav">
+
+
+</p>
+
+<p>
+This entry was posted in 
+
+<a href="https://adityam.github.io/linux-blog/categories/efficiency">
+  Efficiency</a> 
+and tagged 
+
+<a href="https://adityam.github.io/linux-blog/tags/rofi">rofi</a>,
+<a href="https://adityam.github.io/linux-blog/tags/heredoc">heredoc</a>,
+<a href="https://adityam.github.io/linux-blog/tags/awk">awk</a>,
+<a href="https://adityam.github.io/linux-blog/tags/xargs">xargs</a>,
+<a href="https://adityam.github.io/linux-blog/tags/xclip">xclip</a>.
+ 
+</p>
+
+<div id="disqus_thread"></div>
+<div id="disqus_comments">
+  <button onclick="load_disqus()">Show Comments</button>
+</div>
+<script>
+    function load_disqus() { 
+        var d = document, s = d.createElement('script');
+        s.src = '//random-determinism.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        var load_button = document.getElementById('disqus_comments');
+        load_button.parentNode.removeChild(load_button);
+    };
+   (function () {
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//random-determinism.disqus.com/count.js';
+        (d.head || d.body).appendChild(s);
+    }()); 
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+    </div>
+    
+    
+    
+    <div id="pied" role="contentinfo">
+      Content distributed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license
+    </div>
+  </div>
+</body>
+</html>
+
+
