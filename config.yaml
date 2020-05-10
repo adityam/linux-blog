@@ -11,7 +11,7 @@ publishDir    : docs
 rssLimit      : 10
 
 params:
-  disqus : "random-determinism"
+  disqus : "adi-linux-blog"
 
 markup:
   defaultMarkdownHandler: "blackfriday"
