@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Tinkering with Linux </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Aditya Mahajan" />
+  <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/styles.css" type="text/css" />
+  <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/paperclear.css" type="text/css" />
+  
+</head>
+<body>
+  
+  
+  
+  <div id="container">
+    <div id="header" role="banner">
+      <span id="title"><a href="https://adityam.github.io/linux-blog">Tinkering with Linux</a></span><br />
+      
+    </div>
+    
+    
+    
+    <div id="menu" role="navigation">
+      <ul class="nav tree">
+        <li>
+        <strong>Recent Posts</strong>
+          <ul>
+            
+            
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/multiple-versions-of-a-library/">Multiple versions of a library</a></li>
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/rofi-selectors/">Rofi Selectors</a></li>
+            
+            
+          </ul>
+        </li>
+        <li><strong><a href="https://adityam.github.io/linux-blog/post">All Posts</a></strong></li>
+      </ul>
+    </div>
+    
+    
+    
+    <div id="content" role="main">
+
+
+<h1>Installing and using multiple versions of a library</h1>
+<p class="post-time">Posted on May 13, 2020</p>
+
+<p>I use a Haskell static website generator called <a href="https://github.com/jgm/yst">yst</a> for generating my
+homepage. Why? Partly because when I first created my professional webpage, I
+was a Haskell enthusiast and <a href="https://github.com/jgm/yst">yst</a> seemed cool. After a while, I got
+frustrated with Haskell (I use Arch Linux, and it seemed that each upgrade
+would break Haskell install) and moved on. I haven&rsquo;t used Haskell for a while
+now.</p>
+
+<p>But, I had a critical resource, my webpage, which depended on a Haskell
+library. I thought that Haskell generated statically linked binaries, so I
+simply copied the <code>yst</code> binary and kept it in my <code>PATH</code>. This worked for
+almost 8 years during which I upgraded 3 systems (all using Arch Linux). Until
+today, when <code>yst</code> stopped working with the following error message:</p>
+<pre><code>yst: error while loading shared libraries: libffi.so.6: cannot open shared object file: No such file or directory</code></pre>
+<p>Darn! It turns out that I had a dynamically linked binary rather than a
+statically linked library.</p>
+<pre><code>$ldd =yst
+        linux-vdso.so.1 (0x00007ffc5696c000)
+        libz.so.1 =&gt; /usr/lib/libz.so.1 (0x00007f30268c3000)
+        librt.so.1 =&gt; /usr/lib/librt.so.1 (0x00007f30268b8000)
+        libdl.so.2 =&gt; /usr/lib/libdl.so.2 (0x00007f30268b3000)
+        libpthread.so.0 =&gt; /usr/lib/libpthread.so.0 (0x00007f3026891000)
+        libsqlite3.so.0 =&gt; /usr/lib/libsqlite3.so.0 (0x00007f3026760000)
+        libgmp.so.10 =&gt; /usr/lib/libgmp.so.10 (0x00007f30266bd000)
+        libm.so.6 =&gt; /usr/lib/libm.so.6 (0x00007f3026577000)
+        libffi.so.6 =&gt; not found
+        libc.so.6 =&gt; /usr/lib/libc.so.6 (0x00007f30263b1000)
+        /lib64/ld-linux-x86-64.so.2 =&gt; /usr/lib64/ld-linux-x86-64.so.2 (0x00007f3026921000)</code></pre>
+<p>So, I tried to install <code>yst</code> using a current version of Haskell. Both <code>cabal
+install yst</code> and <code>stack install yst</code> failed. Basically, the only way to
+satisfy all the constraints for building <code>yst</code> is to use a lower version of
+the <code>base</code> library. As the error message of <code>yst</code> so succinctly put it:</p>
+
+<blockquote>
+<ul>
+<li>Build requires unattainable version of base. Since base is a part of GHC, you
+most likely need to use a different GHC version with the matching base.</li>
+</ul>
+</blockquote>
+
+<p>I could have opened a bug request for <code>yst</code> but thought that a simpler fix
+will be to simply download the older version of <code>libffi</code>.</p>
+
+<p>So, I installed the <code>downgrade</code> package from AUR and ran</p>
+<pre><code>$downgrade libffi
+Available packages:
+
+-  1)  libffi    3.2.1  3  x86_64  (remote)
+-  2)  libffi    3.2.1  4  x86_64  (remote)
+-  3)  libffi    3.2.1  4  x86_64  (remote)
+   4)  libffi    3.3    1  x86_64  (remote)
+   5)  libffi    3.3    2  x86_64  (remote)
++  6)  libffi    3.3    3  x86_64  (remote)
++  7)  libffi    3.3    3  x86_64  (local)
+
+select a package by number:</code></pre>
+<p>I selected <code>3</code>, which is the latest version of libffi 3.2.1 and installed it.
+Now, <code>yst</code> was working, but almost all other programs were not. So, I copied</p>
+<pre><code>/usr/lib/libffi.so.6</code></pre>
+<p>to <code>$HOME/lib</code> and upgraded <code>libffi</code> (using the <code>downgrade</code> program again).
+Now, I was back to square one, but I had the required version of <code>libffi</code>
+needed to run <code>yst</code>. So, instead of running <code>yst</code> directly, I can run</p>
+<pre><code>LD_LIBRARY_PATH=$(HOME)/lib/ yst</code></pre>
+<p>which uses the old version of libffi for yst, and the current version of
+libffi for everything else. Phew!</p>
+
+<p>This also reminds me that at some stage, I should move my professional webpage
+to a more modern static website generator, like Hugo used for this blog. Another project for a rainy day.</p>
+
+<hr />
+
+<p class="nav">
+
+<a href="/linux-blog/post/rofi-selectors/">&nbsp;&lt;Rofi Selectors</a>
+
+
+</p>
+
+<p>
+This entry was posted in 
+ 
+and tagged 
+
+<a href="https://adityam.github.io/linux-blog/tags/arch-linux">arch linux</a>,
+<a href="https://adityam.github.io/linux-blog/tags/snafu">snafu</a>,
+<a href="https://adityam.github.io/linux-blog/tags/pacman">pacman</a>,
+<a href="https://adityam.github.io/linux-blog/tags/downgrage">downgrage</a>,
+<a href="https://adityam.github.io/linux-blog/tags/yst">yst</a>.
+ 
+</p>
+
+<div id="disqus_thread"></div>
+<div id="disqus_comments">
+  <button onclick="load_disqus()">Show Comments</button>
+</div>
+<script>
+    function load_disqus() { 
+        var d = document, s = d.createElement('script');
+        s.src = '//adi-linux-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        var load_button = document.getElementById('disqus_comments');
+        load_button.parentNode.removeChild(load_button);
+    };
+   (function () {
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//adi-linux-blog.disqus.com/count.js';
+        (d.head || d.body).appendChild(s);
+    }()); 
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+    </div>
+    
+    
+    
+    <div id="pied" role="contentinfo">
+      Content distributed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license
+    </div>
+  </div>
+</body>
+</html>
+
+

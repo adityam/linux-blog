@@ -6,10 +6,24 @@
     <description>Recent content on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 May 2020 00:00:51 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2020 13:07:31 -0400</lastBuildDate>
     
 	<atom:link href="https://adityam.github.io/linux-blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Installing and using multiple versions of a library</title>
+      <link>https://adityam.github.io/linux-blog/post/multiple-versions-of-a-library/</link>
+      <pubDate>Wed, 13 May 2020 13:07:31 -0400</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/post/multiple-versions-of-a-library/</guid>
+      <description>&lt;p&gt;I use a Haskell static website generator called &lt;a href=&#34;https://github.com/jgm/yst&#34;&gt;yst&lt;/a&gt; for generating my
+homepage. Why? Partly because when I first created my professional webpage, I
+was a Haskell enthusiast and &lt;a href=&#34;https://github.com/jgm/yst&#34;&gt;yst&lt;/a&gt; seemed cool. After a while, I got
+frustrated with Haskell (I use Arch Linux, and it seemed that each upgrade
+would break Haskell install) and moved on. I haven&amp;rsquo;t used Haskell for a while
+now.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Rofi Selectors</title>

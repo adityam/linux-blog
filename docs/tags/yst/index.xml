@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Tinkering with Linux</title>
-    <link>https://adityam.github.io/linux-blog/post/</link>
-    <description>Recent content in Posts on Tinkering with Linux</description>
+    <title>yst on Tinkering with Linux</title>
+    <link>https://adityam.github.io/linux-blog/tags/yst/</link>
+    <description>Recent content in yst on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 13 May 2020 13:07:31 -0400</lastBuildDate>
     
-	<atom:link href="https://adityam.github.io/linux-blog/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://adityam.github.io/linux-blog/tags/yst/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -23,15 +23,6 @@ was a Haskell enthusiast and &lt;a href=&#34;https://github.com/jgm/yst&#34;&gt;
 frustrated with Haskell (I use Arch Linux, and it seemed that each upgrade
 would break Haskell install) and moved on. I haven&amp;rsquo;t used Haskell for a while
 now.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Rofi Selectors</title>
-      <link>https://adityam.github.io/linux-blog/post/rofi-selectors/</link>
-      <pubDate>Sat, 09 May 2020 00:00:51 -0400</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/post/rofi-selectors/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/davatorium/rofi&#34;&gt;rofi&lt;/a&gt; is perfect for creating interactive scripts, which I like to call &lt;em&gt;rofi selectors&lt;/em&gt;.  Here are some examples:&lt;/p&gt;</description>
     </item>
     
   </channel>
