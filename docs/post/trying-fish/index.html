@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Tinkering with Linux </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Aditya Mahajan" />
+  <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/styles.css" type="text/css" />
+  <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/paperclear.css" type="text/css" />
+  
+  <script type="module" defer
+    src="//instant.page/3.0.0"
+    integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1">
+  </script>
+</head>
+<body>
+  
+  
+  
+  <div id="container">
+    <div id="header" role="banner">
+      <span id="title"><a href="https://adityam.github.io/linux-blog">Tinkering with Linux</a></span><br />
+      
+    </div>
+    
+    
+    
+    <div id="menu" role="navigation">
+      <ul class="nav tree">
+        <li>
+        <strong>Recent Posts</strong>
+          <ul>
+            
+            
+            
+            <li><a href="/linux-blog/post/trying-fish/">Trying Fish Shell</a></li>
+            
+            
+            
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/multiple-versions-of-a-library/">Multiple versions of a library</a></li>
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/rofi-selectors/">Rofi Selectors</a></li>
+            
+            
+          </ul>
+        </li>
+        <li><strong><a href="https://adityam.github.io/linux-blog/post">All Posts</a></strong></li>
+      </ul>
+    </div>
+    
+    
+    
+    <div id="content" role="main">
+
+
+<h1>Trying Fish Shell</h1>
+<p class="post-time">Posted on June 10, 2020</p>
+
+<p>I have been using <code>zsh</code> as my shell for almost 15 years. I spent ages
+configuring it in the beginning and for the most part I have been happy with
+my setup. Lately, I saw multiple suggestions for
+<a href="https://github.com/zsh-users/zsh-autosuggestions">zsh-autosuggestions</a>, which
+has a tag-line &ldquo;Fish-like autosuggestions for zsh&rdquo;. Imitation is the best form
+of flattery. So, I thought of giving fish a shot.</p>
+
+<p>I did not have high hopes with fish, simply because I am so very used to zsh
+and fish is an <a href="https://fishshell.com/docs/current/design.html">opinionated
+shell</a> which breaks POSIX
+compatibility. After spending a day configuring it and spending another day
+using it, I have been pleasantly surprised.</p>
+
+<p>For the most part, the default behavior of fish was similar to my zsh setup.
+It was relatively simple to port all my aliases and customized shell functions
+from zsh to fish. And for the most part, I was productive right away in fish.</p>
+
+<p>I like the directory dependent auto-suggestions and like the fact that
+it can parse man pages for tab completion options. As an example, I use
+<a href="https://gohugo.io/">hugo</a> to generate this blog. Hugo comes with a completion
+plugin for bash but not for zsh. I had a written a bare bones zsh-completion
+plugin for hugo for the 2 or 3 options that I commonly use. Fish is able to
+suggest tab completion options by parsing the man page.</p>
+
+<p>But there are two pain points.</p>
+
+<p>The first is the ability to ignore suffixes in tab completion. For example, I
+had the following in my .zshrc [inserted manual line break for readability]:</p>
+
+<pre><code><span class="Comment"># Vim&#0058; do not offer completion of temporary files of tex</span>
+<span class="Keyword">zstyle</span> <span class="String">'</span><span class="String">:completion::*:(nvim|vim):*</span><span class="String">'</span> file-patterns <span class="String">'</span><span class="String">*~*.(aux|dvi|log|thm|idx|pdf
+        |rel|out|tuo|tui|tuc|tmp|mpo|mpb|mpd|1|keep|pgf|fls|gz|fdb_latexmk)</span><span class="String">'</span> <span class="String">'</span><span class="String">*</span><span class="String">'</span></code></pre>
+
+<p>So, when I press <code>vim &lt;Tab&gt;</code>, the autocomplete does not suggest filenames with
+the above extensions. I use the same pattern for many programs. In my quick
+scan of the auto-complete plugins distributed with fish, I could not find a
+similar pattern. I ended up replicating this functionality with (again,
+inserted line break for readability):</p>
+
+<pre><code><span class="Comment"># Do not offer completion of tmp files</span>
+complete -c nvim -x -a &quot;(
+  fd --full-path --type file --max-results=20 (commandline -ct) 
+      -E <span class="String">'*.{aux,bbl,blg,dvi,fdb_latexmk,gz,fls,idx,log,pdf,pgf,out,tmp,tuc,thm}'</span>
+)&quot; </code></pre>
+
+<p>This is not functionally equivalent and I am forking out to an external
+problem rather than builtin completion. But <code>fd</code> is relatively fast, and I do
+not notice any perceptible difference in speed. Plus, it has the advantage
+that I get suggestions from nested sub-directories, which I find useful.</p>
+
+<p>The other trouble is that fish does not support history substitution (<code>!$</code>,
+etc.). This is explicitly mentioned in the
+<a href="https://fishshell.com/docs/current/faq.html#why-doesn-t-history-substitution-etc-work">FAQ</a>.
+Fish recommends using <code>Up Arraw</code> and editing the recalled line or using <code>Alt+Up
+Arrow</code> or <code>Alt+.</code> to recall the arguments of the previous command, start from
+the last.</p>
+
+<p>This breaks a lot of my muscle memory. For example, when generating a new blog
+post, I use</p>
+<pre><code>$ hugo new post/title-of-the-post.md
+$ nvim content/!$ </code></pre>
+<p>Using <code>Alt+.</code> after <code>content/</code> does not work.<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup></p>
+
+<p>In spite of these two annoyances, I like the rest of the shell. I like the
+fact that I can type <code>funced name</code> to see how each function is defined, and
+tweak it if I wish. So, I am going to use fish for a while and see how it
+goes.</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">Though, in this situation, I can use my fancy new <code>fd</code> based completion to simply do <code>nvim title&lt;Tab&gt;</code> to complete the filename. I could also use <code>nvim title&lt;Ctrl+T&gt;</code> to invoke <code>fzf</code> based completion (but that doesn&rsquo;t ignore exteions).
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+<hr />
+
+<p class="nav">
+
+<a href="/linux-blog/post/multiple-versions-of-a-library/">&nbsp;&lt;Multiple versions of a library</a>
+
+
+</p>
+
+<p>
+This entry was posted in 
+
+<a href="https://adityam.github.io/linux-blog/categories/terminal">
+  Terminal</a> 
+and tagged 
+
+<a href="https://adityam.github.io/linux-blog/tags/fish">fish</a>,
+<a href="https://adityam.github.io/linux-blog/tags/zsh">zsh</a>,
+<a href="https://adityam.github.io/linux-blog/tags/shell">shell</a>.
+ 
+</p>
+
+<div id="disqus_thread"></div>
+<div id="disqus_comments">
+  <button onclick="load_disqus()">Show Comments</button>
+</div>
+<script>
+    function load_disqus() { 
+        var d = document, s = d.createElement('script');
+        s.src = '//adi-linux-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        var load_button = document.getElementById('disqus_comments');
+        load_button.parentNode.removeChild(load_button);
+    };
+   (function () {
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//adi-linux-blog.disqus.com/count.js';
+        (d.head || d.body).appendChild(s);
+    }()); 
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+    </div>
+    
+    
+    
+    <div id="pied" role="contentinfo">
+      Content distributed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license
+    </div>
+  </div>
+</body>
+</html>
+
+

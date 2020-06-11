@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 May 2020 13:07:31 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://adityam.github.io/linux-blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>fish</title>
+      <link>https://adityam.github.io/linux-blog/tags/fish/</link>
+      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/fish/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>https://adityam.github.io/linux-blog/tags/shell/</link>
+      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zsh</title>
+      <link>https://adityam.github.io/linux-blog/tags/zsh/</link>
+      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/zsh/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Arch Linux</title>
@@ -71,33 +98,6 @@
       <pubDate>Sat, 09 May 2020 00:00:51 -0400</pubDate>
       
       <guid>https://adityam.github.io/linux-blog/tags/heredoc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>rofi</title>
-      <link>https://adityam.github.io/linux-blog/tags/rofi/</link>
-      <pubDate>Sat, 09 May 2020 00:00:51 -0400</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/rofi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>xargs</title>
-      <link>https://adityam.github.io/linux-blog/tags/xargs/</link>
-      <pubDate>Sat, 09 May 2020 00:00:51 -0400</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/xargs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>xclip</title>
-      <link>https://adityam.github.io/linux-blog/tags/xclip/</link>
-      <pubDate>Sat, 09 May 2020 00:00:51 -0400</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/xclip/</guid>
       <description></description>
     </item>
     
