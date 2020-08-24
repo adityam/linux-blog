@@ -6,10 +6,46 @@
     <description>Recent content in Tags on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://adityam.github.io/linux-blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>dropbox</title>
+      <link>https://adityam.github.io/linux-blog/tags/dropbox/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/dropbox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>google-drive</title>
+      <link>https://adityam.github.io/linux-blog/tags/google-drive/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/google-drive/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>one-drive</title>
+      <link>https://adityam.github.io/linux-blog/tags/one-drive/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/one-drive/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rclone</title>
+      <link>https://adityam.github.io/linux-blog/tags/rclone/</link>
+      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/rclone/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>fish</title>
@@ -62,42 +98,6 @@
       <pubDate>Wed, 13 May 2020 13:07:31 -0400</pubDate>
       
       <guid>https://adityam.github.io/linux-blog/tags/pacman/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SNAFU</title>
-      <link>https://adityam.github.io/linux-blog/tags/snafu/</link>
-      <pubDate>Wed, 13 May 2020 13:07:31 -0400</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/snafu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>yst</title>
-      <link>https://adityam.github.io/linux-blog/tags/yst/</link>
-      <pubDate>Wed, 13 May 2020 13:07:31 -0400</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/yst/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>awk</title>
-      <link>https://adityam.github.io/linux-blog/tags/awk/</link>
-      <pubDate>Sat, 09 May 2020 00:00:51 -0400</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/awk/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>heredoc</title>
-      <link>https://adityam.github.io/linux-blog/tags/heredoc/</link>
-      <pubDate>Sat, 09 May 2020 00:00:51 -0400</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/heredoc/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Tinkering with Linux </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Aditya Mahajan" />
+  <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/styles.css" type="text/css" />
+  <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/paperclear.css" type="text/css" />
+  
+  <script type="module" defer
+    src="//instant.page/3.0.0"
+    integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1">
+  </script>
+
+  <script data-goatcounter="https://adityam.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  
+  
+  
+  <div id="container">
+    <div id="header" role="banner">
+      <span id="title"><a href="https://adityam.github.io/linux-blog">Tinkering with Linux</a></span><br />
+      
+    </div>
+    
+    
+    
+    <div id="menu" role="navigation">
+      <ul class="nav tree">
+        <li>
+        <strong>Recent Posts</strong>
+          <ul>
+            
+            
+            
+            <li><a href="/linux-blog/post/syncing-using-rclone/">Syncing using rclone</a></li>
+            
+            
+            
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/trying-fish/">Trying Fish Shell</a></li>
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/multiple-versions-of-a-library/">Multiple versions of a library</a></li>
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/rofi-selectors/">Rofi Selectors</a></li>
+            
+            
+          </ul>
+        </li>
+        <li><strong><a href="https://adityam.github.io/linux-blog/post">All Posts</a></strong></li>
+      </ul>
+    </div>
+    
+    
+    
+    <div id="content" role="main">
+
+
+<h1>Syncing using rclone</h1>
+<p class="post-time">Posted on August 23, 2020</p>
+
+<p>I have been a Dropbox user for over a decade. Part of the attraction for me
+was that it is one of the few synchronization services that fully supports
+Linux. I had it installed on two servers, my office desktop, my laptop, and
+most of my mobile devices. Couple of years ago, my employer moved most of its
+IT services with Microsoft 365, which gives me access to storage space on
+Microsoft OneDrive as well. Plus, I have purchased additional storage on
+Google (for backing up my personal photos). But I never seriously used
+Microsoft OneDrive or Google Drive for synchronization because all my computers
+run Linux and neither of these services had a Linux client.</p>
+
+<p>Now with the pandemic, I am involved in more remote collaborations and some of
+my collaborators prefer Google Drive and some administrative projects are
+managed on Microsoft Teams and use the shared files on Microsoft Teams. At
+first, I was simply viewing these files using a browser but after a while
+manually synchronizing files by uploading using a browser became annoying. So,
+I began to search for ways in which I could synchronize with these services on
+Linux.</p>
+
+<p>Enter <a href="https://rclone.org/">rclone</a>, which markets itself as <em>&ldquo;The Swiss army
+knife of cloud storage&rdquo;</em>. Rclone can sync with Microsoft OneDrive, Google
+Drive, and more than 40 other cloud storage products!</p>
+
+<p>So far I am only doing manual syncing. First, create a new &ldquo;remote&rdquo; using
+<code>rclone config</code> and then add a cron-job which periodically runs:</p>
+<pre><code>rclone copy REMOTE:folder local-folder
+rclone copy local-folder REMOTE:folder </code></pre>
+<p>So far, I have used this on projects where the files change once a week and
+there is no risk of conflicts etc., and it has worked flawlessly. Rclone
+provides an option to <a href="https://rclone.org/commands/rclone_mount/">mount a cloud storage service
+locally</a> and I plan to explore that
+if/when I need to work on a project which is updated more frequently.</p>
+
+<hr />
+
+<p class="nav">
+
+<a href="/linux-blog/post/trying-fish/">&nbsp;&lt;Trying Fish Shell</a>
+
+
+</p>
+
+<p>
+This entry was posted in 
+
+<a href="https://adityam.github.io/linux-blog/categories/syncronization">
+  Syncronization</a> 
+and tagged 
+
+<a href="https://adityam.github.io/linux-blog/tags/rclone">rclone</a>,
+<a href="https://adityam.github.io/linux-blog/tags/dropbox">dropbox</a>,
+<a href="https://adityam.github.io/linux-blog/tags/google-drive">google-drive</a>,
+<a href="https://adityam.github.io/linux-blog/tags/one-drive">one-drive</a>.
+ 
+</p>
+
+<div id="disqus_thread"></div>
+<div id="disqus_comments">
+  <button onclick="load_disqus()">Show Comments</button>
+</div>
+<script>
+    function load_disqus() { 
+        var d = document, s = d.createElement('script');
+        s.src = '//adi-linux-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        var load_button = document.getElementById('disqus_comments');
+        load_button.parentNode.removeChild(load_button);
+    };
+   (function () {
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//adi-linux-blog.disqus.com/count.js';
+        (d.head || d.body).appendChild(s);
+    }()); 
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+    </div>
+    
+    
+    
+    <div id="pied" role="contentinfo">
+      Content distributed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license
+    </div>
+  </div>
+</body>
+</html>
+
+
