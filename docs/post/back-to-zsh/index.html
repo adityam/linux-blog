@@ -75,63 +75,59 @@
     <div id="content" role="main">
 
 
-<h1>Syncing using rclone</h1>
-<p class="post-time">Posted on August 23, 2020</p>
+<h1>Back to ZSH</h1>
+<p class="post-time">Posted on September 3, 2020</p>
 
-<p>I have been a Dropbox user for over a decade. Part of the attraction for me
-was that it is one of the few synchronization services that fully supports
-Linux. I had it installed on two servers, my office desktop, my laptop, and
-most of my mobile devices. Couple of years ago, my employer moved most of its
-IT services with Microsoft 365, which gives me access to storage space on
-Microsoft OneDrive as well. Plus, I have purchased additional storage on
-Google (for backing up my personal photos). But I never seriously used
-Microsoft OneDrive or Google Drive for synchronization because all my computers
-run Linux and neither of these services had a Linux client.</p>
+<p>As I mentioned in <a href="https://adityam.github.io/linux-blog/post/trying-fish/">a previous post</a>, I started using fish after using
+zsh for about 15 years. After working exclusively on fish for about 3 months,
+I am now back to zsh.</p>
 
-<p>Now with the pandemic, I am involved in more remote collaborations and some of
-my collaborators prefer Google Drive and some administrative projects are
-managed on Microsoft Teams and use the shared files on Microsoft Teams. At
-first, I was simply viewing these files using a browser but after a while
-manually synchronizing files by uploading using a browser became annoying. So,
-I began to search for ways in which I could synchronize with these services on
-Linux.</p>
+<p>In the end, there was nothing inherently missing in fish, but fish just did a
+few minor things differently which began to get annoying.</p>
 
-<p>Enter <a href="https://rclone.org/">rclone</a>, which markets itself as <em>&ldquo;The Swiss army
-knife of cloud storage&rdquo;</em>. Rclone can sync with Microsoft OneDrive, Google
-Drive, and more than 40 other cloud storage products!</p>
+<ul>
+<li><p>Fish&rsquo;s tab-completion first shows a short list of option (top 10 or so) and
+you have to press tab twice to see the whole list. I found that I was almost
+always pressing tab twice.</p></li>
 
-<p>So far I am only doing manual syncing. First, create a new &ldquo;remote&rdquo; using
-<code>rclone config</code> and then add a cron-job which periodically runs:</p>
-<pre><code>rclone copy REMOTE:folder local-folder
-rclone copy local-folder REMOTE:folder </code></pre>
-<p>So far, I have used this on projects where the files change once a week and
-there is no risk of conflicts etc., and it has worked flawlessly. Rclone
-provides an option to <a href="https://rclone.org/commands/rclone_mount/">mount a cloud storage service
-locally</a> and I plan to explore that
-if/when I need to work on a project which is updated more frequently.</p>
+<li><p>By default, while doing tab complete on directories, fish includes the
+directories in my <code>CDPATH</code>. In principle, this is a good thing, but these
+directories are shown <em>before</em> the directories in the current working
+directory. Combined with the previous comment, this meant that I had to hunt
+around for the directory I wanted to cd to.</p></li>
+
+<li><p>The trick of ignoring certain suffixes using <code>fd</code> that I had listed in my
+previous post was not robust enough. I could get something like <code>nvim
+~/.config/&lt;tab&gt;</code> to work reliably. So, after a couple of weeks, I just
+commented out the <code>fd</code> stuff and then I had to hunt for the right file
+extension while doing tab completion.</p></li>
+
+<li><p>I kinda missed <code>sudo !!</code>, etc. The <code>Alt + Arrow</code> commands were simply not as
+powerful.</p></li>
+</ul>
+
+<p>So, in the end, although fish has an overall cleaner design,
+my muscle memory is too much tied to zsh. So, back to the old &hellip;</p>
+
 
 <hr />
 
 <p class="nav">
 
-<a href="/linux-blog/post/trying-fish/">&nbsp;&lt;Trying Fish Shell</a>
+<a href="/linux-blog/post/syncing-using-rclone/">&nbsp;&lt;Syncing using rclone</a>
 
-
-| <a href="/linux-blog/post/back-to-zsh/">Back to ZSH></a>
 
 </p>
 
 <p>
 This entry was posted in 
 
-<a href="https://adityam.github.io/linux-blog/categories/syncronization">
-  Syncronization</a> 
+<a href="https://adityam.github.io/linux-blog/categories/terminal">
+  Terminal</a> 
 and tagged 
 
-<a href="https://adityam.github.io/linux-blog/tags/rclone">rclone</a>,
-<a href="https://adityam.github.io/linux-blog/tags/dropbox">dropbox</a>,
-<a href="https://adityam.github.io/linux-blog/tags/google-drive">google-drive</a>,
-<a href="https://adityam.github.io/linux-blog/tags/one-drive">one-drive</a>.
+<a href="https://adityam.github.io/linux-blog/tags/zsh">zsh</a>,
+<a href="https://adityam.github.io/linux-blog/tags/fist">fist</a>.
  
 </p>
 

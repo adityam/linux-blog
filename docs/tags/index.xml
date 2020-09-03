@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2020 17:53:52 -0400</lastBuildDate>
     
 	<atom:link href="https://adityam.github.io/linux-blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>fist</title>
+      <link>https://adityam.github.io/linux-blog/tags/fist/</link>
+      <pubDate>Thu, 03 Sep 2020 17:53:52 -0400</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/fist/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zsh</title>
+      <link>https://adityam.github.io/linux-blog/tags/zsh/</link>
+      <pubDate>Thu, 03 Sep 2020 17:53:52 -0400</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/zsh/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>dropbox</title>
@@ -66,15 +84,6 @@
     </item>
     
     <item>
-      <title>zsh</title>
-      <link>https://adityam.github.io/linux-blog/tags/zsh/</link>
-      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/zsh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Arch Linux</title>
       <link>https://adityam.github.io/linux-blog/tags/arch-linux/</link>
       <pubDate>Wed, 13 May 2020 13:07:31 -0400</pubDate>
@@ -89,15 +98,6 @@
       <pubDate>Wed, 13 May 2020 13:07:31 -0400</pubDate>
       
       <guid>https://adityam.github.io/linux-blog/tags/downgrage/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pacman</title>
-      <link>https://adityam.github.io/linux-blog/tags/pacman/</link>
-      <pubDate>Wed, 13 May 2020 13:07:31 -0400</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/pacman/</guid>
       <description></description>
     </item>
     

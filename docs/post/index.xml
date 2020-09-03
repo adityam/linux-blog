@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2020 17:53:52 -0400</lastBuildDate>
     
 	<atom:link href="https://adityam.github.io/linux-blog/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Back to ZSH</title>
+      <link>https://adityam.github.io/linux-blog/post/back-to-zsh/</link>
+      <pubDate>Thu, 03 Sep 2020 17:53:52 -0400</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/post/back-to-zsh/</guid>
+      <description>As I mentioned in a previous post, I started using fish after using zsh for about 15 years. After working exclusively on fish for about 3 months, I am now back to zsh.
+In the end, there was nothing inherently missing in fish, but fish just did a few minor things differently which began to get annoying.
+ Fish&amp;rsquo;s tab-completion first shows a short list of option (top 10 or so) and you have to press tab twice to see the whole list.</description>
+    </item>
     
     <item>
       <title>Syncing using rclone</title>
