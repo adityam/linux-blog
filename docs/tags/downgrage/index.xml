@@ -6,11 +6,7 @@
     <description>Recent content in downgrage on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 May 2020 13:07:31 -0400</lastBuildDate>
-    
-	<atom:link href="https://adityam.github.io/linux-blog/tags/downgrage/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 13 May 2020 13:07:31 -0400</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/downgrage/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Installing and using multiple versions of a library</title>
       <link>https://adityam.github.io/linux-blog/post/multiple-versions-of-a-library/</link>

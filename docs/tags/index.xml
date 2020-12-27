@@ -6,10 +6,24 @@
     <description>Recent content in Tags on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Sep 2020 17:53:52 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 27 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A6X</title>
+      <link>https://adityam.github.io/linux-blog/tags/a6x/</link>
+      <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/a6x/</guid>
+      <description></description>
+    </item>
     
-	<atom:link href="https://adityam.github.io/linux-blog/tags/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>Max3</title>
+      <link>https://adityam.github.io/linux-blog/tags/max3/</link>
+      <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/max3/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>fist</title>
@@ -80,24 +94,6 @@
       <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://adityam.github.io/linux-blog/tags/shell/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Arch Linux</title>
-      <link>https://adityam.github.io/linux-blog/tags/arch-linux/</link>
-      <pubDate>Wed, 13 May 2020 13:07:31 -0400</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/arch-linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>downgrage</title>
-      <link>https://adityam.github.io/linux-blog/tags/downgrage/</link>
-      <pubDate>Wed, 13 May 2020 13:07:31 -0400</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/downgrage/</guid>
       <description></description>
     </item>
     

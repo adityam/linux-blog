@@ -3,12 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://adityam.github.io/linux-blog/post/back-to-zsh/</loc>
-    <lastmod>2020-09-03T17:53:52-04:00</lastmod>
+    <loc>https://adityam.github.io/linux-blog/tags/a6x/</loc>
+    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://adityam.github.io/linux-blog/categories/</loc>
+    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adityam.github.io/linux-blog/categories/eink/</loc>
+    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adityam.github.io/linux-blog/tags/max3/</loc>
+    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adityam.github.io/linux-blog/post/</loc>
+    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adityam.github.io/linux-blog/tags/</loc>
+    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adityam.github.io/linux-blog/post/tale-of-two-eink-notebooks/</loc>
+    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adityam.github.io/linux-blog/</loc>
+    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adityam.github.io/linux-blog/post/back-to-zsh/</loc>
     <lastmod>2020-09-03T17:53:52-04:00</lastmod>
   </url>
   
@@ -18,22 +53,7 @@
   </url>
   
   <url>
-    <loc>https://adityam.github.io/linux-blog/post/</loc>
-    <lastmod>2020-09-03T17:53:52-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adityam.github.io/linux-blog/tags/</loc>
-    <lastmod>2020-09-03T17:53:52-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://adityam.github.io/linux-blog/categories/terminal/</loc>
-    <lastmod>2020-09-03T17:53:52-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adityam.github.io/linux-blog/</loc>
     <lastmod>2020-09-03T17:53:52-04:00</lastmod>
   </url>
   
@@ -99,6 +119,11 @@
   
   <url>
     <loc>https://adityam.github.io/linux-blog/post/multiple-versions-of-a-library/</loc>
+    <lastmod>2020-05-13T13:07:31-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adityam.github.io/linux-blog/categories/os/</loc>
     <lastmod>2020-05-13T13:07:31-04:00</lastmod>
   </url>
   

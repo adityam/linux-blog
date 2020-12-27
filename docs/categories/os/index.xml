@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SNAFU on Tinkering with Linux</title>
-    <link>https://adityam.github.io/linux-blog/tags/snafu/</link>
-    <description>Recent content in SNAFU on Tinkering with Linux</description>
+    <title>OS on Tinkering with Linux</title>
+    <link>https://adityam.github.io/linux-blog/categories/os/</link>
+    <description>Recent content in OS on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 May 2020 13:07:31 -0400</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/snafu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 May 2020 13:07:31 -0400</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/categories/os/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Installing and using multiple versions of a library</title>
       <link>https://adityam.github.io/linux-blog/post/multiple-versions-of-a-library/</link>
