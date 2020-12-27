@@ -15,10 +15,10 @@ almost exclusively using fountain pens (Pelikan M200, Pilot Vanishing Point,
 and occasionally, Pilot Metropolitan). 
 
 To reduce the amount of time I state at a screen, I purchased a [Oynx Boox
-Max3][Max 3] tablet almost an year ago, primarily to read academic PDFs. The
+Max3][Max 3] tablet almost a year ago, primarily to read academic PDFs. The
 13.3" screen of Max3 is perfect for reading dense IEEE formatted two-column
 PDFs. Max3 is an Android device and many Android apps work reasonably well on
-it. So, I ended up using it for internet browsing, reading emails and slack
+it. So, I ended up using it for internet browsing, reading emails and Slack
 messages, [delivering zoom lectures][zoom], and even watching Youtube videos!
 Clearly, J.K. Rowling had Max3 in mind when she described the newspapers with
 moving pictures in Harry Potter.
@@ -38,14 +38,14 @@ Since I had a Max3, I started using it as a notepad. The default stylus was a
 bit lousy, so I bought the [Lamy EMR](https://www.lamy.com/en/emr/) pen with
 [Remarkable nibs](https://remarkable.com/store/remarkable-2/marker-tips).
 
-I use exclusively that combo in the Fall semester: using it to prepare my
+I exclusively used that combo in the Fall semester: using it to prepare my
 lecture notes, deliver "chalk and board" zoom lectures, write initial drafts
 of research papers, and comment on subsequent typeset drafts. Basically, most
 teaching and research activities for which I used pen and paper. 
 
 I like Max3 as a replacement for pen and paper but it was a bit too big for me
 to write on. Max3 is of the size of a legal pad, I am used to writing on
-something with is half the size of a letter paper. But more importantly, when
+something which is half the size of a letter paper. But more importantly, when
 I am reading a research article, I would take notes on a different piece of
 paper. In principle, I can do the same on the Max 3 by using the split screen
 functionality, but doing so makes the PDF too small to read comfortably. So, I
@@ -98,7 +98,7 @@ page.
 
 Another nice feature on the A6X is that I can either add a new page before or
 after the current page. On Max3, I can only insert a new page after the
-current page. However, Max3 is really really quick in inserting a page, while
+current page. However, Max3 is really quick in inserting a page, while
 A6X is slow. So much so, that it fakes a page insert but then displays a
 pop-up saying "Insert new page" which takes about a second or two to
 disappear. Furthermore, on Max3, the button to insert a new page is right on
@@ -138,8 +138,8 @@ bookmark it. I haven't been able to get this to work reliably. My hand drawn
 stars are never recognized as a bookmark symbol, while quite often my "of" and
 "op" are recognized as the star symbol. It is really annoying and completely
 destroys my flow while writing. I wish there were a way to either disable the
-star symbol or make it more elaborate (like start with a circle around it), so
-as to avoid accidental triggers. 
+star symbol or make it more elaborate (like start with a circle around it)
+to avoid accidental triggers. 
 
 # Conclusions
 
