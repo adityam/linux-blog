@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rsync.net on Tinkering with Linux</title>
+    <link>https://adityam.github.io/linux-blog/tags/rsync.net/</link>
+    <description>Recent content in rsync.net on Tinkering with Linux</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 20 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/rsync.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Backup up data</title>
+      <link>https://adityam.github.io/linux-blog/post/backing-up-data/</link>
+      <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/post/backing-up-data/</guid>
+      <description>&lt;p&gt;For about 10 years now, I have been using Dropbox as a tool to synchronize data
+between my work desktop and my laptop. I do a local backup using
+&lt;a href=&#34;https://rsnapshot.org&#34;&gt;&lt;code&gt;rsnapshot&lt;/code&gt;&lt;/a&gt;, but they were only stored locally on my desktop. So,
+effectively, I had been relying on Dropbox as a backup solution. Every so
+often, I read horror stories that &lt;a href=&#34;https://duckduckgo.com/?q=dropbox+is+not+a+backup+solution&#34;&gt;Dropbox is not a backup solution&lt;/a&gt;.
+And every time I would read one of these reports, I would think, &amp;ldquo;Hmm&amp;hellip; maybe
+I should start using a proper backup solution.&amp;rdquo; I finally bit the bullet and
+purchased some storage from &lt;a href=&#34;http://rsync.net&#34;&gt;rsync.net&lt;/a&gt; and set up a back up
+system. Yay!&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

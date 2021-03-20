@@ -2,6 +2,8 @@
 title     : "Installing and using multiple versions of a library"
 linktitle : "Multiple versions of a library"
 date  : 2020-05-13T13:07:31-04:00
+categories :
+  - OS
 tags  :
   - Arch Linux
   - SNAFU

@@ -6,7 +6,43 @@
     <description>Recent content in Tags on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cron</title>
+      <link>https://adityam.github.io/linux-blog/tags/cron/</link>
+      <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/cron/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dropbox</title>
+      <link>https://adityam.github.io/linux-blog/tags/dropbox/</link>
+      <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/dropbox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rsync.net</title>
+      <link>https://adityam.github.io/linux-blog/tags/rsync.net/</link>
+      <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/rsync.net/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unison</title>
+      <link>https://adityam.github.io/linux-blog/tags/unison/</link>
+      <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/unison/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>A6X</title>
       <link>https://adityam.github.io/linux-blog/tags/a6x/</link>
@@ -44,15 +80,6 @@
     </item>
     
     <item>
-      <title>dropbox</title>
-      <link>https://adityam.github.io/linux-blog/tags/dropbox/</link>
-      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/dropbox/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>google-drive</title>
       <link>https://adityam.github.io/linux-blog/tags/google-drive/</link>
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
@@ -67,33 +94,6 @@
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://adityam.github.io/linux-blog/tags/one-drive/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>rclone</title>
-      <link>https://adityam.github.io/linux-blog/tags/rclone/</link>
-      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/rclone/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>fish</title>
-      <link>https://adityam.github.io/linux-blog/tags/fish/</link>
-      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/fish/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>shell</title>
-      <link>https://adityam.github.io/linux-blog/tags/shell/</link>
-      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/shell/</guid>
       <description></description>
     </item>
     

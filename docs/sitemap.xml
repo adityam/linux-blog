@@ -3,12 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://adityam.github.io/linux-blog/tags/a6x/</loc>
-    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
+    <loc>https://adityam.github.io/linux-blog/categories/backup/</loc>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adityam.github.io/linux-blog/post/backing-up-data/</loc>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://adityam.github.io/linux-blog/categories/</loc>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adityam.github.io/linux-blog/tags/cron/</loc>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adityam.github.io/linux-blog/tags/dropbox/</loc>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adityam.github.io/linux-blog/post/</loc>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adityam.github.io/linux-blog/tags/rsync.net/</loc>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adityam.github.io/linux-blog/tags/</loc>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adityam.github.io/linux-blog/</loc>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adityam.github.io/linux-blog/tags/unison/</loc>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adityam.github.io/linux-blog/tags/a6x/</loc>
     <lastmod>2020-12-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -23,22 +68,7 @@
   </url>
   
   <url>
-    <loc>https://adityam.github.io/linux-blog/post/</loc>
-    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adityam.github.io/linux-blog/tags/</loc>
-    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://adityam.github.io/linux-blog/post/tale-of-two-eink-notebooks/</loc>
-    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adityam.github.io/linux-blog/</loc>
     <lastmod>2020-12-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -60,11 +90,6 @@
   <url>
     <loc>https://adityam.github.io/linux-blog/tags/zsh/</loc>
     <lastmod>2020-09-03T17:53:52-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adityam.github.io/linux-blog/tags/dropbox/</loc>
-    <lastmod>2020-08-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>

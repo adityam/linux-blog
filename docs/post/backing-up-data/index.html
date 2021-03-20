@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Tinkering with Linux </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Aditya Mahajan" />
+  <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/styles.css" type="text/css" />
+  <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/paperclear.css" type="text/css" />
+  
+  <script type="module" defer
+    src="//instant.page/3.0.0"
+    integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1">
+  </script>
+
+  <script data-goatcounter="https://adityam.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  
+  
+  
+  <div id="container">
+    <div id="header" role="banner">
+      <span id="title"><a href="https://adityam.github.io/linux-blog">Tinkering with Linux</a></span><br />
+      
+    </div>
+    
+    
+    
+    <div id="menu" role="navigation">
+      <ul class="nav tree">
+        <li>
+        <strong>Recent Posts</strong>
+          <ul>
+            
+            
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/backing-up-data/">Backup up data</a></li>
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/tale-of-two-eink-notebooks/">Tale of two eink notebooks</a></li>
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/back-to-zsh/">Back to ZSH</a></li>
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/syncing-using-rclone/">Syncing using rclone</a></li>
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/trying-fish/">Trying Fish Shell</a></li>
+            
+            
+          </ul>
+        </li>
+        <li><strong><a href="https://adityam.github.io/linux-blog/post">All Posts</a></strong></li>
+      </ul>
+    </div>
+    
+    
+    
+    <div id="content" role="main">
+
+
+<h1>Backup up data</h1>
+<p class="post-time">Posted on March 20, 2021</p>
+
+<p>For about 10 years now, I have been using Dropbox as a tool to synchronize data
+between my work desktop and my laptop. I do a local backup using
+<a href="https://rsnapshot.org"><code>rsnapshot</code></a>, but they were only stored locally on my desktop. So,
+effectively, I had been relying on Dropbox as a backup solution. Every so
+often, I read horror stories that <a href="https://duckduckgo.com/?q=dropbox+is+not+a+backup+solution">Dropbox is not a backup solution</a>.
+And every time I would read one of these reports, I would think, &ldquo;Hmm&hellip; maybe
+I should start using a proper backup solution.&rdquo; I finally bit the bullet and
+purchased some storage from <a href="http://rsync.net">rsync.net</a> and set up a back up
+system. Yay!</p>
+
+<p>I chose <a href="http://rsync.net">rsync.net</a> because they have a completely no nonsense website
+(no marketing gimmicks and an honest technical description of what they
+provide). And I have read many blogs and posts where people recommend
+<a href="http://rsync.net">rsync.net</a>, and I have never read a negative review.</p>
+
+<p>My current synchronization setup is as follows. There are two directories that
+I sync between my desktop and laptop: <code>Projects</code> (which contains my active
+projects) and <code>backup</code> (which contains zipped copies of my old projects).
+The <code>Projects</code> directory is sym-linked to <code>Dropbox</code> directory, and key in sync
+via Dropbox. The <code>backup</code> directory is kept in sync via <code>unison</code> (which I find
+to be faster than raw <code>rsync</code>) and <code>cron</code>.</p>
+
+<p>It was relatively easy to add <a href="http://rsync.net">rsync.net</a> as another synchronization
+host. To do that, I created a file <code>$HOME/.unison/rsync.prf</code> on my desktop:</p>
+<pre><code>root = /home/username
+root = ssh://user@user.rsync.net
+
+force = /home/username
+
+path = backup
+path = Dropbox
+
+log = true
+logfile = .unison/rsync.log
+
+batch = true
+
+ignore = Path Dropbox/.dropbox
+ignore = Path Dropbox/.dropbox.cache</code></pre>
+<p>Most of the preferences are pretty self explanatory. The only non-obvious line
+is <code>force = /home/username</code>, which tells <code>unison</code> that in case of a file
+conflict, overwrite the file from my desktop to <code>rsync.net</code>. This is slightly
+risky, but rsync.net provides daily snapshots for 7 days, so I should be able
+to recover from accidental deletions. I have only had the account for less
+than 24hrs, so the automatic snapshot hasn&rsquo;t kicked in yet. I&rsquo;ll see how it
+looks; otherwise, I&rsquo;ll also backup the <code>rsnapshot</code> snapshots to <code>rsync.net</code>.</p>
+
+<p>Now, one difficulty was that my desktop is running Arch Linux. So I had the
+latest version of <code>unison</code> (version 2.51.2), while <code>rsync.net</code> is running
+version 2.40.63. And <code>unison</code> refuses to sync with different versions of
+<code>unison</code> on the client and the server.</p>
+
+<p>Fortunately, there is a package on <a href="https://aur.archlinux.org/packages/unison-2.48.4-compat-bin/">AUR</a> (isn&rsquo;t that always the case),
+which installs the pre-built binary from debian. Fortunately, <a href="http://ftp.de.debian.org/debian/pool/main/u/unison/">debian&rsquo;s
+repository</a>, had version 2.40.102 of <code>unison</code>, so I could easily
+install that using the AUR package (which installs the binary as <code>unison-2.40</code>
+to avoid any clashes with the default version).</p>
+
+<p>Now, I needed to do was run</p>
+<pre><code>$unison-2.40 rsync</code></pre>
+<p>to sync my desktop to rsync.net. I added the following to my <code>crontab -e</code>
+file:</p>
+<pre><code>5 */6 * * *   unison-2.40 rsync </code></pre>
+<p>which runs <code>unison</code> every six hours (at 5 minutes past the hour).</p>
+
+<p>And Voilà! Now all my work projects are backup up on <code>rsync.net</code>. That was not
+too difficult to set up.</p>
+
+<p>Now all I need to do is to figure out a backup strategy for my photos and
+videos which are currently all on Google Photos.</p>
+
+<hr />
+
+<p class="nav">
+
+<a href="/linux-blog/post/tale-of-two-eink-notebooks/">&nbsp;&lt;Tale of two eink notebooks</a>
+
+
+</p>
+
+<p>
+This entry was posted in 
+
+<a href="https://adityam.github.io/linux-blog/categories/backup">
+  Backup</a> 
+and tagged 
+
+<a href="https://adityam.github.io/linux-blog/tags/rsync.net">rsync.net</a>,
+<a href="https://adityam.github.io/linux-blog/tags/unison">unison</a>,
+<a href="https://adityam.github.io/linux-blog/tags/dropbox">dropbox</a>,
+<a href="https://adityam.github.io/linux-blog/tags/cron">cron</a>.
+ 
+</p>
+
+<div id="disqus_thread"></div>
+<div id="disqus_comments">
+  <button onclick="load_disqus()">Show Comments</button>
+</div>
+<script>
+    function load_disqus() { 
+        var d = document, s = d.createElement('script');
+        s.src = '//adi-linux-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        var load_button = document.getElementById('disqus_comments');
+        load_button.parentNode.removeChild(load_button);
+    };
+   (function () {
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//adi-linux-blog.disqus.com/count.js';
+        (d.head || d.body).appendChild(s);
+    }()); 
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+    </div>
+    
+    
+    
+    <div id="pied" role="contentinfo">
+      Content distributed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license
+    </div>
+  </div>
+</body>
+</html>
+
+
