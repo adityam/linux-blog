@@ -75,49 +75,62 @@
     <div id="content" role="main">
 
 
-<h1>Back to ZSH</h1>
-<p class="post-time">Posted on September 3, 2020</p>
+<h1>Accessing newest file in a directory</h1>
+<p class="post-time">Posted on April 18, 2021</p>
 
-<p>As I mentioned in <a href="https://adityam.github.io/linux-blog/post/trying-fish/">a previous post</a>, I started using fish after using
-zsh for about 15 years. After working exclusively on fish for about 3 months,
-I am now back to zsh.</p>
-
-<p>In the end, there was nothing inherently missing in fish, but fish just did a
-few minor things differently which began to get annoying.</p>
+<p>There are many instances where I want to access the most recent file in a
+directory:</p>
 
 <ul>
-<li><p>Fish&rsquo;s tab-completion first shows a short list of option (top 10 or so) and
-you have to press tab twice to see the whole list. I found that I was almost
-always pressing tab twice.</p></li>
+<li><p>By default, my browser saves PDF files (and other downloaded files, for that
+matter) in <code>~/Downloads</code>. Rather than navigating to a more appropriate
+directory via the GUI, I find it more convenient to <code>cd</code> to the appropriate
+directory on the command line (where <a href="https://github.com/ajeetdsouza/zoxide">zoxide</a> is an amazing tool to jump
+to commonly used directories) and simply move the file there.</p></li>
 
-<li><p>By default, while doing tab complete on directories, fish includes the
-directories in my <code>CDPATH</code>. In principle, this is a good thing, but these
-directories are shown <em>before</em> the directories in the current working
-directory. Combined with the previous comment, this meant that I had to hunt
-around for the directory I wanted to cd to.</p></li>
+<li><p>I use <a href="https://dotepub.com">a browser plugin</a> to convert long web articles to <code>.epub</code> so
+that I can read them later on my eInk tablet. This plugin saves files in
+<code>~/Downloads</code> and has no option to change the downloads directory.</p></li>
 
-<li><p>The trick of ignoring certain suffixes using <code>fd</code> that I had listed in my
-previous post was not robust enough. I could get something like <code>nvim
-~/.config/&lt;tab&gt;</code> to work reliably. So, after a couple of weeks, I just
-commented out the <code>fd</code> stuff and then I had to hunt for the right file
-extension while doing tab completion.</p></li>
-
-<li><p>I kinda missed <code>sudo !!</code>, etc. The <code>Alt + Arrow</code> commands were simply not as
-powerful.</p></li>
+<li><p>I run a <code>cron</code> script that downloads and packages the latest version of
+ConTeXt by running <code>makepkg</code> in a directory containing the <code>PKGBUILD</code> file
+for <a href="https://aur.archlinux.org/packages/luametatex/"><code>luametatex</code></a>. However, I don&rsquo;t automatically upgrade the
+package. I always prefer to upgrade packages manually when I know that I
+have the time to fix the upgrade if something breaks (happens rarely, but I
+don&rsquo;t want something to break half an hour before a deadline). When
+updating, I want to find the latest <code>luametatex-date.pkg.tar.gz</code> file in the
+directory.</p></li>
 </ul>
 
-<p>So, in the end, although fish has an overall cleaner design,
-my muscle memory is too much tied to zsh. So, back to the old &hellip;</p>
+<p>I recently discovered <a href="https://man.archlinux.org/man/extra/zsh/zshexpn.1.en#Glob_Qualifiers">glob qualifiers</a>, which is perfect for these
+tasks. In the shell <code>*</code> expands to all files and directories. Zsh has options
+to qualify which files needs to be expanded. In particular:</p>
 
+<ul>
+<li><code>*(.)</code> expands all files (i.e., excludes directories)</li>
+<li><code>*(.om)</code> expands all files and sorts them descending order according to
+modification time</li>
+<li><code>*(.om[1])</code> selects the first such file.</li>
+</ul>
+
+<p>Thus, for my first two use cases, I can use:</p>
+<pre><code>z desired-directory &amp;&amp; mv ~/Downloads/*(.om[1]) ./</code></pre>
+<p>For the third use case:</p>
+<pre><code>z luametatex &amp;&amp; sudo pamcan -U *(.om[1])</code></pre>
+<p>Sometimes, I want to use the latest file matching a particular pattern (say,
+the latest PDF file with <code>pattern</code> in the title). In such cases, I can use:</p>
+<pre><code>mv ~/Downloads/*pattern*.pdf(om[1]) ./</code></pre>
+<p>Or, if I want to see the name of the file before moving it:</p>
+<pre><code>mv ~/Downloads/*pattern*.pdf^Xm</code></pre>
+<p>(where <code>^Xm</code> means press <code>CTRL+X m</code>). Search for <code>_most_recent_file</code> in
+<a href="https://man.archlinux.org/man/extra/zsh/zshcompsys.1.en">zshcompsys</a> for details.</p>
 
 <hr />
 
 <p class="nav">
 
-<a href="/linux-blog/post/syncing-using-rclone/">&nbsp;&lt;Syncing using rclone</a>
+<a href="/linux-blog/post/backing-up-data/">&nbsp;&lt;Backup up data</a>
 
-
-| <a href="/linux-blog/post/tale-of-two-eink-notebooks/">Tale of two eink notebooks></a>
 
 </p>
 
@@ -129,7 +142,8 @@ This entry was posted in
 and tagged 
 
 <a href="https://adityam.github.io/linux-blog/tags/zsh">zsh</a>,
-<a href="https://adityam.github.io/linux-blog/tags/fist">fist</a>.
+<a href="https://adityam.github.io/linux-blog/tags/glob-qualifiers">glob qualifiers</a>,
+<a href="https://adityam.github.io/linux-blog/tags/zshexpn">zshexpn</a>.
  
 </p>
 

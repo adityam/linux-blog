@@ -1,205 +1,134 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
+    <loc>https://adityam.github.io/linux-blog/post/accessing-newest-file-in-directory/</loc>
+    <lastmod>2021-04-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/categories/</loc>
+    <lastmod>2021-04-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/tags/glob-qualifiers/</loc>
+    <lastmod>2021-04-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/post/</loc>
+    <lastmod>2021-04-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/tags/</loc>
+    <lastmod>2021-04-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/categories/terminal/</loc>
+    <lastmod>2021-04-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/</loc>
+    <lastmod>2021-04-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/tags/zsh/</loc>
+    <lastmod>2021-04-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/tags/zshexpn/</loc>
+    <lastmod>2021-04-18T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/categories/backup/</loc>
     <lastmod>2021-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/post/backing-up-data/</loc>
     <lastmod>2021-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adityam.github.io/linux-blog/categories/</loc>
-    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/cron/</loc>
     <lastmod>2021-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/dropbox/</loc>
     <lastmod>2021-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adityam.github.io/linux-blog/post/</loc>
-    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/rsync.net/</loc>
     <lastmod>2021-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adityam.github.io/linux-blog/tags/</loc>
-    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adityam.github.io/linux-blog/</loc>
-    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/unison/</loc>
     <lastmod>2021-03-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/a6x/</loc>
     <lastmod>2020-12-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/categories/eink/</loc>
     <lastmod>2020-12-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/max3/</loc>
     <lastmod>2020-12-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/post/tale-of-two-eink-notebooks/</loc>
     <lastmod>2020-12-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/post/back-to-zsh/</loc>
     <lastmod>2020-09-03T17:53:52-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/fist/</loc>
     <lastmod>2020-09-03T17:53:52-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adityam.github.io/linux-blog/categories/terminal/</loc>
-    <lastmod>2020-09-03T17:53:52-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adityam.github.io/linux-blog/tags/zsh/</loc>
-    <lastmod>2020-09-03T17:53:52-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/google-drive/</loc>
     <lastmod>2020-08-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/one-drive/</loc>
     <lastmod>2020-08-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/rclone/</loc>
     <lastmod>2020-08-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/post/syncing-using-rclone/</loc>
     <lastmod>2020-08-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/categories/syncronization/</loc>
     <lastmod>2020-08-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/fish/</loc>
     <lastmod>2020-06-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/shell/</loc>
     <lastmod>2020-06-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/post/trying-fish/</loc>
     <lastmod>2020-06-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/arch-linux/</loc>
     <lastmod>2020-05-13T13:07:31-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/downgrage/</loc>
     <lastmod>2020-05-13T13:07:31-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/post/multiple-versions-of-a-library/</loc>
     <lastmod>2020-05-13T13:07:31-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/categories/os/</loc>
     <lastmod>2020-05-13T13:07:31-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/pacman/</loc>
     <lastmod>2020-05-13T13:07:31-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/snafu/</loc>
     <lastmod>2020-05-13T13:07:31-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/yst/</loc>
     <lastmod>2020-05-13T13:07:31-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/awk/</loc>
     <lastmod>2020-05-09T00:00:51-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/categories/efficiency/</loc>
     <lastmod>2020-05-09T00:00:51-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/heredoc/</loc>
     <lastmod>2020-05-09T00:00:51-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/rofi/</loc>
     <lastmod>2020-05-09T00:00:51-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/post/rofi-selectors/</loc>
     <lastmod>2020-05-09T00:00:51-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/xargs/</loc>
     <lastmod>2020-05-09T00:00:51-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/xclip/</loc>
     <lastmod>2020-05-09T00:00:51-04:00</lastmod>
   </url>
-  
 </urlset>

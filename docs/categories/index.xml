@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Terminal</title>
+      <link>https://adityam.github.io/linux-blog/categories/terminal/</link>
+      <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/categories/terminal/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>backup</title>
       <link>https://adityam.github.io/linux-blog/categories/backup/</link>
@@ -22,15 +31,6 @@
       <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://adityam.github.io/linux-blog/categories/eink/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Terminal</title>
-      <link>https://adityam.github.io/linux-blog/categories/terminal/</link>
-      <pubDate>Thu, 03 Sep 2020 17:53:52 -0400</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/categories/terminal/</guid>
       <description></description>
     </item>
     

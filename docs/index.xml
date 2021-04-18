@@ -6,7 +6,17 @@
     <description>Recent content on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Accessing newest file in a directory</title>
+      <link>https://adityam.github.io/linux-blog/post/accessing-newest-file-in-directory/</link>
+      <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/post/accessing-newest-file-in-directory/</guid>
+      <description>&lt;p&gt;There are many instances where I want to access the most recent file in a
+directory:&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Backup up data</title>
       <link>https://adityam.github.io/linux-blog/post/backing-up-data/</link>

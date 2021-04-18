@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>glob qualifiers</title>
+      <link>https://adityam.github.io/linux-blog/tags/glob-qualifiers/</link>
+      <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/glob-qualifiers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zsh</title>
+      <link>https://adityam.github.io/linux-blog/tags/zsh/</link>
+      <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/zsh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zshexpn</title>
+      <link>https://adityam.github.io/linux-blog/tags/zshexpn/</link>
+      <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/zshexpn/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>cron</title>
       <link>https://adityam.github.io/linux-blog/tags/cron/</link>
@@ -67,33 +94,6 @@
       <pubDate>Thu, 03 Sep 2020 17:53:52 -0400</pubDate>
       
       <guid>https://adityam.github.io/linux-blog/tags/fist/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>zsh</title>
-      <link>https://adityam.github.io/linux-blog/tags/zsh/</link>
-      <pubDate>Thu, 03 Sep 2020 17:53:52 -0400</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/zsh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>google-drive</title>
-      <link>https://adityam.github.io/linux-blog/tags/google-drive/</link>
-      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/google-drive/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>one-drive</title>
-      <link>https://adityam.github.io/linux-blog/tags/one-drive/</link>
-      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/one-drive/</guid>
       <description></description>
     </item>
     
