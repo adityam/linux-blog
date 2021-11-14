@@ -75,49 +75,79 @@
     <div id="content" role="main">
 
 
-<h1>Back to ZSH</h1>
-<p class="post-time">Posted on September 3, 2020</p>
+<h1>Using Slack from the terminal</h1>
+<p class="post-time">Posted on November 13, 2021</p>
 
-<p>As I mentioned in <a href="https://adityam.github.io/linux-blog/post/trying-fish/">a previous post</a>, I started using fish after using
-zsh for about 15 years. After working exclusively on fish for about 3 months,
-I am now back to zsh.</p>
+<p>In rencent years, lot of my short conversations with my research lab has moved
+to Slack. I am not a big fan of closed protocol communication clients, but
+Slack has the advantage that it is relatively easy to use. Well, it seems that
+it relatively easy to use for everyone except me.</p>
 
-<p>In the end, there was nothing inherently missing in fish, but fish just did a
-few minor things differently which began to get annoying.</p>
+<p>I started with the Slack desktop client, which was a resource hog. So, I
+switched to using Slack in the browser. But for the last week or so, Slack on
+the browser (Firefox) was becoming extremely unresponsive. So, I started
+looking at alternatives.</p>
+
+<p>I tried a few different clients but was not impressed by any of the
+alternative GUIs. So, I started testing TUIs as well. There were two which
+seem to be reasonably well maintained:</p>
 
 <ul>
-<li><p>Fish&rsquo;s tab-completion first shows a short list of option (top 10 or so) and
-you have to press tab twice to see the whole list. I found that I was almost
-always pressing tab twice.</p></li>
-
-<li><p>By default, while doing tab complete on directories, fish includes the
-directories in my <code>CDPATH</code>. In principle, this is a good thing, but these
-directories are shown <em>before</em> the directories in the current working
-directory. Combined with the previous comment, this meant that I had to hunt
-around for the directory I wanted to cd to.</p></li>
-
-<li><p>The trick of ignoring certain suffixes using <code>fd</code> that I had listed in my
-previous post was not robust enough. I could get something like <code>nvim
-~/.config/&lt;tab&gt;</code> to work reliably. So, after a couple of weeks, I just
-commented out the <code>fd</code> stuff and then I had to hunt for the right file
-extension while doing tab completion.</p></li>
-
-<li><p>I kinda missed <code>sudo !!</code>, etc. The <code>Alt + Arrow</code> commands were simply not as
-powerful.</p></li>
+<li><a href="https://github.com/wee-slack/wee-slack">wee-slack</a></li>
+<li><a href="https://github.com/erroneousboat/slack-term">slack-term</a></li>
 </ul>
 
-<p>So, in the end, although fish has an overall cleaner design,
-my muscle memory is too much tied to zsh. So, back to the old &hellip;</p>
+<p>I could not get <code>wee-slack</code> to work. The instructions were asking to install
+stuff in <code>~/.weechat/...</code> but that did not work for me. <code>slack-term</code> looks
+decent and works well (except, as expected, it doesn&rsquo;t show attachments;
+though I wonder if it is possible to do something similar to <code>w3m</code> to display
+images inline. However, there was one show stopper: all the timestamps were in
+UTC!</p>
 
+<p>It turns out that by default, docker images show time in UTC (rather, if you
+don&rsquo;t set time zone on a linux machine, it assumes that the time zone is UTC).
+After a bit of duckduckgo-ing, I figured that I needed to add <code>tzdata</code> package
+to the docker file, and then pass the <code>TZ</code> argument to set the time-zone. So,
+I cloned the repo of slack-term and added the following patch:</p>
+<pre tabindex="0"><code>diff --git a/Dockerfile b/Dockerfile
+index 4139c4a..0cc8d99 100644
+--- a/Dockerfile
++++ b/Dockerfile
+@@ -4,7 +4,8 @@ ENV PATH /go/bin:/usr/local/go/bin:$PATH
+ ENV GOPATH /go
+ 
+ RUN    apk add --no-cache \
+-   ca-certificates
++ ca-certificates \
++    tzdata
+ 
+ COPY . /go/src/github.com/erroneousboat/slack-term
+ 
+@@ -26,6 +27,7 @@ FROM alpine:latest
+ ENV USER root
+ 
+ COPY --from=builder /usr/bin/slack-term /usr/bin/slack-term
++COPY --from=builder /usr/share/zoneinfo /usr/share/zoneinfo
+ COPY --from=builder /etc/ssl/certs/ /etc/ssl/certs
+ 
+ ENTRYPOINT stty cols 25 &amp;&amp; slack-term -config config</code></pre>
+<p>Then I built the image using:</p>
+<pre tabindex="0"><code>docket build . -t local/slack-term</code></pre>
+<p>And added the following aliases in my <code>~/.zshrc</code>:</p>
+<pre tabindex="0"><code>alias slack-org1=&#34;docker run -it -v /home/username/.config/slack-term/org1:/config -e TZ=&#39;America/New_York&#39; local/slack-term&#34;                      
+alias slack-org2=&#34;docker run -it -v /home/username/.config/slack-term/org2:/config -e TZ=&#39;America/New_York&#39; local/slack-term&#34;</code></pre>
+<p>where <code>org1</code> and <code>org2</code> are two slack organizations that I am a part of. Now,
+the timezone is set correctly in the Docker image and <code>slack-term</code> shows the
+correct timestamps.</p>
+
+<p>Now, back to actual work&hellip;</p>
 
 <hr />
 
 <p class="nav">
 
-<a href="/linux-blog/post/syncing-using-rclone/">&nbsp;&lt;Syncing using rclone</a>
+<a href="/linux-blog/post/accessing-newest-file-in-directory/">&nbsp;&lt;Accessing newest file in a directory</a>
 
-
-| <a href="/linux-blog/post/tale-of-two-eink-notebooks/">Tale of two eink notebooks></a>
 
 </p>
 
@@ -128,8 +158,8 @@ This entry was posted in
   Terminal</a> 
 and tagged 
 
-<a href="https://adityam.github.io/linux-blog/tags/zsh">zsh</a>,
-<a href="https://adityam.github.io/linux-blog/tags/fist">fist</a>.
+<a href="https://adityam.github.io/linux-blog/tags/slack">slack</a>,
+<a href="https://adityam.github.io/linux-blog/tags/slack-term">slack-term</a>.
  
 </p>
 

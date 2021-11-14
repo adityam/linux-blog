@@ -38,6 +38,11 @@
             
             
             
+            <li><a href="/linux-blog/post/slack-tui/">Using Slack from the terminal</a></li>
+            
+            
+            
+            
             
             
             
@@ -57,11 +62,6 @@
             
             
             <li><a href="/linux-blog/post/back-to-zsh/">Back to ZSH</a></li>
-            
-            
-            
-            
-            <li><a href="/linux-blog/post/syncing-using-rclone/">Syncing using rclone</a></li>
             
             
           </ul>
@@ -102,7 +102,7 @@ Drive, and more than 40 other cloud storage products!</p>
 
 <p>So far I am only doing manual syncing. First, create a new &ldquo;remote&rdquo; using
 <code>rclone config</code> and then add a cron-job which periodically runs:</p>
-<pre><code>rclone copy REMOTE:folder local-folder
+<pre tabindex="0"><code>rclone copy REMOTE:folder local-folder
 rclone copy local-folder REMOTE:folder </code></pre>
 <p>So far, I have used this on projects where the files change once a week and
 there is no risk of conflicts etc., and it has worked flawlessly. Rclone

@@ -6,7 +6,19 @@
     <description>Recent content on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Slack from the terminal</title>
+      <link>https://adityam.github.io/linux-blog/post/slack-tui/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/post/slack-tui/</guid>
+      <description>&lt;p&gt;In rencent years, lot of my short conversations with my research lab has moved
+to Slack. I am not a big fan of closed protocol communication clients, but
+Slack has the advantage that it is relatively easy to use. Well, it seems that
+it relatively easy to use for everyone except me.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Accessing newest file in a directory</title>
       <link>https://adityam.github.io/linux-blog/post/accessing-newest-file-in-directory/</link>

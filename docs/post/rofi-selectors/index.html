@@ -38,6 +38,11 @@
             
             
             
+            <li><a href="/linux-blog/post/slack-tui/">Using Slack from the terminal</a></li>
+            
+            
+            
+            
             
             
             
@@ -59,11 +64,6 @@
             <li><a href="/linux-blog/post/back-to-zsh/">Back to ZSH</a></li>
             
             
-            
-            
-            <li><a href="/linux-blog/post/syncing-using-rclone/">Syncing using rclone</a></li>
-            
-            
           </ul>
         </li>
         <li><strong><a href="https://adityam.github.io/linux-blog/post">All Posts</a></strong></li>
@@ -81,7 +81,7 @@
 <p><a href="https://github.com/davatorium/rofi">rofi</a> is perfect for creating interactive scripts, which I like to call <em>rofi selectors</em>.  Here are some examples:</p>
 
 <h2 id="connecting-to-bluetooth-devices">Connecting to bluetooth devices</h2>
-<pre><code>cat &lt;&lt;DEVICES | rofi -width 30 -dmenu -i -p &#34;Devices&#34;  \
+<pre tabindex="0"><code>cat &lt;&lt;DEVICES | rofi -width 30 -dmenu -i -p &#34;Devices&#34;  \
               | awk &#39;{printf $1}&#39; \
               | xargs bluetoothctl connect \
 # List of devices to connect
@@ -108,7 +108,7 @@ with <code>blueman-applet</code>!</p>
 <p>I often have to fill forms where I need to know the project ids for the
 different projects that I am working on. So, I have created a command
 <code>~/bin/project-ids</code> as follows</p>
-<pre><code>cat &lt;&lt;PROJECTS | rofi -width 20 -dmenu -i -p &#34;Project&#34;  \
+<pre tabindex="0"><code>cat &lt;&lt;PROJECTS | rofi -width 20 -dmenu -i -p &#34;Project&#34;  \
                | awk &#39;{printf $1}&#39; \
                | xclip -selection clipboard \
 # List of Projects
@@ -129,7 +129,7 @@ selectors for this situation. I have written a script (written in
 <a href="https://crystal-lang.org/">crystal</a>, but it can be written in your favorite language), which
 simply outputs the list of student-ids and names, and then I pass the output
 to <code>rofi</code>.</p>
-<pre><code>/path-to-script/student-id
+<pre tabindex="0"><code>/path-to-script/student-id
     | rofi -width 40 -dmenu -i -p &#34;Name&#34;  \
     | awk &#39;{printf $1}&#39; \
     | xclip -selection clipboard</code></pre>
@@ -140,7 +140,7 @@ encrypted files insider <code>~/.password-store</code>. The next selector reads 
 website/usernames for which a password is available, selects the username
 using <code>rofi</code> and passes the result to <code>pass -c</code>, which copies the password to
 clipboard for 45 sec.</p>
-<pre><code>cd $HOME/.password-store &amp;&amp; fd -t f  \
+<pre tabindex="0"><code>cd $HOME/.password-store &amp;&amp; fd -t f  \
     | sed &#39;s/\.gpg$//&#39;  \
     | rofi -width 30 -dmenu -i -p &#34;pass&#34; \
     | xargs pass -c </code></pre>
