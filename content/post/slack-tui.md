@@ -29,11 +29,13 @@ seem to be reasonably well maintained:
 
 I could not get `wee-slack` to work. The instructions were asking to install
 stuff in `~/.weechat/...` but that did not work for me. `slack-term` looks
-decent and works well (except, as expected, it doesn't show attachments;
-though I wonder if it is possible to do something similar to `w3m` to display
-images inline. However, there was one show stopper: all the timestamps were in
-UTC!
+decent and works well. I am going to use this post to collect some notes on
+how to improve the user experience with `slack-term`.
 
+## Use correct timezone
+
+I decided to use the docker version of slack-term and one of the issues was
+that the timestamps associated with all messages were shown in UTC!
 It turns out that by default, docker images show time in UTC (rather, if you
 don't set time zone on a linux machine, it assumes that the time zone is UTC).
 After a bit of duckduckgo-ing, I figured that I needed to add `tzdata` package
@@ -79,5 +81,28 @@ alias slack-org2="docker run -it -v /home/username/.config/slack-term/org2:/conf
 where `org1` and `org2` are two slack organizations that I am a part of. Now,
 the timezone is set correctly in the Docker image and `slack-term` shows the
 correct timestamps.
+
+
+## Sharing attachments
+
+Slack GUIs allow you to share attachments, but that is not supported by
+`slack-term`. For me, a simple solution was to use Dropbox for sharing. Most
+of my files are on Dropbox. So, if I could easily generate a shareable Dropbox
+link, that I could just share that instead of sharing a file. Turn out, it is
+easy to get the link used by Dropbox for sharing files:
+
+    dropbox.py sharelink <filename>
+
+gives the sharable link for the file. So, I simply added the following
+function to my `~/.zshrc` file:
+
+```
+function dropbox-link() { dropbox.py sharelink "$1" | xclip -selection clipboard } 
+```
+
+Now, I can just go to the directory with the file that I want to share, run
+`dropbox-link <filename>` and simply paste the link in `slack-term`.
+
+---
 
 Now, back to actual work...
