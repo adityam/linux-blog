@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>web-browser</title>
+      <link>https://adityam.github.io/linux-blog/categories/web-browser/</link>
+      <pubDate>Tue, 21 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/categories/web-browser/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Terminal</title>
       <link>https://adityam.github.io/linux-blog/categories/terminal/</link>

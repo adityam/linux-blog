@@ -6,7 +6,21 @@
     <description>Recent content in Posts on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testing out qutebrowser</title>
+      <link>https://adityam.github.io/linux-blog/post/qutebrowser/</link>
+      <pubDate>Tue, 21 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/post/qutebrowser/</guid>
+      <description>&lt;p&gt;I have been cycling between web browsers for the last few years. I used to use
+Opera, but then it became a shell for Chrome, then I started using Chromium,
+but occasonally got huge memory consumption, then I started using Firefox, but
+lately it has become very laggy (to the extent that even scrolling was slow).
+So, after testing a bunch of less commonly used browsers, I have finally
+settled on &lt;a href=&#34;https://qutebrowser.org/&#34;&gt;qutebrowser&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Using Slack from the terminal</title>
       <link>https://adityam.github.io/linux-blog/post/slack-tui/</link>

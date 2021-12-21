@@ -75,63 +75,51 @@
     <div id="content" role="main">
 
 
-<h1>Syncing using rclone</h1>
-<p class="post-time">Posted on August 23, 2020</p>
+<h1>Testing out qutebrowser</h1>
+<p class="post-time">Posted on December 21, 2021</p>
 
-<p>I have been a Dropbox user for over a decade. Part of the attraction for me
-was that it is one of the few synchronization services that fully supports
-Linux. I had it installed on two servers, my office desktop, my laptop, and
-most of my mobile devices. Couple of years ago, my employer moved most of its
-IT services with Microsoft 365, which gives me access to storage space on
-Microsoft OneDrive as well. Plus, I have purchased additional storage on
-Google (for backing up my personal photos). But I never seriously used
-Microsoft OneDrive or Google Drive for synchronization because all my computers
-run Linux and neither of these services had a Linux client.</p>
+<p>I have been cycling between web browsers for the last few years. I used to use
+Opera, but then it became a shell for Chrome, then I started using Chromium,
+but occasonally got huge memory consumption, then I started using Firefox, but
+lately it has become very laggy (to the extent that even scrolling was slow).
+So, after testing a bunch of less commonly used browsers, I have finally
+settled on <a href="https://qutebrowser.org/">qutebrowser</a>.</p>
 
-<p>Now with the pandemic, I am involved in more remote collaborations and some of
-my collaborators prefer Google Drive and some administrative projects are
-managed on Microsoft Teams and use the shared files on Microsoft Teams. At
-first, I was simply viewing these files using a browser but after a while
-manually synchronizing files by uploading using a browser became annoying. So,
-I began to search for ways in which I could synchronize with these services on
-Linux.</p>
+<p>qutebrowser is a keyborad focused browser (which is like a cheery on top for
+me), but what I realy like is the fact that is lightweight. I have been using
+it for a week, and everything seems to work correctly. I&rsquo;ll collect my tips
+and tricks for customizing qutebrowser here.</p>
 
-<p>Enter <a href="https://rclone.org/">rclone</a>, which markets itself as <em>&ldquo;The Swiss army
-knife of cloud storage&rdquo;</em>. Rclone can sync with Microsoft OneDrive, Google
-Drive, and more than 40 other cloud storage products!</p>
+<h3 id="setting-as-default-browser">Setting as default browser</h3>
 
-<p>So far I am only doing manual syncing. First, create a new &ldquo;remote&rdquo; using
-<code>rclone config</code> and then add a cron-job which periodically runs:</p>
-<pre tabindex="0"><code>rclone copy REMOTE:folder local-folder
-rclone copy local-folder REMOTE:folder </code></pre>
-<p>So far, I have used this on projects where the files change once a week and
-there is no risk of conflicts etc., and it has worked flawlessly. Rclone
-provides an option to <a href="https://rclone.org/commands/rclone_mount/">mount a cloud storage service
-locally</a> and I plan to explore that
-if/when I need to work on a project which is updated more frequently.</p>
+<p>Suprisingly, setting qutebrowser as the default browser was a bit unusal.
+The usual:</p>
+<pre tabindex="0"><code>xdg-settings set default-web-browser qutebrowser.desktop</code></pre>
+<p>did not work. A quick test showed that</p>
+<pre tabindex="0"><code>$pacman -Ql qutebrowser| grep desktop
+qutebrowser /usr/share/applications/org.qutebrowser.qutebrowser.desktop</code></pre>
+<p>So, the desktop entry is called <code>org.qutebrowser.qutebrowser.desktop</code>! Once I
+knew this, setting qutebrowser as a default browser was easy:</p>
+<pre tabindex="0"><code>xdg-settings set default-web-browser org.qutebrowser.qutebrowser.desktop</code></pre>
 
 <hr />
 
 <p class="nav">
 
-<a href="/linux-blog/post/trying-fish/">&nbsp;&lt;Trying Fish Shell</a>
+<a href="/linux-blog/post/slack-tui/">&nbsp;&lt;Using Slack from the terminal</a>
 
-
-| <a href="/linux-blog/post/back-to-zsh/">Back to ZSH></a>
 
 </p>
 
 <p>
 This entry was posted in 
 
-<a href="https://adityam.github.io/linux-blog/categories/syncronization">
-  Syncronization</a> 
+<a href="https://adityam.github.io/linux-blog/categories/web-browser">
+  Web-Browser</a> 
 and tagged 
 
-<a href="https://adityam.github.io/linux-blog/tags/rclone">rclone</a>,
-<a href="https://adityam.github.io/linux-blog/tags/dropbox">dropbox</a>,
-<a href="https://adityam.github.io/linux-blog/tags/google-drive">google-drive</a>,
-<a href="https://adityam.github.io/linux-blog/tags/one-drive">one-drive</a>.
+<a href="https://adityam.github.io/linux-blog/tags/qutebrowser">qutebrowser</a>,
+<a href="https://adityam.github.io/linux-blog/tags/xdg-settings">xdg-settings</a>.
  
 </p>
 
