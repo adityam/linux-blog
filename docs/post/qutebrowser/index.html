@@ -101,6 +101,23 @@ qutebrowser /usr/share/applications/org.qutebrowser.qutebrowser.desktop</code></
 <p>So, the desktop entry is called <code>org.qutebrowser.qutebrowser.desktop</code>! Once I
 knew this, setting qutebrowser as a default browser was easy:</p>
 <pre tabindex="0"><code>xdg-settings set default-web-browser org.qutebrowser.qutebrowser.desktop</code></pre>
+<h2 id="update-no-longer-using-qutebrowser">Update: No longer using qutebrowser</h2>
+
+<p>Qutebrowser does not support the standard Chrome/Firefox extensions. For the
+most part, I can live without extensions, but one that I really need is Zotero
+integration. Quite often I&rsquo;ll come across an interesting paper, but don&rsquo;t have
+time to read it. I save (and categorize) such papers right away using Zotero,
+so that I can read them at a later date.</p>
+
+<p>There is a <a href="https://github.com/parchd-1/qutebrowser-zotero">user script for
+zotero</a>, which basically
+parses the current URL, extracts the PDF, and passes it to Zotero. However,
+most of the papers that I read are behind a paywall, so the script cannot
+download the PDFs. So, I have to resort to &ldquo;download paper -&gt; manually import
+to Zotero&rdquo; which is too time consuming.</p>
+
+<p>I am still using Zotero for one off tasks (like previewing output for a
+Hugo-generated website), but it is no longer my daily driver.</p>
 
 <hr />
 

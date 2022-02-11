@@ -103,6 +103,15 @@ function dropbox-link() { dropbox.py sharelink "$1" | xclip -selection clipboard
 Now, I can just go to the directory with the file that I want to share, run
 `dropbox-link <filename>` and simply paste the link in `slack-term`.
 
+## Update: Going back to GUIs
+
+I tested slack-term for about two months, but it was too cumbersome to use.
+Long messages were hard to read, the visual indicators were difficult to see,
+attachments were had to see, and so on. So, I decided to go back to GUI, this
+time with slack's desktop client. 
+
+
+
 ---
 
 Now, back to actual work...
