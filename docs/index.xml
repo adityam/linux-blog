@@ -6,7 +6,17 @@
     <description>Recent content on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Feb 2022 12:35:13 -0500</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testing out Visidata</title>
+      <link>https://adityam.github.io/linux-blog/post/visidata/</link>
+      <pubDate>Fri, 11 Feb 2022 12:35:13 -0500</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/post/visidata/</guid>
+      <description>Normally, I don&amp;rsquo;t have to deal with large spreadsheets. I do use simple spreadsheets for keeping track of budgets/investments/taxes etc., but the only big spreadsheets I encounter are sifting through all applicants for hiring students and assigning grades to students. I struggle through OpenOffice Calc to work through these, because navigating spreadsheets is too slow.
+I recently came across a recommendation for visidata in a thread of HackerNews, and it certainly looks like a program that I should checkout the next time I need to work through a big spreadsheet.</description>
+    </item>
+    
     <item>
       <title>Testing out qutebrowser</title>
       <link>https://adityam.github.io/linux-blog/post/qutebrowser/</link>
@@ -136,15 +146,6 @@ was a Haskell enthusiast and &lt;a href=&#34;https://github.com/jgm/yst&#34;&gt;
 frustrated with Haskell (I use Arch Linux, and it seemed that each upgrade
 would break Haskell install) and moved on. I haven&amp;rsquo;t used Haskell for a while
 now.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Rofi Selectors</title>
-      <link>https://adityam.github.io/linux-blog/post/rofi-selectors/</link>
-      <pubDate>Sat, 09 May 2020 00:00:51 -0400</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/post/rofi-selectors/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/davatorium/rofi&#34;&gt;rofi&lt;/a&gt; is perfect for creating interactive scripts, which I like to call &lt;em&gt;rofi selectors&lt;/em&gt;.  Here are some examples:&lt;/p&gt;</description>
     </item>
     
   </channel>
