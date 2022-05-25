@@ -6,7 +6,43 @@
     <description>Recent content in Tags on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Feb 2022 12:35:13 -0500</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>kitty</title>
+      <link>https://adityam.github.io/linux-blog/tags/kitty/</link>
+      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/kitty/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>links</title>
+      <link>https://adityam.github.io/linux-blog/tags/links/</link>
+      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/links/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>w3m</title>
+      <link>https://adityam.github.io/linux-blog/tags/w3m/</link>
+      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/w3m/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xterm</title>
+      <link>https://adityam.github.io/linux-blog/tags/xterm/</link>
+      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/xterm/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>visidata</title>
       <link>https://adityam.github.io/linux-blog/tags/visidata/</link>
@@ -58,42 +94,6 @@
       <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://adityam.github.io/linux-blog/tags/glob-qualifiers/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>zsh</title>
-      <link>https://adityam.github.io/linux-blog/tags/zsh/</link>
-      <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/zsh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>zshexpn</title>
-      <link>https://adityam.github.io/linux-blog/tags/zshexpn/</link>
-      <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/zshexpn/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cron</title>
-      <link>https://adityam.github.io/linux-blog/tags/cron/</link>
-      <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/cron/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dropbox</title>
-      <link>https://adityam.github.io/linux-blog/tags/dropbox/</link>
-      <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/dropbox/</guid>
       <description></description>
     </item>
     

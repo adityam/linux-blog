@@ -6,7 +6,16 @@
     <description>Recent content in CLI on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Feb 2022 12:35:13 -0500</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/categories/cli/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/categories/cli/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Changing terminal and browser</title>
+      <link>https://adityam.github.io/linux-blog/post/changing-terminal-and-browser/</link>
+      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/post/changing-terminal-and-browser/</guid>
+      <description>I spend a lot of time on the terminal: using alpine to send emails and using vim/neovim to edit tex files and code. For at least a decade if not longer, I have been using UXTerm as my terminal emulator. At some stage I spent some time configuring UXTerm fonts and color schemes to what I like, and I have been using it ever since. Recently, I started experiencing some weird issues with UXTerm, which forced me down a rabbit hole.</description>
+    </item>
+    
     <item>
       <title>Testing out Visidata</title>
       <link>https://adityam.github.io/linux-blog/post/visidata/</link>

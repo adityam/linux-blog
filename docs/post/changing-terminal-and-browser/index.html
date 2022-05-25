@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Tinkering with Linux </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Aditya Mahajan" />
+  <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/styles.css" type="text/css" />
+  <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/paperclear.css" type="text/css" />
+  
+  <script type="module" defer
+    src="//instant.page/3.0.0"
+    integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1">
+  </script>
+
+  <script data-goatcounter="https://adityam.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  
+  
+  
+  <div id="container">
+    <div id="header" role="banner">
+      <span id="title"><a href="https://adityam.github.io/linux-blog">Tinkering with Linux</a></span><br />
+      
+    </div>
+    
+    
+    
+    <div id="menu" role="navigation">
+      <ul class="nav tree">
+        <li>
+        <strong>Recent Posts</strong>
+          <ul>
+            
+            
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/changing-terminal-and-browser/">Changing terminal and browser</a></li>
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/visidata/">Testing out Visidata</a></li>
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/qutebrowser/">Testing out qutebrowser</a></li>
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/slack-tui/">Using Slack from the terminal</a></li>
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/accessing-newest-file-in-directory/">Accessing newest file in a directory</a></li>
+            
+            
+          </ul>
+        </li>
+        <li><strong><a href="https://adityam.github.io/linux-blog/post">All Posts</a></strong></li>
+      </ul>
+    </div>
+    
+    
+    
+    <div id="content" role="main">
+
+
+<h1>Changing terminal and browser</h1>
+<p class="post-time">Posted on May 24, 2022</p>
+
+<p>I spend a lot of time on the terminal: using alpine to send emails and using
+vim/neovim to edit tex files and code. For at least a decade if not longer, I
+have been using UXTerm as my terminal emulator. At some stage I spent some
+time configuring UXTerm fonts and color schemes to what I like, and I have
+been using it ever since. Recently, I started experiencing some weird issues
+with UXTerm, which forced me down a rabbit hole.</p>
+
+<p>I did not use my office workstation for almost a year and a half due to covid.
+When I returned back, I did a system update, and started working. But every so
+often (once an hour or so), I started seeing weird flickering of the terminal.
+This was particularly common when I was composing emails (neovim open inside
+alpine). Most of the times, this scrolling stopped on pressing <code>CTRL-L</code> but it
+was annoying to say the least. I tried searching online for what was
+happening, but could not find a solution that worked. Surprisingly, my laptop,
+which has the same distro and the same setup never had an isse.</p>
+
+<p>Anyways, I thought that it was time to try out a new terminal emulator. After
+reading a bit about the different options, <a href="https://www.reddit.com/r/archlinux/comments/n9noje/alacritty_vs_kitty/gxqne6n">this post</a> of the
+notcurses author convinced me to test <a href="https://sw.kovidgoyal.net/kitty/">kitty</a>
+first. After spending half an hour going over the documentation, I could
+configure everything (fonts, colorscheme, copy and paste behavior) as I liked.
+I have been using it on my office workstation for 3-4 hours and no more
+flickering.</p>
+
+<p>The story would have ended with &ldquo;and they lived happily ever after&rdquo;, until I
+noticed that images where not displayed when viewing HTML emails in alpine. I
+am sure you are screaming, &ldquo;What!&rdquo;. So, let me take a step back and explain.</p>
+
+<p>I use alpine (which is a text based email program) for reading emails.
+Occasionally, I get an email which has some images or HTML formatting (such as
+tables), which doesn&rsquo;t display nicely in alpine. In such cases, I simply do
+&lsquo;V&rsquo; + &lsquo;Down-Arrow&rsquo; + &lsquo;Enter&rsquo; to display the <code>text/html</code> portion of the email.
+I have configured my <code>mailcap</code> file to display <code>text/html</code> using <code>w3m</code>, which
+is a text-based browser which can display inline images in the terminal. The
+inline image display of <code>w3m</code> was not working on kitty.</p>
+
+<p>Back to DuckDuckGo. There was <a href="https://github.com/kovidgoyal/kitty/issues/851">an issue</a> on kitty&rsquo;s github page where
+the author essentially said that w3m uses a hack to display images in the
+terminal and he is not going to support that hack. So, time to see if there
+are any other text-based browsers that are still maintained and support inline
+images.</p>
+
+<p>In the past I had used <a href="https://lynx.invisible-island.net/">lynx</a>, but that doesn&rsquo;t support inline images.
+<a href="http://www.elinks.cz/">elinks</a> hasn&rsquo;t been updated in almost a decade, but <a href="http://links.twibright.com/">links</a> is
+actively maintained and supports inline images!</p>
+
+<p>So, I installed <code>links</code> using <code>pacman -S links</code> and tried to open a website
+with images:</p>
+<pre tabindex="0"><code>$links -g &lt;website&gt;
+Graphics not enabled when compiling</code></pre>
+<p>Hmm&hellip;, so I downloaded the <code>PKGBUILD</code> of links using</p>
+<pre tabindex="0"><code>asp checkout links</code></pre>
+<p>and realized that <code>links</code> <a href="https://github.com/archlinux/svntogit-packages/blob/f86750a7ef66c071873cb580de45d03b9fd13cac/trunk/PKGBUILD#L35-L50">PKGBUILD does something unusual</a>. It first compiles
+the package with graphics support, renames the executable as <code>xlinks</code> and then
+recompiles without graphics support. So, all I needed to do was use <code>xlinks
+-g</code> in my <code>mailcap</code>. But &hellip; that opens a new X window to display the results!
+So, effectively <code>xlinks -g</code> is a lightweight browser.</p>
+
+<p>The interesting thing is that I did not notice that <code>links -g</code> is a graphical
+browser rather than a text browser until I wrote this blog post. The reason is
+that I use a tiling windows manager (i3m) and normally the workspace where I
+am running alpine is two columns of windows: one with email and another
+terminal and the other with slack and a few other terminal. Both columns are
+in stacked mode. So, when <code>xlinks -g</code> opened a new X window, it completely
+covered alpine and I thought that the content was being displayed as part of
+alpine.</p>
+
+<p>Now, the reason that I pipe email messages to a text-based browser rather than
+firefox is to keep distractions in check. Typically, with text based browsers,
+I just read the message and don&rsquo;t start browsing the web. I am going to see if
+I can maintain the same distraction free habit with <code>xlinks</code>. If not, then
+I&rsquo;ll be back to square one.</p>
+
+
+<hr />
+
+<p class="nav">
+
+<a href="/linux-blog/post/visidata/">&nbsp;&lt;Testing out Visidata</a>
+
+
+</p>
+
+<p>
+This entry was posted in 
+
+<a href="https://adityam.github.io/linux-blog/categories/cli">
+  CLI</a> 
+and tagged 
+
+<a href="https://adityam.github.io/linux-blog/tags/xterm">xterm</a>,
+<a href="https://adityam.github.io/linux-blog/tags/kitty">kitty</a>,
+<a href="https://adityam.github.io/linux-blog/tags/links">links</a>,
+<a href="https://adityam.github.io/linux-blog/tags/w3m">w3m</a>.
+ 
+</p>
+
+<div id="disqus_thread"></div>
+<div id="disqus_comments">
+  <button onclick="load_disqus()">Show Comments</button>
+</div>
+<script>
+    function load_disqus() { 
+        var d = document, s = d.createElement('script');
+        s.src = '//adi-linux-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        var load_button = document.getElementById('disqus_comments');
+        load_button.parentNode.removeChild(load_button);
+    };
+   (function () {
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//adi-linux-blog.disqus.com/count.js';
+        (d.head || d.body).appendChild(s);
+    }()); 
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+    </div>
+    
+    
+    
+    <div id="pied" role="contentinfo">
+      Content distributed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license
+    </div>
+  </div>
+</body>
+</html>
+
+

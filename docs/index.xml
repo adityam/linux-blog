@@ -6,7 +6,16 @@
     <description>Recent content on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Feb 2022 12:35:13 -0500</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Changing terminal and browser</title>
+      <link>https://adityam.github.io/linux-blog/post/changing-terminal-and-browser/</link>
+      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/post/changing-terminal-and-browser/</guid>
+      <description>I spend a lot of time on the terminal: using alpine to send emails and using vim/neovim to edit tex files and code. For at least a decade if not longer, I have been using UXTerm as my terminal emulator. At some stage I spent some time configuring UXTerm fonts and color schemes to what I like, and I have been using it ever since. Recently, I started experiencing some weird issues with UXTerm, which forced me down a rabbit hole.</description>
+    </item>
+    
     <item>
       <title>Testing out Visidata</title>
       <link>https://adityam.github.io/linux-blog/post/visidata/</link>
@@ -132,20 +141,6 @@ my setup. Lately, I saw multiple suggestions for
 &lt;a href=&#34;https://github.com/zsh-users/zsh-autosuggestions&#34;&gt;zsh-autosuggestions&lt;/a&gt;, which
 has a tag-line &amp;ldquo;Fish-like autosuggestions for zsh&amp;rdquo;. Imitation is the best form
 of flattery. So, I thought of giving fish a shot.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Installing and using multiple versions of a library</title>
-      <link>https://adityam.github.io/linux-blog/post/multiple-versions-of-a-library/</link>
-      <pubDate>Wed, 13 May 2020 13:07:31 -0400</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/post/multiple-versions-of-a-library/</guid>
-      <description>&lt;p&gt;I use a Haskell static website generator called &lt;a href=&#34;https://github.com/jgm/yst&#34;&gt;yst&lt;/a&gt; for generating my
-homepage. Why? Partly because when I first created my professional webpage, I
-was a Haskell enthusiast and &lt;a href=&#34;https://github.com/jgm/yst&#34;&gt;yst&lt;/a&gt; seemed cool. After a while, I got
-frustrated with Haskell (I use Arch Linux, and it seemed that each upgrade
-would break Haskell install) and moved on. I haven&amp;rsquo;t used Haskell for a while
-now.&lt;/p&gt;</description>
     </item>
     
   </channel>

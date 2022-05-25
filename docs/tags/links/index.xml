@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>links on Tinkering with Linux</title>
+    <link>https://adityam.github.io/linux-blog/tags/links/</link>
+    <description>Recent content in links on Tinkering with Linux</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 24 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/links/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Changing terminal and browser</title>
+      <link>https://adityam.github.io/linux-blog/post/changing-terminal-and-browser/</link>
+      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/post/changing-terminal-and-browser/</guid>
+      <description>I spend a lot of time on the terminal: using alpine to send emails and using vim/neovim to edit tex files and code. For at least a decade if not longer, I have been using UXTerm as my terminal emulator. At some stage I spent some time configuring UXTerm fonts and color schemes to what I like, and I have been using it ever since. Recently, I started experiencing some weird issues with UXTerm, which forced me down a rabbit hole.</description>
+    </item>
+    
+  </channel>
+</rss>
