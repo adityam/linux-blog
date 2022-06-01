@@ -9,7 +9,6 @@
   <meta name="author" content="Aditya Mahajan" />
   <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/styles.css" type="text/css" />
   <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/paperclear.css" type="text/css" />
-  <link rel="alternate" type="application/rss+xml" href="https://adityam.github.io/linux-blog/tags/yst/index.xml" title="Tinkering with Linux" />
   
   <script type="module" defer
     src="//instant.page/3.0.0"
@@ -75,16 +74,70 @@
     
     <div id="content" role="main">
 
-<h1>yst</h1>
 
-<ul>
-  
-      <li>
-        13 May, 2020 : 
-        <a href="https://adityam.github.io/linux-blog/post/multiple-versions-of-a-library/">Installing and using multiple versions of a library</a>
-      </li>
-  
-</ul>
+<h1>Local config for kitty</h1>
+<p class="post-time">Posted on June 1, 2022</p>
+
+<p>As I mentioned in the last <a href="../changing-terminal-and-browser">post</a>, I am
+testing out <a href="https://sw.kovidgoyal.net/kitty/">kitty</a> as my terminal emulator instead of UXTerm. So for
+everything has been smooth sailing except for one minor issue. On my work
+desktop, I want fontsize 11 but on my laptop, I want fontsize 14. This is a combination of resolution and physical size of the two monitors. Reading the documentation of kitty.conf, it was not clear how to set conditional values for the variables.</p>
+
+<p>On a whim, I tried to see if kitty.conf can read environmental variables and
+it can! So I created two config files, <code>desktop-hostname.conf</code> and
+<code>laptop-hostname.conf</code>, where the names correspond to the value of <code>$HOST</code> on
+the two systems. Then, I end my <code>kitty.conf</code> with</p>
+<pre tabindex="0"><code>include ./$HOST.conf</code></pre>
+<p>I can now add the settings for my desktop in the <code>desktop-hostname.conf</code> file
+and the settings for my laptop on <code>laptop-hostname.conf</code> file.</p>
+
+
+<hr />
+
+<p class="nav">
+
+<a href="/linux-blog/post/changing-terminal-and-browser/">&nbsp;&lt;Changing terminal and browser</a>
+
+
+</p>
+
+<p>
+This entry was posted in 
+
+<a href="https://adityam.github.io/linux-blog/categories/cli">
+  CLI</a> 
+and tagged 
+
+<a href="https://adityam.github.io/linux-blog/tags/kitty">kitty</a>,
+<a href="https://adityam.github.io/linux-blog/tags/configuration">configuration</a>.
+ 
+</p>
+
+<div id="disqus_thread"></div>
+<div id="disqus_comments">
+  <button onclick="load_disqus()">Show Comments</button>
+</div>
+<script>
+    function load_disqus() { 
+        var d = document, s = d.createElement('script');
+        s.src = '//adi-linux-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        var load_button = document.getElementById('disqus_comments');
+        load_button.parentNode.removeChild(load_button);
+    };
+   (function () {
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//adi-linux-blog.disqus.com/count.js';
+        (d.head || d.body).appendChild(s);
+    }()); 
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
 
     </div>
     
@@ -96,7 +149,5 @@
   </div>
 </body>
 </html>
-
-
 
 

@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Local config for kitty</title>
+      <link>https://adityam.github.io/linux-blog/post/kitty-local-config/</link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/post/kitty-local-config/</guid>
+      <description>As I mentioned in the last post, I am testing out kitty as my terminal emulator instead of UXTerm. So for everything has been smooth sailing except for one minor issue. On my work desktop, I want fontsize 11 but on my laptop, I want fontsize 14. This is a combination of resolution and physical size of the two monitors. Reading the documentation of kitty.conf, it was not clear how to set conditional values for the variables.</description>
+    </item>
+    
     <item>
       <title>Changing terminal and browser</title>
       <link>https://adityam.github.io/linux-blog/post/changing-terminal-and-browser/</link>
@@ -127,20 +136,6 @@ Microsoft OneDrive as well. Plus, I have purchased additional storage on
 Google (for backing up my personal photos). But I never seriously used
 Microsoft OneDrive or Google Drive for synchronization because all my computers
 run Linux and neither of these services had a Linux client.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Trying Fish Shell</title>
-      <link>https://adityam.github.io/linux-blog/post/trying-fish/</link>
-      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/post/trying-fish/</guid>
-      <description>&lt;p&gt;I have been using &lt;code&gt;zsh&lt;/code&gt; as my shell for almost 15 years. I spent ages
-configuring it in the beginning and for the most part I have been happy with
-my setup. Lately, I saw multiple suggestions for
-&lt;a href=&#34;https://github.com/zsh-users/zsh-autosuggestions&#34;&gt;zsh-autosuggestions&lt;/a&gt;, which
-has a tag-line &amp;ldquo;Fish-like autosuggestions for zsh&amp;rdquo;. Imitation is the best form
-of flattery. So, I thought of giving fish a shot.&lt;/p&gt;</description>
     </item>
     
   </channel>

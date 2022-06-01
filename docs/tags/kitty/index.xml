@@ -6,7 +6,16 @@
     <description>Recent content in kitty on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/kitty/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/kitty/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Local config for kitty</title>
+      <link>https://adityam.github.io/linux-blog/post/kitty-local-config/</link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/post/kitty-local-config/</guid>
+      <description>As I mentioned in the last post, I am testing out kitty as my terminal emulator instead of UXTerm. So for everything has been smooth sailing except for one minor issue. On my work desktop, I want fontsize 11 but on my laptop, I want fontsize 14. This is a combination of resolution and physical size of the two monitors. Reading the documentation of kitty.conf, it was not clear how to set conditional values for the variables.</description>
+    </item>
+    
     <item>
       <title>Changing terminal and browser</title>
       <link>https://adityam.github.io/linux-blog/post/changing-terminal-and-browser/</link>

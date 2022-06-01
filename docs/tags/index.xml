@@ -6,11 +6,20 @@
     <description>Recent content in Tags on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>configuration</title>
+      <link>https://adityam.github.io/linux-blog/tags/configuration/</link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/configuration/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>kitty</title>
       <link>https://adityam.github.io/linux-blog/tags/kitty/</link>
-      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://adityam.github.io/linux-blog/tags/kitty/</guid>
       <description></description>
@@ -85,15 +94,6 @@
       <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://adityam.github.io/linux-blog/tags/slack-term/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>glob qualifiers</title>
-      <link>https://adityam.github.io/linux-blog/tags/glob-qualifiers/</link>
-      <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/glob-qualifiers/</guid>
       <description></description>
     </item>
     
