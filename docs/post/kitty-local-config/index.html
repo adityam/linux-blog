@@ -87,9 +87,14 @@ desktop, I want fontsize 11 but on my laptop, I want fontsize 14. This is a comb
 it can! So I created two config files, <code>desktop-hostname.conf</code> and
 <code>laptop-hostname.conf</code>, where the names correspond to the value of <code>$HOST</code> on
 the two systems. Then, I end my <code>kitty.conf</code> with</p>
-<pre tabindex="0"><code>include ./$HOST.conf</code></pre>
+<pre tabindex="0"><code>include ./${HOSTNAME}.conf</code></pre>
 <p>I can now add the settings for my desktop in the <code>desktop-hostname.conf</code> file
 and the settings for my laptop on <code>laptop-hostname.conf</code> file.</p>
+
+<p>Note that for this to work, <code>HOSTNAME</code> should be a <em>system wide</em> environmental
+variable. What that means is that it should be set in <code>/etc/environment</code>.
+Setting the variables in <code>$HOME/.profile</code> would not work, as that file is
+sourced after kitty is launched.</p>
 
 
 <hr />

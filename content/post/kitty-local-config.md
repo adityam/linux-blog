@@ -19,11 +19,16 @@ it can! So I created two config files, `desktop-hostname.conf` and
 the two systems. Then, I end my `kitty.conf` with
 
 ```
-include ./$HOST.conf
+include ./${HOSTNAME}.conf
 ```
 
 I can now add the settings for my desktop in the `desktop-hostname.conf` file
 and the settings for my laptop on `laptop-hostname.conf` file. 
+
+Note that for this to work, `HOSTNAME` should be a _system wide_ environmental
+variable. What that means is that it should be set in `/etc/environment`.
+Setting the variables in `$HOME/.profile` would not work, as that file is
+sourced after kitty is launched.
 
 
 [kitty]: https://sw.kovidgoyal.net/kitty/
