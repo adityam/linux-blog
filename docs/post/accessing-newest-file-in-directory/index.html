@@ -38,6 +38,11 @@
             
             
             
+            <li><a href="/linux-blog/post/signing-pdf/">Signing PDFs via command line</a></li>
+            
+            
+            
+            
             
             
             
@@ -59,11 +64,6 @@
             <li><a href="/linux-blog/post/qutebrowser/">Testing out qutebrowser</a></li>
             
             
-            
-            
-            <li><a href="/linux-blog/post/slack-tui/">Using Slack from the terminal</a></li>
-            
-            
           </ul>
         </li>
         <li><strong><a href="https://adityam.github.io/linux-blog/post">All Posts</a></strong></li>
@@ -80,48 +80,52 @@
 
 <p>There are many instances where I want to access the most recent file in a
 directory:</p>
-
 <ul>
-<li><p>By default, my browser saves PDF files (and other downloaded files, for that
+<li>
+<p>By default, my browser saves PDF files (and other downloaded files, for that
 matter) in <code>~/Downloads</code>. Rather than navigating to a more appropriate
 directory via the GUI, I find it more convenient to <code>cd</code> to the appropriate
 directory on the command line (where <a href="https://github.com/ajeetdsouza/zoxide">zoxide</a> is an amazing tool to jump
-to commonly used directories) and simply move the file there.</p></li>
-
-<li><p>I use <a href="https://dotepub.com">a browser plugin</a> to convert long web articles to <code>.epub</code> so
+to commonly used directories) and simply move the file there.</p>
+</li>
+<li>
+<p>I use <a href="https://dotepub.com">a browser plugin</a> to convert long web articles to <code>.epub</code> so
 that I can read them later on my eInk tablet. This plugin saves files in
-<code>~/Downloads</code> and has no option to change the downloads directory.</p></li>
-
-<li><p>I run a <code>cron</code> script that downloads and packages the latest version of
+<code>~/Downloads</code> and has no option to change the downloads directory.</p>
+</li>
+<li>
+<p>I run a <code>cron</code> script that downloads and packages the latest version of
 ConTeXt by running <code>makepkg</code> in a directory containing the <code>PKGBUILD</code> file
 for <a href="https://aur.archlinux.org/packages/luametatex/"><code>luametatex</code></a>. However, I don&rsquo;t automatically upgrade the
 package. I always prefer to upgrade packages manually when I know that I
 have the time to fix the upgrade if something breaks (happens rarely, but I
 don&rsquo;t want something to break half an hour before a deadline). When
 updating, I want to find the latest <code>luametatex-date.pkg.tar.gz</code> file in the
-directory.</p></li>
+directory.</p>
+</li>
 </ul>
-
 <p>I recently discovered <a href="https://man.archlinux.org/man/extra/zsh/zshexpn.1.en#Glob_Qualifiers">glob qualifiers</a>, which is perfect for these
 tasks. In the shell <code>*</code> expands to all files and directories. Zsh has options
 to qualify which files needs to be expanded. In particular:</p>
-
 <ul>
 <li><code>*(.)</code> expands all files (i.e., excludes directories)</li>
 <li><code>*(.om)</code> expands all files and sorts them descending order according to
 modification time</li>
 <li><code>*(.om[1])</code> selects the first such file.</li>
 </ul>
-
 <p>Thus, for my first two use cases, I can use:</p>
-<pre tabindex="0"><code>z desired-directory &amp;&amp; mv ~/Downloads/*(.om[1]) ./</code></pre>
+<pre><code>z desired-directory &amp;&amp; mv ~/Downloads/*(.om[1]) ./
+</code></pre>
 <p>For the third use case:</p>
-<pre tabindex="0"><code>z luametatex &amp;&amp; sudo pamcan -U *(.om[1])</code></pre>
+<pre><code>z luametatex &amp;&amp; sudo pamcan -U *(.om[1])
+</code></pre>
 <p>Sometimes, I want to use the latest file matching a particular pattern (say,
 the latest PDF file with <code>pattern</code> in the title). In such cases, I can use:</p>
-<pre tabindex="0"><code>mv ~/Downloads/*pattern*.pdf(om[1]) ./</code></pre>
+<pre><code>mv ~/Downloads/*pattern*.pdf(om[1]) ./
+</code></pre>
 <p>Or, if I want to see the name of the file before moving it:</p>
-<pre tabindex="0"><code>mv ~/Downloads/*pattern*.pdf^Xm</code></pre>
+<pre><code>mv ~/Downloads/*pattern*.pdf^Xm
+</code></pre>
 <p>(where <code>^Xm</code> means press <code>CTRL+X m</code>). Search for <code>_most_recent_file</code> in
 <a href="https://man.archlinux.org/man/extra/zsh/zshcompsys.1.en">zshcompsys</a> for details.</p>
 

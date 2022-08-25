@@ -37,7 +37,7 @@ directory:&lt;/p&gt;</description>
       <guid>https://adityam.github.io/linux-blog/post/back-to-zsh/</guid>
       <description>As I mentioned in a previous post, I started using fish after using zsh for about 15 years. After working exclusively on fish for about 3 months, I am now back to zsh.
 In the end, there was nothing inherently missing in fish, but fish just did a few minor things differently which began to get annoying.
- Fish&amp;rsquo;s tab-completion first shows a short list of option (top 10 or so) and you have to press tab twice to see the whole list.</description>
+Fish&amp;rsquo;s tab-completion first shows a short list of option (top 10 or so) and you have to press tab twice to see the whole list.</description>
     </item>
     
     <item>

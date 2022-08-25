@@ -38,6 +38,11 @@
             
             
             
+            <li><a href="/linux-blog/post/signing-pdf/">Signing PDFs via command line</a></li>
+            
+            
+            
+            
             
             
             
@@ -57,11 +62,6 @@
             
             
             <li><a href="/linux-blog/post/qutebrowser/">Testing out qutebrowser</a></li>
-            
-            
-            
-            
-            <li><a href="/linux-blog/post/slack-tui/">Using Slack from the terminal</a></li>
             
             
           </ul>
@@ -84,7 +84,6 @@ have been using UXTerm as my terminal emulator. At some stage I spent some
 time configuring UXTerm fonts and color schemes to what I like, and I have
 been using it ever since. Recently, I started experiencing some weird issues
 with UXTerm, which forced me down a rabbit hole.</p>
-
 <p>I did not use my office workstation for almost a year and a half due to covid.
 When I returned back, I did a system update, and started working. But every so
 often (once an hour or so), I started seeing weird flickering of the terminal.
@@ -93,7 +92,6 @@ alpine). Most of the times, this scrolling stopped on pressing <code>CTRL-L</cod
 was annoying to say the least. I tried searching online for what was
 happening, but could not find a solution that worked. Surprisingly, my laptop,
 which has the same distro and the same setup never had an isse.</p>
-
 <p>Anyways, I thought that it was time to try out a new terminal emulator. After
 reading a bit about the different options, <a href="https://www.reddit.com/r/archlinux/comments/n9noje/alacritty_vs_kitty/gxqne6n">this post</a> of the
 notcurses author convinced me to test <a href="https://sw.kovidgoyal.net/kitty/">kitty</a>
@@ -101,11 +99,9 @@ first. After spending half an hour going over the documentation, I could
 configure everything (fonts, colorscheme, copy and paste behavior) as I liked.
 I have been using it on my office workstation for 3-4 hours and no more
 flickering.</p>
-
 <p>The story would have ended with &ldquo;and they lived happily ever after&rdquo;, until I
 noticed that images where not displayed when viewing HTML emails in alpine. I
 am sure you are screaming, &ldquo;What!&rdquo;. So, let me take a step back and explain.</p>
-
 <p>I use alpine (which is a text based email program) for reading emails.
 Occasionally, I get an email which has some images or HTML formatting (such as
 tables), which doesn&rsquo;t display nicely in alpine. In such cases, I simply do
@@ -113,29 +109,24 @@ tables), which doesn&rsquo;t display nicely in alpine. In such cases, I simply d
 I have configured my <code>mailcap</code> file to display <code>text/html</code> using <code>w3m</code>, which
 is a text-based browser which can display inline images in the terminal. The
 inline image display of <code>w3m</code> was not working on kitty.</p>
-
 <p>Back to DuckDuckGo. There was <a href="https://github.com/kovidgoyal/kitty/issues/851">an issue</a> on kitty&rsquo;s github page where
 the author essentially said that w3m uses a hack to display images in the
 terminal and he is not going to support that hack. So, time to see if there
 are any other text-based browsers that are still maintained and support inline
 images.</p>
-
 <p>In the past I had used <a href="https://lynx.invisible-island.net/">lynx</a>, but that doesn&rsquo;t support inline images.
 <a href="http://www.elinks.cz/">elinks</a> hasn&rsquo;t been updated in almost a decade, but <a href="http://links.twibright.com/">links</a> is
 actively maintained and supports inline images!</p>
-
 <p>So, I installed <code>links</code> using <code>pacman -S links</code> and tried to open a website
 with images:</p>
 <pre tabindex="0"><code>$links -g &lt;website&gt;
-Graphics not enabled when compiling</code></pre>
-<p>Hmm&hellip;, so I downloaded the <code>PKGBUILD</code> of links using</p>
-<pre tabindex="0"><code>asp checkout links</code></pre>
-<p>and realized that <code>links</code> <a href="https://github.com/archlinux/svntogit-packages/blob/f86750a7ef66c071873cb580de45d03b9fd13cac/trunk/PKGBUILD#L35-L50">PKGBUILD does something unusual</a>. It first compiles
+Graphics not enabled when compiling
+</code></pre><p>Hmm&hellip;, so I downloaded the <code>PKGBUILD</code> of links using</p>
+<pre tabindex="0"><code>asp checkout links
+</code></pre><p>and realized that <code>links</code> <a href="https://github.com/archlinux/svntogit-packages/blob/f86750a7ef66c071873cb580de45d03b9fd13cac/trunk/PKGBUILD#L35-L50">PKGBUILD does something unusual</a>. It first compiles
 the package with graphics support, renames the executable as <code>xlinks</code> and then
-recompiles without graphics support. So, all I needed to do was use <code>xlinks
--g</code> in my <code>mailcap</code>. But &hellip; that opens a new X window to display the results!
+recompiles without graphics support. So, all I needed to do was use <code>xlinks -g</code> in my <code>mailcap</code>. But &hellip; that opens a new X window to display the results!
 So, effectively <code>xlinks -g</code> is a lightweight browser.</p>
-
 <p>The interesting thing is that I did not notice that <code>links -g</code> is a graphical
 browser rather than a text browser until I wrote this blog post. The reason is
 that I use a tiling windows manager (i3m) and normally the workspace where I
@@ -144,7 +135,6 @@ terminal and the other with slack and a few other terminal. Both columns are
 in stacked mode. So, when <code>xlinks -g</code> opened a new X window, it completely
 covered alpine and I thought that the content was being displayed as part of
 alpine.</p>
-
 <p>Now, the reason that I pipe email messages to a text-based browser rather than
 firefox is to keep distractions in check. Typically, with text based browsers,
 I just read the message and don&rsquo;t start browsing the web. I am going to see if

@@ -38,6 +38,11 @@
             
             
             
+            <li><a href="/linux-blog/post/signing-pdf/">Signing PDFs via command line</a></li>
+            
+            
+            
+            
             
             
             
@@ -57,11 +62,6 @@
             
             
             <li><a href="/linux-blog/post/qutebrowser/">Testing out qutebrowser</a></li>
-            
-            
-            
-            
-            <li><a href="/linux-blog/post/slack-tui/">Using Slack from the terminal</a></li>
             
             
           </ul>
@@ -84,14 +84,13 @@ was a Haskell enthusiast and <a href="https://github.com/jgm/yst">yst</a> seemed
 frustrated with Haskell (I use Arch Linux, and it seemed that each upgrade
 would break Haskell install) and moved on. I haven&rsquo;t used Haskell for a while
 now.</p>
-
 <p>But, I had a critical resource, my webpage, which depended on a Haskell
 library. I thought that Haskell generated statically linked binaries, so I
 simply copied the <code>yst</code> binary and kept it in my <code>PATH</code>. This worked for
 almost 8 years during which I upgraded 3 systems (all using Arch Linux). Until
 today, when <code>yst</code> stopped working with the following error message:</p>
-<pre tabindex="0"><code>yst: error while loading shared libraries: libffi.so.6: cannot open shared object file: No such file or directory</code></pre>
-<p>Darn! It turns out that I had a dynamically linked binary rather than a
+<pre tabindex="0"><code>yst: error while loading shared libraries: libffi.so.6: cannot open shared object file: No such file or directory
+</code></pre><p>Darn! It turns out that I had a dynamically linked binary rather than a
 statically linked library.</p>
 <pre tabindex="0"><code>$ldd =yst
         linux-vdso.so.1 (0x00007ffc5696c000)
@@ -104,22 +103,18 @@ statically linked library.</p>
         libm.so.6 =&gt; /usr/lib/libm.so.6 (0x00007f3026577000)
         libffi.so.6 =&gt; not found
         libc.so.6 =&gt; /usr/lib/libc.so.6 (0x00007f30263b1000)
-        /lib64/ld-linux-x86-64.so.2 =&gt; /usr/lib64/ld-linux-x86-64.so.2 (0x00007f3026921000)</code></pre>
-<p>So, I tried to install <code>yst</code> using a current version of Haskell. Both <code>cabal
-install yst</code> and <code>stack install yst</code> failed. Basically, the only way to
+        /lib64/ld-linux-x86-64.so.2 =&gt; /usr/lib64/ld-linux-x86-64.so.2 (0x00007f3026921000)
+</code></pre><p>So, I tried to install <code>yst</code> using a current version of Haskell. Both <code>cabal install yst</code> and <code>stack install yst</code> failed. Basically, the only way to
 satisfy all the constraints for building <code>yst</code> is to use a lower version of
 the <code>base</code> library. As the error message of <code>yst</code> so succinctly put it:</p>
-
 <blockquote>
 <ul>
 <li>Build requires unattainable version of base. Since base is a part of GHC, you
 most likely need to use a different GHC version with the matching base.</li>
 </ul>
 </blockquote>
-
 <p>I could have opened a bug request for <code>yst</code> but thought that a simpler fix
 will be to simply download the older version of <code>libffi</code>.</p>
-
 <p>So, I installed the <code>downgrade</code> package from AUR and ran</p>
 <pre tabindex="0"><code>$downgrade libffi
 Available packages:
@@ -132,17 +127,16 @@ Available packages:
 +  6)  libffi    3.3    3  x86_64  (remote)
 +  7)  libffi    3.3    3  x86_64  (local)
 
-select a package by number:</code></pre>
-<p>I selected <code>3</code>, which is the latest version of libffi 3.2.1 and installed it.
+select a package by number:
+</code></pre><p>I selected <code>3</code>, which is the latest version of libffi 3.2.1 and installed it.
 Now, <code>yst</code> was working, but almost all other programs were not. So, I copied</p>
-<pre tabindex="0"><code>/usr/lib/libffi.so.6</code></pre>
-<p>to <code>$HOME/lib</code> and upgraded <code>libffi</code> (using the <code>downgrade</code> program again).
+<pre tabindex="0"><code>/usr/lib/libffi.so.6
+</code></pre><p>to <code>$HOME/lib</code> and upgraded <code>libffi</code> (using the <code>downgrade</code> program again).
 Now, I was back to square one, but I had the required version of <code>libffi</code>
 needed to run <code>yst</code>. So, instead of running <code>yst</code> directly, I can run</p>
-<pre tabindex="0"><code>LD_LIBRARY_PATH=$(HOME)/lib/ yst</code></pre>
-<p>which uses the old version of libffi for yst, and the current version of
+<pre tabindex="0"><code>LD_LIBRARY_PATH=$(HOME)/lib/ yst
+</code></pre><p>which uses the old version of libffi for yst, and the current version of
 libffi for everything else. Phew!</p>
-
 <p>This also reminds me that at some stage, I should move my professional webpage
 to a more modern static website generator, like Hugo used for this blog. Another project for a rainy day.</p>
 

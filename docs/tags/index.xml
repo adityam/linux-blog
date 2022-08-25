@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>foxitreader</title>
+      <link>https://adityam.github.io/linux-blog/tags/foxitreader/</link>
+      <pubDate>Thu, 25 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/foxitreader/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mypdfsigner</title>
+      <link>https://adityam.github.io/linux-blog/tags/mypdfsigner/</link>
+      <pubDate>Thu, 25 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/mypdfsigner/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PDF</title>
+      <link>https://adityam.github.io/linux-blog/tags/pdf/</link>
+      <pubDate>Thu, 25 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/pdf/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>configuration</title>
       <link>https://adityam.github.io/linux-blog/tags/configuration/</link>
@@ -67,33 +94,6 @@
       <pubDate>Tue, 21 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://adityam.github.io/linux-blog/tags/qutebrowser/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>xdg-settings</title>
-      <link>https://adityam.github.io/linux-blog/tags/xdg-settings/</link>
-      <pubDate>Tue, 21 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/xdg-settings/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>slack</title>
-      <link>https://adityam.github.io/linux-blog/tags/slack/</link>
-      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/slack/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>slack-term</title>
-      <link>https://adityam.github.io/linux-blog/tags/slack-term/</link>
-      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/slack-term/</guid>
       <description></description>
     </item>
     

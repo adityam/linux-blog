@@ -38,6 +38,11 @@
             
             
             
+            <li><a href="/linux-blog/post/signing-pdf/">Signing PDFs via command line</a></li>
+            
+            
+            
+            
             
             
             
@@ -57,11 +62,6 @@
             
             
             <li><a href="/linux-blog/post/qutebrowser/">Testing out qutebrowser</a></li>
-            
-            
-            
-            
-            <li><a href="/linux-blog/post/slack-tui/">Using Slack from the terminal</a></li>
             
             
           </ul>
@@ -87,19 +87,16 @@ And every time I would read one of these reports, I would think, &ldquo;Hmm&hell
 I should start using a proper backup solution.&rdquo; I finally bit the bullet and
 purchased some storage from <a href="http://rsync.net">rsync.net</a> and set up a back up
 system. Yay!</p>
-
 <p>I chose <a href="http://rsync.net">rsync.net</a> because they have a completely no nonsense website
 (no marketing gimmicks and an honest technical description of what they
 provide). And I have read many blogs and posts where people recommend
 <a href="http://rsync.net">rsync.net</a>, and I have never read a negative review.</p>
-
 <p>My current synchronization setup is as follows. There are two directories that
 I sync between my desktop and laptop: <code>Projects</code> (which contains my active
 projects) and <code>backup</code> (which contains zipped copies of my old projects).
 The <code>Projects</code> directory is sym-linked to <code>Dropbox</code> directory, and key in sync
 via Dropbox. The <code>backup</code> directory is kept in sync via <code>unison</code> (which I find
 to be faster than raw <code>rsync</code>) and <code>cron</code>.</p>
-
 <p>It was relatively easy to add <a href="http://rsync.net">rsync.net</a> as another synchronization
 host. To do that, I created a file <code>$HOME/.unison/rsync.prf</code> on my desktop:</p>
 <pre tabindex="0"><code>root = /home/username
@@ -116,36 +113,31 @@ logfile = .unison/rsync.log
 batch = true
 
 ignore = Path Dropbox/.dropbox
-ignore = Path Dropbox/.dropbox.cache</code></pre>
-<p>Most of the preferences are pretty self explanatory. The only non-obvious line
+ignore = Path Dropbox/.dropbox.cache
+</code></pre><p>Most of the preferences are pretty self explanatory. The only non-obvious line
 is <code>force = /home/username</code>, which tells <code>unison</code> that in case of a file
 conflict, overwrite the file from my desktop to <code>rsync.net</code>. This is slightly
 risky, but rsync.net provides daily snapshots for 7 days, so I should be able
 to recover from accidental deletions. I have only had the account for less
 than 24hrs, so the automatic snapshot hasn&rsquo;t kicked in yet. I&rsquo;ll see how it
 looks; otherwise, I&rsquo;ll also backup the <code>rsnapshot</code> snapshots to <code>rsync.net</code>.</p>
-
 <p>Now, one difficulty was that my desktop is running Arch Linux. So I had the
 latest version of <code>unison</code> (version 2.51.2), while <code>rsync.net</code> is running
 version 2.40.63. And <code>unison</code> refuses to sync with different versions of
 <code>unison</code> on the client and the server.</p>
-
 <p>Fortunately, there is a package on <a href="https://aur.archlinux.org/packages/unison-2.48.4-compat-bin/">AUR</a> (isn&rsquo;t that always the case),
 which installs the pre-built binary from debian. Fortunately, <a href="http://ftp.de.debian.org/debian/pool/main/u/unison/">debian&rsquo;s
 repository</a>, had version 2.40.102 of <code>unison</code>, so I could easily
 install that using the AUR package (which installs the binary as <code>unison-2.40</code>
 to avoid any clashes with the default version).</p>
-
 <p>Now, I needed to do was run</p>
-<pre tabindex="0"><code>$unison-2.40 rsync</code></pre>
-<p>to sync my desktop to rsync.net. I added the following to my <code>crontab -e</code>
+<pre tabindex="0"><code>$unison-2.40 rsync
+</code></pre><p>to sync my desktop to rsync.net. I added the following to my <code>crontab -e</code>
 file:</p>
-<pre tabindex="0"><code>5 */6 * * *   unison-2.40 rsync </code></pre>
-<p>which runs <code>unison</code> every six hours (at 5 minutes past the hour).</p>
-
+<pre tabindex="0"><code>5 */6 * * *   unison-2.40 rsync 
+</code></pre><p>which runs <code>unison</code> every six hours (at 5 minutes past the hour).</p>
 <p>And Voilà! Now all my work projects are backup up on <code>rsync.net</code>. That was not
 too difficult to set up.</p>
-
 <p>Now all I need to do is to figure out a backup strategy for my photos and
 videos which are currently all on Google Photos.</p>
 

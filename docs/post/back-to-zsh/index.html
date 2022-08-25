@@ -38,6 +38,11 @@
             
             
             
+            <li><a href="/linux-blog/post/signing-pdf/">Signing PDFs via command line</a></li>
+            
+            
+            
+            
             
             
             
@@ -59,11 +64,6 @@
             <li><a href="/linux-blog/post/qutebrowser/">Testing out qutebrowser</a></li>
             
             
-            
-            
-            <li><a href="/linux-blog/post/slack-tui/">Using Slack from the terminal</a></li>
-            
-            
           </ul>
         </li>
         <li><strong><a href="https://adityam.github.io/linux-blog/post">All Posts</a></strong></li>
@@ -81,31 +81,32 @@
 <p>As I mentioned in <a href="https://adityam.github.io/linux-blog/post/trying-fish/">a previous post</a>, I started using fish after using
 zsh for about 15 years. After working exclusively on fish for about 3 months,
 I am now back to zsh.</p>
-
 <p>In the end, there was nothing inherently missing in fish, but fish just did a
 few minor things differently which began to get annoying.</p>
-
 <ul>
-<li><p>Fish&rsquo;s tab-completion first shows a short list of option (top 10 or so) and
+<li>
+<p>Fish&rsquo;s tab-completion first shows a short list of option (top 10 or so) and
 you have to press tab twice to see the whole list. I found that I was almost
-always pressing tab twice.</p></li>
-
-<li><p>By default, while doing tab complete on directories, fish includes the
+always pressing tab twice.</p>
+</li>
+<li>
+<p>By default, while doing tab complete on directories, fish includes the
 directories in my <code>CDPATH</code>. In principle, this is a good thing, but these
 directories are shown <em>before</em> the directories in the current working
 directory. Combined with the previous comment, this meant that I had to hunt
-around for the directory I wanted to cd to.</p></li>
-
-<li><p>The trick of ignoring certain suffixes using <code>fd</code> that I had listed in my
-previous post was not robust enough. I could get something like <code>nvim
-~/.config/&lt;tab&gt;</code> to work reliably. So, after a couple of weeks, I just
+around for the directory I wanted to cd to.</p>
+</li>
+<li>
+<p>The trick of ignoring certain suffixes using <code>fd</code> that I had listed in my
+previous post was not robust enough. I could get something like <code>nvim ~/.config/&lt;tab&gt;</code> to work reliably. So, after a couple of weeks, I just
 commented out the <code>fd</code> stuff and then I had to hunt for the right file
-extension while doing tab completion.</p></li>
-
-<li><p>I kinda missed <code>sudo !!</code>, etc. The <code>Alt + Arrow</code> commands were simply not as
-powerful.</p></li>
+extension while doing tab completion.</p>
+</li>
+<li>
+<p>I kinda missed <code>sudo !!</code>, etc. The <code>Alt + Arrow</code> commands were simply not as
+powerful.</p>
+</li>
 </ul>
-
 <p>So, in the end, although fish has an overall cleaner design,
 my muscle memory is too much tied to zsh. So, back to the old &hellip;</p>
 

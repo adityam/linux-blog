@@ -3,7 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.95.0" />
+	<meta name="generator" content="Hugo 0.101.0" />
   <title>Tinkering with Linux </title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -40,6 +40,11 @@
             
             
             
+            <li><a href="/linux-blog/post/signing-pdf/">Signing PDFs via command line</a></li>
+            
+            
+            
+            
             
             
             
@@ -61,11 +66,6 @@
             <li><a href="/linux-blog/post/qutebrowser/">Testing out qutebrowser</a></li>
             
             
-            
-            
-            <li><a href="/linux-blog/post/slack-tui/">Using Slack from the terminal</a></li>
-            
-            
           </ul>
         </li>
         <li><strong><a href="https://adityam.github.io/linux-blog/post">All Posts</a></strong></li>
@@ -77,6 +77,38 @@
     <div id="content" role="main">
 
 
+     
+    <article class="post">
+
+        <h1><a href="/linux-blog/post/signing-pdf/">Signing PDFs via command line</a></h1>
+        <p class="post-time">25 August, 2022
+        (3 minute read).
+        Category: 
+        
+        <a href="https://adityam.github.io/linux-blog/categories/cli">
+          CLI</a>.
+         
+        Tags:
+        
+        <a href="https://adityam.github.io/linux-blog/tags/mypdfsigner">mypdfsigner</a>,
+        <a href="https://adityam.github.io/linux-blog/tags/foxitreader">foxitreader</a>,
+        <a href="https://adityam.github.io/linux-blog/tags/pdf">pdf</a>.
+         
+        </p>
+
+        <div class="post-content">
+            <p><p>Signing PDFs in Linux is always a PITA. Part of the reason is that Adobe
+stopped the development of a linux port of Adobe Reader since adobe reader v9.
+Some of the newer PDFs require features which are newer than acrobat v9 and
+cannot be opened or signed with acrobat v9.</p>
+<p>In this page, I summarize some of the options for signing PDF that have worked
+for me.</p></p>
+            <a class="btn btn-default" href="/linux-blog/post/signing-pdf/" id="read-more-button">
+                Read more >
+            </a>
+        </div>
+
+    </article>
      
     <article class="post">
 
@@ -305,10 +337,9 @@ handwritten pages. (I write on a half-folded printer paper, so it is actually
 only 7-15 pages &ldquo;full&rdquo; pages). For the last decade or so, I have written
 almost exclusively using fountain pens (Pelikan M200, Pilot Vanishing Point,
 and occasionally, Pilot Metropolitan).</p>
-
 <p>To reduce the amount of time I state at a screen, I purchased a <a href="https://onyxboox.com/boox_max3">Oynx Boox
 Max3</a> tablet almost a year ago, primarily to read academic PDFs. The
-13.3&rdquo; screen of Max3 is perfect for reading dense IEEE formatted two-column
+13.3&quot; screen of Max3 is perfect for reading dense IEEE formatted two-column
 PDFs. Max3 is an Android device and many Android apps work reasonably well on
 it. So, I ended up using it for internet browsing, reading emails and Slack
 messages, <a href="https://www.reddit.com/r/ereader/comments/fnxkep/using_boox_max3_as_a_whiteboard_for_teaching/">delivering zoom lectures</a>, and even watching Youtube videos!
@@ -341,44 +372,8 @@ moving pictures in Harry Potter.</p></p>
         <div class="post-content">
             <p>As I mentioned in a previous post, I started using fish after using zsh for about 15 years. After working exclusively on fish for about 3 months, I am now back to zsh.
 In the end, there was nothing inherently missing in fish, but fish just did a few minor things differently which began to get annoying.
- Fish&rsquo;s tab-completion first shows a short list of option (top 10 or so) and you have to press tab twice to see the whole list.</p>
+Fish&rsquo;s tab-completion first shows a short list of option (top 10 or so) and you have to press tab twice to see the whole list.</p>
             <a class="btn btn-default" href="/linux-blog/post/back-to-zsh/" id="read-more-button">
-                Read more >
-            </a>
-        </div>
-
-    </article>
-     
-    <article class="post">
-
-        <h1><a href="/linux-blog/post/syncing-using-rclone/">Syncing using rclone</a></h1>
-        <p class="post-time">23 August, 2020
-        (2 minute read).
-        Category: 
-        
-        <a href="https://adityam.github.io/linux-blog/categories/syncronization">
-          Syncronization</a>.
-         
-        Tags:
-        
-        <a href="https://adityam.github.io/linux-blog/tags/rclone">rclone</a>,
-        <a href="https://adityam.github.io/linux-blog/tags/dropbox">dropbox</a>,
-        <a href="https://adityam.github.io/linux-blog/tags/google-drive">google-drive</a>,
-        <a href="https://adityam.github.io/linux-blog/tags/one-drive">one-drive</a>.
-         
-        </p>
-
-        <div class="post-content">
-            <p><p>I have been a Dropbox user for over a decade. Part of the attraction for me
-was that it is one of the few synchronization services that fully supports
-Linux. I had it installed on two servers, my office desktop, my laptop, and
-most of my mobile devices. Couple of years ago, my employer moved most of its
-IT services with Microsoft 365, which gives me access to storage space on
-Microsoft OneDrive as well. Plus, I have purchased additional storage on
-Google (for backing up my personal photos). But I never seriously used
-Microsoft OneDrive or Google Drive for synchronization because all my computers
-run Linux and neither of these services had a Linux client.</p></p>
-            <a class="btn btn-default" href="/linux-blog/post/syncing-using-rclone/" id="read-more-button">
                 Read more >
             </a>
         </div>

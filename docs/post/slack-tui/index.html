@@ -38,6 +38,11 @@
             
             
             
+            <li><a href="/linux-blog/post/signing-pdf/">Signing PDFs via command line</a></li>
+            
+            
+            
+            
             
             
             
@@ -59,11 +64,6 @@
             <li><a href="/linux-blog/post/qutebrowser/">Testing out qutebrowser</a></li>
             
             
-            
-            
-            <li><a href="/linux-blog/post/slack-tui/">Using Slack from the terminal</a></li>
-            
-            
           </ul>
         </li>
         <li><strong><a href="https://adityam.github.io/linux-blog/post">All Posts</a></strong></li>
@@ -82,28 +82,22 @@
 to Slack. I am not a big fan of closed protocol communication clients, but
 Slack has the advantage that it is relatively easy to use. Well, it seems that
 it relatively easy to use for everyone except me.</p>
-
 <p>I started with the Slack desktop client, which was a resource hog. So, I
 switched to using Slack in the browser. But for the last week or so, Slack on
 the browser (Firefox) was becoming extremely unresponsive. So, I started
 looking at alternatives.</p>
-
 <p>I tried a few different clients but was not impressed by any of the
 alternative GUIs. So, I started testing TUIs as well. There were two which
 seem to be reasonably well maintained:</p>
-
 <ul>
 <li><a href="https://github.com/wee-slack/wee-slack">wee-slack</a></li>
 <li><a href="https://github.com/erroneousboat/slack-term">slack-term</a></li>
 </ul>
-
 <p>I could not get <code>wee-slack</code> to work. The instructions were asking to install
 stuff in <code>~/.weechat/...</code> but that did not work for me. <code>slack-term</code> looks
 decent and works well. I am going to use this post to collect some notes on
 how to improve the user experience with <code>slack-term</code>.</p>
-
 <h2 id="use-correct-timezone">Use correct timezone</h2>
-
 <p>I decided to use the docker version of slack-term and one of the issues was
 that the timestamps associated with all messages were shown in UTC!
 It turns out that by default, docker images show time in UTC (rather, if you
@@ -132,39 +126,35 @@ index 4139c4a..0cc8d99 100644
 +COPY --from=builder /usr/share/zoneinfo /usr/share/zoneinfo
  COPY --from=builder /etc/ssl/certs/ /etc/ssl/certs
  
- ENTRYPOINT stty cols 25 &amp;&amp; slack-term -config config</code></pre>
-<p>Then I built the image using:</p>
-<pre tabindex="0"><code>docket build . -t local/slack-term</code></pre>
+ ENTRYPOINT stty cols 25 &amp;&amp; slack-term -config config
+</code></pre><p>Then I built the image using:</p>
+<pre><code>docket build . -t local/slack-term
+</code></pre>
 <p>And added the following aliases in my <code>~/.zshrc</code>:</p>
 <pre tabindex="0"><code>alias slack-org1=&#34;docker run -it -v /home/username/.config/slack-term/org1:/config -e TZ=&#39;America/New_York&#39; local/slack-term&#34;                      
-alias slack-org2=&#34;docker run -it -v /home/username/.config/slack-term/org2:/config -e TZ=&#39;America/New_York&#39; local/slack-term&#34;</code></pre>
-<p>where <code>org1</code> and <code>org2</code> are two slack organizations that I am a part of. Now,
+alias slack-org2=&#34;docker run -it -v /home/username/.config/slack-term/org2:/config -e TZ=&#39;America/New_York&#39; local/slack-term&#34;
+</code></pre><p>where <code>org1</code> and <code>org2</code> are two slack organizations that I am a part of. Now,
 the timezone is set correctly in the Docker image and <code>slack-term</code> shows the
 correct timestamps.</p>
-
 <h2 id="sharing-attachments">Sharing attachments</h2>
-
 <p>Slack GUIs allow you to share attachments, but that is not supported by
 <code>slack-term</code>. For me, a simple solution was to use Dropbox for sharing. Most
 of my files are on Dropbox. So, if I could easily generate a shareable Dropbox
 link, that I could just share that instead of sharing a file. Turn out, it is
 easy to get the link used by Dropbox for sharing files:</p>
-<pre tabindex="0"><code>dropbox.py sharelink &lt;filename&gt;</code></pre>
+<pre><code>dropbox.py sharelink &lt;filename&gt;
+</code></pre>
 <p>gives the sharable link for the file. So, I simply added the following
 function to my <code>~/.zshrc</code> file:</p>
-<pre tabindex="0"><code>function dropbox-link() { dropbox.py sharelink &#34;$1&#34; | xclip -selection clipboard } </code></pre>
-<p>Now, I can just go to the directory with the file that I want to share, run
+<pre tabindex="0"><code>function dropbox-link() { dropbox.py sharelink &#34;$1&#34; | xclip -selection clipboard } 
+</code></pre><p>Now, I can just go to the directory with the file that I want to share, run
 <code>dropbox-link &lt;filename&gt;</code> and simply paste the link in <code>slack-term</code>.</p>
-
 <h2 id="update-going-back-to-guis">Update: Going back to GUIs</h2>
-
 <p>I tested slack-term for about two months, but it was too cumbersome to use.
 Long messages were hard to read, the visual indicators were difficult to see,
 attachments were had to see, and so on. So, I decided to go back to GUI, this
 time with slack&rsquo;s desktop client.</p>
-
-<hr />
-
+<hr>
 <p>Now, back to actual work&hellip;</p>
 
 <hr />

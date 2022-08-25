@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Tinkering with Linux </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Aditya Mahajan" />
+  <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/styles.css" type="text/css" />
+  <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/paperclear.css" type="text/css" />
+  
+  <script type="module" defer
+    src="//instant.page/3.0.0"
+    integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1">
+  </script>
+
+  <script data-goatcounter="https://adityam.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  
+  
+  
+  <div id="container">
+    <div id="header" role="banner">
+      <span id="title"><a href="https://adityam.github.io/linux-blog">Tinkering with Linux</a></span><br />
+      
+    </div>
+    
+    
+    
+    <div id="menu" role="navigation">
+      <ul class="nav tree">
+        <li>
+        <strong>Recent Posts</strong>
+          <ul>
+            
+            
+            
+            <li><a href="/linux-blog/post/signing-pdf/">Signing PDFs via command line</a></li>
+            
+            
+            
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/kitty-local-config/">Local config for kitty</a></li>
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/changing-terminal-and-browser/">Changing terminal and browser</a></li>
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/visidata/">Testing out Visidata</a></li>
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/qutebrowser/">Testing out qutebrowser</a></li>
+            
+            
+          </ul>
+        </li>
+        <li><strong><a href="https://adityam.github.io/linux-blog/post">All Posts</a></strong></li>
+      </ul>
+    </div>
+    
+    
+    
+    <div id="content" role="main">
+
+
+<h1>Signing PDFs via command line</h1>
+<p class="post-time">Posted on August 25, 2022</p>
+
+<p>Signing PDFs in Linux is always a PITA. Part of the reason is that Adobe
+stopped the development of a linux port of Adobe Reader since adobe reader v9.
+Some of the newer PDFs require features which are newer than acrobat v9 and
+cannot be opened or signed with acrobat v9.</p>
+<p>In this page, I summarize some of the options for signing PDF that have worked
+for me.</p>
+<h2 id="adobe-acrobat-v9">Adobe Acrobat v9</h2>
+<p>Adobe Acrobat is still my first choice for signing of PDFs. When it works, it
+works well. But, as I mentioned above, it does not work in all cases.</p>
+<h2 id="foxitreader">FoxitReader</h2>
+<p>I have purchased CodeWeavers Crossover (which is a commercially maintained
+port of Wine) to be able to run Windows program. I tried installing modern
+version of Acrobat Reader using Crossover, but those attempts have been
+unfruitful. However, foxitreader does install well using crossover and works
+really well for placing a visual signature on the PDF. I haven&rsquo;t managed to
+get the actual cryptographical signing to work, but in my office that is
+rarely needed.  The only downside is that foxitreader refuses to sign certain
+PDFs, so this method does not always work in all cases.</p>
+<h2 id="mypdfsigner">mypdfsigner</h2>
+<p><a href="https://www.kryptokoder.com/home.html">mypdfsigner</a> is a CLI tool (and a
+language library for PHP, Ruby, and Python) for signing PDF documents. I
+installed it using <a href="https://snapcraft.io/">snap</a>:</p>
+<pre tabindex="0"><code>sudo snap install mypdfsigner
+</code></pre><p>Although it has a <a href="https://www.kryptokoder.com/manual.html">decent
+documentation</a>, it took a while to
+figure out how to run it. It needs a config file, which looks as follows:</p>
+<pre tabindex="0"><code>#MyPDFSigner configuration file
+certfile=/home/path-to-p12-file
+certpasswd=&lt;encrypted password&gt;
+certstore=PKCS12 KEYSTORE FILE
+sigpage=-1
+sigrect=[-220 -240 -90 -220]
+sigimage=/home/path-to-sig-file.png
+tsaurl=http://adobe-timestamp.geotrust.com/tsa
+subfilter=ETSI.CAdES.detached
+</code></pre><p>Here <code>certfile</code> is a <code>.p12</code> file that I had created using Adobe Acrobat (on
+Windows). The <code>certpasswd</code> is the encryped password for this file generated
+using</p>
+<pre tabindex="0"><code>snap run mypdfsigner -e &lt;password&gt;
+</code></pre><p>where <code>password</code> is the password for reading <code>.p12</code> file. My password
+contained special characters which was causing shell expansion, so I specified
+it as <code>&quot;&lt;password&gt;&quot;</code>.</p>
+<p>Finally, <code>sigimage</code> is the name of a PNG file containing the signature. So far
+so good. The tricky part is the <code>sigpage</code> and <code>sigrect</code> options.</p>
+<p>The <code>sigpage</code> option specifies which page the visual signature should be
+placed. In the above <code>-1</code> means the last page.</p>
+<p>The <code>sigrect</code> specifies the lower bottom and top right rectangle of the
+location on the page where the signature is placed. It requires a bit of trial
+and error to get this right and this trial and error has to be repeated for
+every new document.</p>
+<p>But the good thing is that it works in settings where the other methods fail.</p>
+
+<hr />
+
+<p class="nav">
+
+<a href="/linux-blog/post/kitty-local-config/">&nbsp;&lt;Local config for kitty</a>
+
+
+</p>
+
+<p>
+This entry was posted in 
+
+<a href="https://adityam.github.io/linux-blog/categories/cli">
+  CLI</a> 
+and tagged 
+
+<a href="https://adityam.github.io/linux-blog/tags/mypdfsigner">mypdfsigner</a>,
+<a href="https://adityam.github.io/linux-blog/tags/foxitreader">foxitreader</a>,
+<a href="https://adityam.github.io/linux-blog/tags/pdf">pdf</a>.
+ 
+</p>
+
+<div id="disqus_thread"></div>
+<div id="disqus_comments">
+  <button onclick="load_disqus()">Show Comments</button>
+</div>
+<script>
+    function load_disqus() { 
+        var d = document, s = d.createElement('script');
+        s.src = '//adi-linux-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        var load_button = document.getElementById('disqus_comments');
+        load_button.parentNode.removeChild(load_button);
+    };
+   (function () {
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//adi-linux-blog.disqus.com/count.js';
+        (d.head || d.body).appendChild(s);
+    }()); 
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+    </div>
+    
+    
+    
+    <div id="pied" role="contentinfo">
+      Content distributed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license
+    </div>
+  </div>
+</body>
+</html>
+
+

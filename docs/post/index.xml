@@ -6,7 +6,21 @@
     <description>Recent content in Posts on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Signing PDFs via command line</title>
+      <link>https://adityam.github.io/linux-blog/post/signing-pdf/</link>
+      <pubDate>Thu, 25 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/post/signing-pdf/</guid>
+      <description>&lt;p&gt;Signing PDFs in Linux is always a PITA. Part of the reason is that Adobe
+stopped the development of a linux port of Adobe Reader since adobe reader v9.
+Some of the newer PDFs require features which are newer than acrobat v9 and
+cannot be opened or signed with acrobat v9.&lt;/p&gt;
+&lt;p&gt;In this page, I summarize some of the options for signing PDF that have worked
+for me.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Local config for kitty</title>
       <link>https://adityam.github.io/linux-blog/post/kitty-local-config/</link>
@@ -99,10 +113,9 @@ handwritten pages. (I write on a half-folded printer paper, so it is actually
 only 7-15 pages &amp;ldquo;full&amp;rdquo; pages). For the last decade or so, I have written
 almost exclusively using fountain pens (Pelikan M200, Pilot Vanishing Point,
 and occasionally, Pilot Metropolitan).&lt;/p&gt;
-
 &lt;p&gt;To reduce the amount of time I state at a screen, I purchased a &lt;a href=&#34;https://onyxboox.com/boox_max3&#34;&gt;Oynx Boox
 Max3&lt;/a&gt; tablet almost a year ago, primarily to read academic PDFs. The
-13.3&amp;rdquo; screen of Max3 is perfect for reading dense IEEE formatted two-column
+13.3&amp;quot; screen of Max3 is perfect for reading dense IEEE formatted two-column
 PDFs. Max3 is an Android device and many Android apps work reasonably well on
 it. So, I ended up using it for internet browsing, reading emails and Slack
 messages, &lt;a href=&#34;https://www.reddit.com/r/ereader/comments/fnxkep/using_boox_max3_as_a_whiteboard_for_teaching/&#34;&gt;delivering zoom lectures&lt;/a&gt;, and even watching Youtube videos!
@@ -118,24 +131,7 @@ moving pictures in Harry Potter.&lt;/p&gt;</description>
       <guid>https://adityam.github.io/linux-blog/post/back-to-zsh/</guid>
       <description>As I mentioned in a previous post, I started using fish after using zsh for about 15 years. After working exclusively on fish for about 3 months, I am now back to zsh.
 In the end, there was nothing inherently missing in fish, but fish just did a few minor things differently which began to get annoying.
- Fish&amp;rsquo;s tab-completion first shows a short list of option (top 10 or so) and you have to press tab twice to see the whole list.</description>
-    </item>
-    
-    <item>
-      <title>Syncing using rclone</title>
-      <link>https://adityam.github.io/linux-blog/post/syncing-using-rclone/</link>
-      <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/post/syncing-using-rclone/</guid>
-      <description>&lt;p&gt;I have been a Dropbox user for over a decade. Part of the attraction for me
-was that it is one of the few synchronization services that fully supports
-Linux. I had it installed on two servers, my office desktop, my laptop, and
-most of my mobile devices. Couple of years ago, my employer moved most of its
-IT services with Microsoft 365, which gives me access to storage space on
-Microsoft OneDrive as well. Plus, I have purchased additional storage on
-Google (for backing up my personal photos). But I never seriously used
-Microsoft OneDrive or Google Drive for synchronization because all my computers
-run Linux and neither of these services had a Linux client.&lt;/p&gt;</description>
+Fish&amp;rsquo;s tab-completion first shows a short list of option (top 10 or so) and you have to press tab twice to see the whole list.</description>
     </item>
     
   </channel>

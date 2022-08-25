@@ -3,10 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://adityam.github.io/linux-blog/categories/</loc>
-    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adityam.github.io/linux-blog/categories/cli/</loc>
-    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/tags/foxitreader/</loc>
+    <lastmod>2022-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/tags/mypdfsigner/</loc>
+    <lastmod>2022-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/tags/pdf/</loc>
+    <lastmod>2022-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/post/</loc>
+    <lastmod>2022-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/post/signing-pdf/</loc>
+    <lastmod>2022-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/tags/</loc>
+    <lastmod>2022-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/</loc>
+    <lastmod>2022-08-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/configuration/</loc>
     <lastmod>2022-06-01T00:00:00+00:00</lastmod>
@@ -15,15 +36,6 @@
     <lastmod>2022-06-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adityam.github.io/linux-blog/post/kitty-local-config/</loc>
-    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://adityam.github.io/linux-blog/post/</loc>
-    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://adityam.github.io/linux-blog/tags/</loc>
-    <lastmod>2022-06-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://adityam.github.io/linux-blog/</loc>
     <lastmod>2022-06-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adityam.github.io/linux-blog/post/changing-terminal-and-browser/</loc>

@@ -38,6 +38,11 @@
             
             
             
+            <li><a href="/linux-blog/post/signing-pdf/">Signing PDFs via command line</a></li>
+            
+            
+            
+            
             
             
             
@@ -59,11 +64,6 @@
             <li><a href="/linux-blog/post/qutebrowser/">Testing out qutebrowser</a></li>
             
             
-            
-            
-            <li><a href="/linux-blog/post/slack-tui/">Using Slack from the terminal</a></li>
-            
-            
           </ul>
         </li>
         <li><strong><a href="https://adityam.github.io/linux-blog/post">All Posts</a></strong></li>
@@ -79,7 +79,6 @@
 <p class="post-time">Posted on May 9, 2020</p>
 
 <p><a href="https://github.com/davatorium/rofi">rofi</a> is perfect for creating interactive scripts, which I like to call <em>rofi selectors</em>.  Here are some examples:</p>
-
 <h2 id="connecting-to-bluetooth-devices">Connecting to bluetooth devices</h2>
 <pre tabindex="0"><code>cat &lt;&lt;DEVICES | rofi -width 30 -dmenu -i -p &#34;Devices&#34;  \
               | awk &#39;{printf $1}&#39; \
@@ -87,24 +86,21 @@
 # List of devices to connect
 00:16:94:2F:AC:18 Sennheiser Headphone
 01:16:94:2F:AC:18 Anker Headphone
-DEVICES</code></pre>
-<p>First <code>rofi</code> displays the MAC addresses and names of the bluetooth headphones
+DEVICES
+</code></pre><p>First <code>rofi</code> displays the MAC addresses and names of the bluetooth headphones
 that I use, then <code>awk</code> parses the appropriate field (the MAC address in this
 case), and <code>xargs</code> call the appropriate command (<code>bluetoothctl</code> in this case)
 to connect to that headphone. I use <a href="https://linuxhint.com/bash-heredoc-tutorial/">heredocs</a>  so that I can add
 the list of devices at the end of the command. Note the trick of adding a <code>\</code>
 after the last command so that the comment <code># List of devices</code> is parsed as
 part of the command rather than part of the heredoc.</p>
-
 <p>I have stored this file as <code>~/bin/bt-connect</code>. To use it for the first time, I
 call <code>rofi -show run</code> (which is mapped to <code>MOD+p</code> in my setup) and type
 <code>/home/username/bin/bt-connect</code>. From then onwards, <code>rofi</code> remembers the
 previously typed command and I can simply do <code>MDO+p</code> and then type
 <code>bt-connect</code>, and select the appropriate headphone. No more fiddling around
 with <code>blueman-applet</code>!</p>
-
 <h2 id="accessing-frequently-used-information">Accessing frequently used information</h2>
-
 <p>I often have to fill forms where I need to know the project ids for the
 different projects that I am working on. So, I have created a command
 <code>~/bin/project-ids</code> as follows</p>
@@ -115,14 +111,12 @@ different projects that I am working on. So, I have created a command
 123456 Project 1
 123456 Project 2
 123456 Project 3
-PROJECTS</code></pre>
-<p>The basic structure of the command is the same as before. Display the list of
+PROJECTS
+</code></pre><p>The basic structure of the command is the same as before. Display the list of
 options (project-id and project-name) using <code>rofi</code>, parse the appropriate
 field using <code>awk</code>, but in this case, I copy the parsed field to the clipboard.
 This way I can simply paste it in the form where I need it.</p>
-
 <h2 id="parsing-dynamic-information">Parsing dynamic information</h2>
-
 <p>Again, I need to fill forms with student ids. I have an XML file which
 contains details of students, including student ids. It is easy to use <code>rofi</code>
 selectors for this situation. I have written a script (written in
@@ -132,9 +126,8 @@ to <code>rofi</code>.</p>
 <pre tabindex="0"><code>/path-to-script/student-id
     | rofi -width 40 -dmenu -i -p &#34;Name&#34;  \
     | awk &#39;{printf $1}&#39; \
-    | xclip -selection clipboard</code></pre>
-<h2 id="copying-passwords">Copying passwords</h2>
-
+    | xclip -selection clipboard
+</code></pre><h2 id="copying-passwords">Copying passwords</h2>
 <p>I use <a href="https://www.passwordstore.org/">pass</a> as a password manager. <code>pass</code> stores the passwords as
 encrypted files insider <code>~/.password-store</code>. The next selector reads the
 website/usernames for which a password is available, selects the username
@@ -143,7 +136,8 @@ clipboard for 45 sec.</p>
 <pre tabindex="0"><code>cd $HOME/.password-store &amp;&amp; fd -t f  \
     | sed &#39;s/\.gpg$//&#39;  \
     | rofi -width 30 -dmenu -i -p &#34;pass&#34; \
-    | xargs pass -c </code></pre>
+    | xargs pass -c 
+</code></pre>
 
 <hr />
 
