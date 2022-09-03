@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Tinkering with Linux </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Aditya Mahajan" />
+  <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/styles.css" type="text/css" />
+  <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/paperclear.css" type="text/css" />
+  
+  <script type="module" defer
+    src="//instant.page/3.0.0"
+    integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1">
+  </script>
+
+  <script data-goatcounter="https://adityam.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  
+  
+  
+  <div id="container">
+    <div id="header" role="banner">
+      <span id="title"><a href="https://adityam.github.io/linux-blog">Tinkering with Linux</a></span><br />
+      
+    </div>
+    
+    
+    
+    <div id="menu" role="navigation">
+      <ul class="nav tree">
+        <li>
+        <strong>Recent Posts</strong>
+          <ul>
+            
+            
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/converting-supernote-files-to-pdf/">Converting SuperNote files to PDF</a></li>
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/signing-pdf/">Signing PDFs via command line</a></li>
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/kitty-local-config/">Local config for kitty</a></li>
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/changing-terminal-and-browser/">Changing terminal and browser</a></li>
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/visidata/">Testing out Visidata</a></li>
+            
+            
+          </ul>
+        </li>
+        <li><strong><a href="https://adityam.github.io/linux-blog/post">All Posts</a></strong></li>
+      </ul>
+    </div>
+    
+    
+    
+    <div id="content" role="main">
+
+
+<h1>Converting SuperNote files to PDF</h1>
+<p class="post-time">Posted on September 2, 2022</p>
+
+<p>Writing is my primary mode of note taking and at the beginning of the
+pandemic, I switched from paper notebooks to digital notebooks. My primary
+notetaking devices are SuperNote A6X, Boox Max3, and iPad Pro using Notability
+App (in that order,
+though I do prefer iPad for reviewing papers etc. because of the speed). I
+prefer the writing experience on Supernote, but I do miss one of the software
+features of Boox: In Boox, everytime I save a note file, it is automatically
+converted to PDF and stored in a pdf directory which mirrors the layout of the
+notes directory. There is no such feature in SuperNote. Notes have to
+converted manually and get exported to a flat directory.</p>
+<p>Now, the reason that I want automatic pdf conversion is that PDF is a
+universal format and can be read on any device. In contrast, all the digital
+notebook devices or apps use a propriaty format, which cannot be read easily
+on other devices. That&rsquo;s why I like the automatic conversion on Boox. That
+(along with DropSync to instantly sync the converted file) means that I always
+have access to the latest version of my notebooks everywhere. On SuperNote, I
+need to remember to manually convert the file. (And also manually since the
+device, but that&rsquo;s another story).</p>
+<p>I recently discovered a script called
+<a href="https://github.com/jya-dev/supernote-tool">supernote-tool</a>, which parses the
+SuperNote <code>.note</code> format and converts it to PDF. So, I wrote a simple
+<a href="https://ruby.github.io/rake/index.html"><code>Rakefile</code></a> to convert all <code>.note</code> files to <code>.pdf</code> files.</p>
+<p>I sync SuperNote files using Dropbox and Supernote creates a directory
+<code>Dropbox/Supernote</code> which has the following structure:</p>
+<pre tabindex="0"><code>Dropbox/Supernote
+├── Document
+├── EXPORT
+├── INBOX
+├── MyStyle
+├── Note
+└── SCREENSHOT
+</code></pre><p>By default, all the note files are in the <code>Note</code> sub-directory. I wanted to
+create a sibling directory called <code>pdfs</code>, which mirrors the layout of the
+<code>Notes</code> directory and converts each <code>.note</code> file to <code>.pdf</code>. I wanted to write
+this as a <code>Makefile</code> so that I can periodically run the conversion via <code>cron</code>,
+but writing complext makefiles is always wild goose chase on google. So, I
+decided to write it as a <code>Rakefile</code>, although I haven&rsquo;t touched ruby in almost
+15 years. Here is the file:</p>
+<pre><code>
+<span class="Include">require</span> <span class="Delimiter">'</span><span class="String">fileutils</span><span class="Delimiter">'</span>
+<span class="Include">require</span> <span class="Delimiter">'</span><span class="String">rake/clean</span><span class="Delimiter">'</span>
+
+<span class="Type">SN</span> = <span class="Delimiter">&quot;</span><span class="String">$HOME/Software/supernote-tool/venv/bin/supernote-tool</span><span class="Delimiter">&quot;</span>
+
+<span class="Type">SRC_DIR</span> = <span class="Delimiter">&quot;</span><span class="String">Note</span><span class="Delimiter">&quot;</span>
+<span class="Type">PDF_DIR</span> = <span class="Delimiter">&quot;</span><span class="String">pdfs</span><span class="Delimiter">&quot;</span>
+
+<span class="Type">SRC</span> = <span class="Type">FileList</span>[<span class="Delimiter">&quot;</span><span class="Delimiter">#{</span><span class="Type">SRC_DIR</span><span class="Delimiter">}</span><span class="String">/**/*.note</span><span class="Delimiter">&quot;</span>]
+<span class="Type">PDF</span> = <span class="Type">SRC</span>.pathmap(<span class="Delimiter">&quot;</span><span class="String">%{^</span><span class="Delimiter">#{</span><span class="Type">SRC_DIR</span><span class="Delimiter">}</span><span class="String">,</span><span class="Delimiter">#{</span><span class="Type">PDF_DIR</span><span class="Delimiter">}</span><span class="String">}X.pdf</span><span class="Delimiter">&quot;</span>)
+
+directory <span class="Type">PDF_DIR</span>
+
+task <span class="Constant">:</span><span class="Constant">pdf</span> =&gt; <span class="Type">PDF</span>
+
+rule <span class="Delimiter">'</span><span class="String">.pdf</span><span class="Delimiter">'</span> =&gt; <span class="Keyword">proc</span> {|f| f.pathmap(<span class="Delimiter">&quot;</span><span class="String">%{^</span><span class="Delimiter">#{</span><span class="Type">PDF_DIR</span><span class="Delimiter">}</span><span class="String">,</span><span class="Delimiter">#{</span><span class="Type">SRC_DIR</span><span class="Delimiter">}</span><span class="String">}X.note</span><span class="Delimiter">&quot;</span>)} <span class="Statement">do</span> |t|
+    mkdir_p t.name.pathmap(<span class="Delimiter">&quot;</span><span class="String">%d</span><span class="Delimiter">&quot;</span>)
+    sh <span class="Delimiter">%Q{</span><span class="Delimiter">#{</span><span class="Type">SN</span><span class="Delimiter">}</span><span class="String"> convert -t pdf --pdf-type vector -a &quot;</span><span class="Delimiter">#{</span>t.source<span class="Delimiter">}</span><span class="String">&quot; &quot;</span><span class="Delimiter">#{</span>t.name<span class="Delimiter">}</span><span class="String">&quot;</span><span class="Delimiter">}</span>
+<span class="Statement">end</span>
+
+task <span class="Constant">:</span><span class="Constant">default</span> =&gt; <span class="Constant">:</span><span class="Constant">pdf</span>
+
+<span class="Type">CLEAN</span>.include(<span class="Type">PDF</span>)
+
+</code></pre>
+<p>The tricky part of the writing this was to figure out how to make sure that
+the converted pdfs are saved in a parallel directory with the same directory
+structure as the notes directory. I was hoping that there was an easy way to
+do it using <code>rule</code>s, but I could not figure it out. So, I followed a very
+rudimentary method.</p>
+<p>First, collect the names of all <code>.note</code> files:</p>
+<pre><code>
+<span class="Type">SRC</span> = <span class="Type">FileList</span>[<span class="Delimiter">&quot;</span><span class="Delimiter">#{</span><span class="Type">SRC_DIR</span><span class="Delimiter">}</span><span class="String">/**/*.note</span><span class="Delimiter">&quot;</span>]
+</code></pre>
+<p>and then change the root directory and the extension:</p>
+<pre><code>
+<span class="Type">PDF</span> = <span class="Type">SRC</span>.pathmap(<span class="Delimiter">&quot;</span><span class="String">%{^</span><span class="Delimiter">#{</span><span class="Type">SRC_DIR</span><span class="Delimiter">}</span><span class="String">,</span><span class="Delimiter">#{</span><span class="Type">PDF_DIR</span><span class="Delimiter">}</span><span class="String">}X.pdf</span><span class="Delimiter">&quot;</span>)
+</code></pre>
+<p>This looks like black magic, but it fairly simply once your read the
+documentation of
+<a href="https://ruby-doc.org/stdlib-3.0.2/libdoc/rake/rdoc/String.html"><code>pathmap</code></a>.</p>
+<p>Then, I specify a rule to generate the <code>.pdf</code> file. To do so, I need to
+specify that the corresponding <code>.note</code> file is a dependency of the <code>.pdf</code>
+file, I run the conversion if the <code>.note</code> file is newer than the <code>.pdf</code> file.
+Rake has this super cool feature that you don&rsquo;t have to explicitly list all
+target names; it can regex against a specified string. See, for example, <a href="https://jacobswanner.com/development/2014/rake-rule-tasks/">this
+blog post</a>.
+However, this automatic dependency specification only works when the source
+and the destination are in the same directory. But I want the <code>.note</code> and
+<code>.pdf</code> files to be in parallel directories. Again, I found that the simplest
+way to do this was to invert the conversion used to generate the name of the
+<code>.pdf</code> file:</p>
+<pre><code>
+rule <span class="Delimiter">'</span><span class="String">.pdf</span><span class="Delimiter">'</span> =&gt; <span class="Keyword">proc</span> {|f| f.pathmap(<span class="Delimiter">&quot;</span><span class="String">%{^</span><span class="Delimiter">#{</span><span class="Type">PDF_DIR</span><span class="Delimiter">}</span><span class="String">,</span><span class="Delimiter">#{</span><span class="Type">SRC_DIR</span><span class="Delimiter">}</span><span class="String">}X.note</span><span class="Delimiter">&quot;</span>)} <span class="Statement">do</span> |t|
+    mkdir_p t.name.pathmap(<span class="Delimiter">&quot;</span><span class="String">%d</span><span class="Delimiter">&quot;</span>)
+    sh <span class="Delimiter">%Q{</span><span class="Delimiter">#{</span><span class="Type">SN</span><span class="Delimiter">}</span><span class="String"> convert -t pdf --pdf-type vector -a &quot;</span><span class="Delimiter">#{</span>t.source<span class="Delimiter">}</span><span class="String">&quot; &quot;</span><span class="Delimiter">#{</span>t.name<span class="Delimiter">}</span><span class="String">&quot;</span><span class="Delimiter">}</span>
+<span class="Statement">end</span>
+</code></pre>
+<p>And that&rsquo;s it! I added a cron task so that this script is run every 6 hours.</p>
+<p>There are a few things that I don&rsquo;t like about this setup:</p>
+<ul>
+<li>
+<p>AFAIK, there is no public discription of the spec of the SuperNote format.
+So, most likely, <code>supernote-tool</code> is a reverse engineered tool. It works
+well now, but break in a future release.</p>
+</li>
+<li>
+<p>Supernote provides two conversion methods: pixel conversion and vector
+conversion. I prefer the look of vector conversion, but that is <em>very</em> slow.
+It doesn&rsquo;t really matter much in this setup, as I don&rsquo;t need the PDF right
+away, but it is still annoying. I don&rsquo;t understand why the conversion is
+slow from a practical point of view (it is just drawing a smooth path from a
+bunch of points). One of these days, I plan to look into the
+storage format and figure out why the vector conversion is taking too long,
+and if I can speed it up by using Metapost.</p>
+</li>
+</ul>
+<p>Nontheless, at present, this simple <code>Rakefile</code> scratches the itch.</p>
+
+<hr />
+
+<p class="nav">
+
+<a href="/linux-blog/post/signing-pdf/">&nbsp;&lt;Signing PDFs via command line</a>
+
+
+</p>
+
+<p>
+This entry was posted in 
+
+<a href="https://adityam.github.io/linux-blog/categories/eink">
+  Eink</a> 
+and tagged 
+
+<a href="https://adityam.github.io/linux-blog/tags/supernote">supernote</a>,
+<a href="https://adityam.github.io/linux-blog/tags/supernote-tool">supernote-tool</a>,
+<a href="https://adityam.github.io/linux-blog/tags/rake">rake</a>,
+<a href="https://adityam.github.io/linux-blog/tags/cron">cron</a>,
+<a href="https://adityam.github.io/linux-blog/tags/max3">max3</a>,
+<a href="https://adityam.github.io/linux-blog/tags/a6x">a6x</a>,
+<a href="https://adityam.github.io/linux-blog/tags/boox">boox</a>.
+ 
+</p>
+
+<div id="disqus_thread"></div>
+<div id="disqus_comments">
+  <button onclick="load_disqus()">Show Comments</button>
+</div>
+<script>
+    function load_disqus() { 
+        var d = document, s = d.createElement('script');
+        s.src = '//adi-linux-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        var load_button = document.getElementById('disqus_comments');
+        load_button.parentNode.removeChild(load_button);
+    };
+   (function () {
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//adi-linux-blog.disqus.com/count.js';
+        (d.head || d.body).appendChild(s);
+    }()); 
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+    </div>
+    
+    
+    
+    <div id="pied" role="contentinfo">
+      Content distributed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license
+    </div>
+  </div>
+</body>
+</html>
+
+

@@ -6,7 +6,70 @@
     <description>Recent content in Tags on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A6X</title>
+      <link>https://adityam.github.io/linux-blog/tags/a6x/</link>
+      <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/a6x/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>boox</title>
+      <link>https://adityam.github.io/linux-blog/tags/boox/</link>
+      <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/boox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cron</title>
+      <link>https://adityam.github.io/linux-blog/tags/cron/</link>
+      <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/cron/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Max3</title>
+      <link>https://adityam.github.io/linux-blog/tags/max3/</link>
+      <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/max3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rake</title>
+      <link>https://adityam.github.io/linux-blog/tags/rake/</link>
+      <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/rake/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>supernote</title>
+      <link>https://adityam.github.io/linux-blog/tags/supernote/</link>
+      <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/supernote/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>supernote-tool</title>
+      <link>https://adityam.github.io/linux-blog/tags/supernote-tool/</link>
+      <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/supernote-tool/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>foxitreader</title>
       <link>https://adityam.github.io/linux-blog/tags/foxitreader/</link>
@@ -31,69 +94,6 @@
       <pubDate>Thu, 25 Aug 2022 00:00:00 +0000</pubDate>
       
       <guid>https://adityam.github.io/linux-blog/tags/pdf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>configuration</title>
-      <link>https://adityam.github.io/linux-blog/tags/configuration/</link>
-      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/configuration/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>kitty</title>
-      <link>https://adityam.github.io/linux-blog/tags/kitty/</link>
-      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/kitty/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>links</title>
-      <link>https://adityam.github.io/linux-blog/tags/links/</link>
-      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/links/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>w3m</title>
-      <link>https://adityam.github.io/linux-blog/tags/w3m/</link>
-      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/w3m/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>xterm</title>
-      <link>https://adityam.github.io/linux-blog/tags/xterm/</link>
-      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/xterm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>visidata</title>
-      <link>https://adityam.github.io/linux-blog/tags/visidata/</link>
-      <pubDate>Fri, 11 Feb 2022 12:35:13 -0500</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/visidata/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>qutebrowser</title>
-      <link>https://adityam.github.io/linux-blog/tags/qutebrowser/</link>
-      <pubDate>Tue, 21 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/qutebrowser/</guid>
       <description></description>
     </item>
     

@@ -2,8 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://adityam.github.io/linux-blog/tags/a6x/</loc>
+    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/tags/boox/</loc>
+    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/categories/</loc>
-    <lastmod>2022-08-25T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/post/converting-supernote-files-to-pdf/</loc>
+    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/tags/cron/</loc>
+    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/categories/eink/</loc>
+    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/tags/max3/</loc>
+    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/post/</loc>
+    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/tags/rake/</loc>
+    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/tags/supernote/</loc>
+    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/tags/supernote-tool/</loc>
+    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/tags/</loc>
+    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/</loc>
+    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adityam.github.io/linux-blog/categories/cli/</loc>
     <lastmod>2022-08-25T00:00:00+00:00</lastmod>
@@ -17,16 +53,7 @@
     <loc>https://adityam.github.io/linux-blog/tags/pdf/</loc>
     <lastmod>2022-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adityam.github.io/linux-blog/post/</loc>
-    <lastmod>2022-08-25T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://adityam.github.io/linux-blog/post/signing-pdf/</loc>
-    <lastmod>2022-08-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://adityam.github.io/linux-blog/tags/</loc>
-    <lastmod>2022-08-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://adityam.github.io/linux-blog/</loc>
     <lastmod>2022-08-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/configuration/</loc>
@@ -98,9 +125,6 @@
     <loc>https://adityam.github.io/linux-blog/post/backing-up-data/</loc>
     <lastmod>2021-03-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adityam.github.io/linux-blog/tags/cron/</loc>
-    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/dropbox/</loc>
     <lastmod>2021-03-20T00:00:00+00:00</lastmod>
   </url><url>
@@ -109,15 +133,6 @@
   </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/unison/</loc>
     <lastmod>2021-03-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://adityam.github.io/linux-blog/tags/a6x/</loc>
-    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://adityam.github.io/linux-blog/categories/eink/</loc>
-    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://adityam.github.io/linux-blog/tags/max3/</loc>
-    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adityam.github.io/linux-blog/post/tale-of-two-eink-notebooks/</loc>
     <lastmod>2020-12-27T00:00:00+00:00</lastmod>

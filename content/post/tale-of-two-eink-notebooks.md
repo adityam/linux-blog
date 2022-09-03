@@ -4,6 +4,8 @@ date  : 2020-12-27
 tags  :
   - Max3
   - A6X
+  - supernote
+  - boox
 categories :
   - eink
 ---

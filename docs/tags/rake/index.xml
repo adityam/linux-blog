@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rake on Tinkering with Linux</title>
+    <link>https://adityam.github.io/linux-blog/tags/rake/</link>
+    <description>Recent content in rake on Tinkering with Linux</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 02 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/rake/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Converting SuperNote files to PDF</title>
+      <link>https://adityam.github.io/linux-blog/post/converting-supernote-files-to-pdf/</link>
+      <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/post/converting-supernote-files-to-pdf/</guid>
+      <description>&lt;p&gt;Writing is my primary mode of note taking and at the beginning of the
+pandemic, I switched from paper notebooks to digital notebooks. My primary
+notetaking devices are SuperNote A6X, Boox Max3, and iPad Pro using Notability
+App (in that order,
+though I do prefer iPad for reviewing papers etc. because of the speed). I
+prefer the writing experience on Supernote, but I do miss one of the software
+features of Boox: In Boox, everytime I save a note file, it is automatically
+converted to PDF and stored in a pdf directory which mirrors the layout of the
+notes directory. There is no such feature in SuperNote. Notes have to
+converted manually and get exported to a flat directory.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
