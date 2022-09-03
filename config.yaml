@@ -14,5 +14,8 @@ params:
   disqus : "adi-linux-blog"
 
 markup:
-  defaultMarkdownHandler: "blackfriday"
+  goldmark:
+    renderer:
+      unsafe: true
+
 
