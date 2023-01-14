@@ -75,81 +75,59 @@
     <div id="content" role="main">
 
 
-<h1>Accessing newest file in a directory</h1>
-<p class="post-time">Posted on April 18, 2021</p>
+<h1>Managing dotfiles using stow</h1>
+<p class="post-time">Posted on January 14, 2023</p>
 
-<p>There are many instances where I want to access the most recent file in a
-directory:</p>
-<ul>
-<li>
-<p>By default, my browser saves PDF files (and other downloaded files, for that
-matter) in <code>~/Downloads</code>. Rather than navigating to a more appropriate
-directory via the GUI, I find it more convenient to <code>cd</code> to the appropriate
-directory on the command line (where <a href="https://github.com/ajeetdsouza/zoxide">zoxide</a> is an amazing tool to jump
-to commonly used directories) and simply move the file there.</p>
-</li>
-<li>
-<p>I use <a href="https://dotepub.com">a browser plugin</a> to convert long web articles to <code>.epub</code> so
-that I can read them later on my eInk tablet. This plugin saves files in
-<code>~/Downloads</code> and has no option to change the downloads directory.</p>
-</li>
-<li>
-<p>I run a <code>cron</code> script that downloads and packages the latest version of
-ConTeXt by running <code>makepkg</code> in a directory containing the <code>PKGBUILD</code> file
-for <a href="https://aur.archlinux.org/packages/luametatex/"><code>luametatex</code></a>. However, I don&rsquo;t automatically upgrade the
-package. I always prefer to upgrade packages manually when I know that I
-have the time to fix the upgrade if something breaks (happens rarely, but I
-don&rsquo;t want something to break half an hour before a deadline). When
-updating, I want to find the latest <code>luametatex-date.pkg.tar.gz</code> file in the
-directory.</p>
-</li>
-</ul>
-<p>I recently discovered <a href="https://man.archlinux.org/man/extra/zsh/zshexpn.1.en#Glob_Qualifiers">glob qualifiers</a>, which is perfect for these
-tasks. In the shell <code>*</code> expands to all files and directories. Zsh has options
-to qualify which files needs to be expanded. In particular:</p>
-<ul>
-<li><code>*(.)</code> expands all files (i.e., excludes directories)</li>
-<li><code>*(.om)</code> expands all files and sorts them descending order according to
-modification time</li>
-<li><code>*(.om[1])</code> selects the first such file.</li>
-</ul>
-<p>Thus, for my first two use cases, I can use:</p>
-<pre><code>z desired-directory &amp;&amp; mv ~/Downloads/*(.om[1]) ./
+<p>One of my new year&rsquo;s resolutions was to come up with a sensible way to manage
+my dotfiles. I evaluated a few solutions and finally settled on <a href="https://www.gnu.org/software/stow/">GNU
+stow</a>.</p>
+<p>GNU stow is a symlink manager, normally used to manage symlinks to programs
+installed in <code>/usr/local/bin</code>. However, it can also be used to manage symlinks
+to configuration files. After a bit of trial and error, I settled to the
+following.</p>
+<ol>
+<li>Create a dirctory <code>~/Dropbox/dotfiles</code> to store all the dotfiles.</li>
+<li>For each package, create a subdictory <code>package</code>.</li>
+<li>Typically, the configuration files of a package are either stored in
+<code>~/.packagerc</code> or <code>~/.config/package</code>. Let&rsquo;s use <code>zsh</code> and <code>kitty</code> as
+canoncial examples of the two cases.</li>
+<li>For <code>zsh</code>, create a file <code>~/Dropbox/dotfiles/zsh/dot-zshrc</code> which has the
+contents of the desired <code>.zshrc</code>.</li>
+<li>For <code>kitty</code>, create a file <code>~/Dropbox/dotfiles/dot-config/kitty/kitty.conf</code>
+with the desired contents of <code>~/.config/kitty.conf</code></li>
+<li>Note that in both cases, we have replaced <code>.filename</code> or <code>.dirname</code> by
+<code>dot-filename</code> and <code>dot-dirname</code>.</li>
+</ol>
+<p>Then run the command</p>
+<pre tabindex="0"><code>stow -t $HOME -v package
+</code></pre><p>for each package, which creates the appropriate symlinks. That&rsquo;s it!</p>
+<p>Well almost. There is currently a <a href="https://github.com/aspiers/stow/issues/33">bug</a> in stow, due to which <code>--dotfiles</code>
+option does not work with directories. Fortunately, there is an AUR package
+<code>show-dotfiles-git</code> which provides a fix, at least until the fix is merged
+upstream.</p>
+<p>It can be tedious to link each package one by one. If so, we can stow all
+packages at once using</p>
+<pre tabindex="0"><code>find . -mindepth 1 -maxdepth 1 -typed -printf &#39;%f &#39; | xargs stow -t $HOME -v
 </code></pre>
-<p>For the third use case:</p>
-<pre><code>z luametatex &amp;&amp; sudo pamcan -U *(.om[1])
-</code></pre>
-<p>Sometimes, I want to use the latest file matching a particular pattern (say,
-the latest PDF file with <code>pattern</code> in the title). In such cases, I can use:</p>
-<pre><code>mv ~/Downloads/*pattern*.pdf(om[1]) ./
-</code></pre>
-<p>Or, if I want to see the name of the file before moving it:</p>
-<pre><code>mv ~/Downloads/*pattern*.pdf^Xm
-</code></pre>
-<p>(where <code>^Xm</code> means press <code>CTRL+X m</code>). Search for <code>_most_recent_file</code> in
-<a href="https://man.archlinux.org/man/extra/zsh/zshcompsys.1.en">zshcompsys</a> for details.</p>
 
 <hr />
 
 <p class="nav">
 
-<a href="/linux-blog/post/backing-up-data/">&nbsp;&lt;Backup up data</a>
+<a href="/linux-blog/post/converting-supernote-files-to-pdf/">&nbsp;&lt;Converting SuperNote files to PDF</a>
 
-
-| <a href="/linux-blog/post/slack-tui/">Using Slack from the terminal></a>
 
 </p>
 
 <p>
 This entry was posted in 
 
-<a href="https://adityam.github.io/linux-blog/categories/terminal">
-  Terminal</a> 
+<a href="https://adityam.github.io/linux-blog/categories/os">
+  OS</a> 
 and tagged 
 
-<a href="https://adityam.github.io/linux-blog/tags/zsh">zsh</a>,
-<a href="https://adityam.github.io/linux-blog/tags/glob-qualifiers">glob qualifiers</a>,
-<a href="https://adityam.github.io/linux-blog/tags/zshexpn">zshexpn</a>.
+<a href="https://adityam.github.io/linux-blog/tags/stow">stow</a>,
+<a href="https://adityam.github.io/linux-blog/tags/dotfile">dotfile</a>.
  
 </p>
 

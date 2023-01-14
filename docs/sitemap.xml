@@ -2,13 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://adityam.github.io/linux-blog/categories/</loc>
+    <lastmod>2023-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/tags/dotfile/</loc>
+    <lastmod>2023-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/post/managing-dotfiles-using-stow/</loc>
+    <lastmod>2023-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/categories/os/</loc>
+    <lastmod>2023-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/post/</loc>
+    <lastmod>2023-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/tags/stow/</loc>
+    <lastmod>2023-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/tags/</loc>
+    <lastmod>2023-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/</loc>
+    <lastmod>2023-01-14T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/a6x/</loc>
     <lastmod>2022-09-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/boox/</loc>
-    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://adityam.github.io/linux-blog/categories/</loc>
     <lastmod>2022-09-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adityam.github.io/linux-blog/post/converting-supernote-files-to-pdf/</loc>
@@ -23,9 +44,6 @@
     <loc>https://adityam.github.io/linux-blog/tags/max3/</loc>
     <lastmod>2022-09-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adityam.github.io/linux-blog/post/</loc>
-    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/rake/</loc>
     <lastmod>2022-09-02T00:00:00+00:00</lastmod>
   </url><url>
@@ -33,12 +51,6 @@
     <lastmod>2022-09-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/supernote-tool/</loc>
-    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://adityam.github.io/linux-blog/tags/</loc>
-    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://adityam.github.io/linux-blog/</loc>
     <lastmod>2022-09-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adityam.github.io/linux-blog/categories/cli/</loc>
@@ -101,9 +113,6 @@
     <loc>https://adityam.github.io/linux-blog/tags/slack-term/</loc>
     <lastmod>2021-11-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://adityam.github.io/linux-blog/categories/terminal/</loc>
-    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://adityam.github.io/linux-blog/post/slack-tui/</loc>
     <lastmod>2021-11-13T00:00:00+00:00</lastmod>
   </url><url>
@@ -111,6 +120,9 @@
     <lastmod>2021-04-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/glob-qualifiers/</loc>
+    <lastmod>2021-04-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://adityam.github.io/linux-blog/categories/terminal/</loc>
     <lastmod>2021-04-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/zsh/</loc>
@@ -174,9 +186,6 @@
     <lastmod>2020-05-13T13:07:31-04:00</lastmod>
   </url><url>
     <loc>https://adityam.github.io/linux-blog/post/multiple-versions-of-a-library/</loc>
-    <lastmod>2020-05-13T13:07:31-04:00</lastmod>
-  </url><url>
-    <loc>https://adityam.github.io/linux-blog/categories/os/</loc>
     <lastmod>2020-05-13T13:07:31-04:00</lastmod>
   </url><url>
     <loc>https://adityam.github.io/linux-blog/tags/pacman/</loc>

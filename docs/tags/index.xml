@@ -6,7 +6,25 @@
     <description>Recent content in Tags on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>dotfile</title>
+      <link>https://adityam.github.io/linux-blog/tags/dotfile/</link>
+      <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/dotfile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stow</title>
+      <link>https://adityam.github.io/linux-blog/tags/stow/</link>
+      <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/tags/stow/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>A6X</title>
       <link>https://adityam.github.io/linux-blog/tags/a6x/</link>
@@ -76,24 +94,6 @@
       <pubDate>Thu, 25 Aug 2022 00:00:00 +0000</pubDate>
       
       <guid>https://adityam.github.io/linux-blog/tags/foxitreader/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mypdfsigner</title>
-      <link>https://adityam.github.io/linux-blog/tags/mypdfsigner/</link>
-      <pubDate>Thu, 25 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/mypdfsigner/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PDF</title>
-      <link>https://adityam.github.io/linux-blog/tags/pdf/</link>
-      <pubDate>Thu, 25 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/tags/pdf/</guid>
       <description></description>
     </item>
     

@@ -6,19 +6,7 @@
     <description>Recent content in Terminal on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/categories/terminal/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Using Slack from the terminal</title>
-      <link>https://adityam.github.io/linux-blog/post/slack-tui/</link>
-      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/post/slack-tui/</guid>
-      <description>&lt;p&gt;In rencent years, lot of my short conversations with my research lab has moved
-to Slack. I am not a big fan of closed protocol communication clients, but
-Slack has the advantage that it is relatively easy to use. Well, it seems that
-it relatively easy to use for everyone except me.&lt;/p&gt;</description>
-    </item>
-    
+    <lastBuildDate>Sun, 18 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/categories/terminal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Accessing newest file in a directory</title>
       <link>https://adityam.github.io/linux-blog/post/accessing-newest-file-in-directory/</link>
@@ -38,20 +26,6 @@ directory:&lt;/p&gt;</description>
       <description>As I mentioned in a previous post, I started using fish after using zsh for about 15 years. After working exclusively on fish for about 3 months, I am now back to zsh.
 In the end, there was nothing inherently missing in fish, but fish just did a few minor things differently which began to get annoying.
 Fish&amp;rsquo;s tab-completion first shows a short list of option (top 10 or so) and you have to press tab twice to see the whole list.</description>
-    </item>
-    
-    <item>
-      <title>Trying Fish Shell</title>
-      <link>https://adityam.github.io/linux-blog/post/trying-fish/</link>
-      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/post/trying-fish/</guid>
-      <description>&lt;p&gt;I have been using &lt;code&gt;zsh&lt;/code&gt; as my shell for almost 15 years. I spent ages
-configuring it in the beginning and for the most part I have been happy with
-my setup. Lately, I saw multiple suggestions for
-&lt;a href=&#34;https://github.com/zsh-users/zsh-autosuggestions&#34;&gt;zsh-autosuggestions&lt;/a&gt;, which
-has a tag-line &amp;ldquo;Fish-like autosuggestions for zsh&amp;rdquo;. Imitation is the best form
-of flattery. So, I thought of giving fish a shot.&lt;/p&gt;</description>
     </item>
     
   </channel>

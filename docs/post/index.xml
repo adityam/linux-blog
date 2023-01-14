@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Managing dotfiles using stow</title>
+      <link>https://adityam.github.io/linux-blog/post/managing-dotfiles-using-stow/</link>
+      <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/post/managing-dotfiles-using-stow/</guid>
+      <description>&lt;p&gt;One of my new year&amp;rsquo;s resolutions was to come up with a sensible way to manage
+my dotfiles. I evaluated a few solutions and finally settled on &lt;a href=&#34;https://www.gnu.org/software/stow/&#34;&gt;GNU
+stow&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Converting SuperNote files to PDF</title>
       <link>https://adityam.github.io/linux-blog/post/converting-supernote-files-to-pdf/</link>
@@ -118,27 +129,6 @@ And every time I would read one of these reports, I would think, &amp;ldquo;Hmm&
 I should start using a proper backup solution.&amp;rdquo; I finally bit the bullet and
 purchased some storage from &lt;a href=&#34;http://rsync.net&#34;&gt;rsync.net&lt;/a&gt; and set up a back up
 system. Yay!&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Tale of two eink notebooks</title>
-      <link>https://adityam.github.io/linux-blog/post/tale-of-two-eink-notebooks/</link>
-      <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/post/tale-of-two-eink-notebooks/</guid>
-      <description>&lt;p&gt;I am a pen and paper person. On a typical day, I write about 10&amp;ndash;30
-handwritten pages. (I write on a half-folded printer paper, so it is actually
-only 7-15 pages &amp;ldquo;full&amp;rdquo; pages). For the last decade or so, I have written
-almost exclusively using fountain pens (Pelikan M200, Pilot Vanishing Point,
-and occasionally, Pilot Metropolitan).&lt;/p&gt;
-&lt;p&gt;To reduce the amount of time I state at a screen, I purchased a &lt;a href=&#34;https://onyxboox.com/boox_max3&#34;&gt;Oynx Boox
-Max3&lt;/a&gt; tablet almost a year ago, primarily to read academic PDFs. The
-13.3&amp;quot; screen of Max3 is perfect for reading dense IEEE formatted two-column
-PDFs. Max3 is an Android device and many Android apps work reasonably well on
-it. So, I ended up using it for internet browsing, reading emails and Slack
-messages, &lt;a href=&#34;https://www.reddit.com/r/ereader/comments/fnxkep/using_boox_max3_as_a_whiteboard_for_teaching/&#34;&gt;delivering zoom lectures&lt;/a&gt;, and even watching Youtube videos!
-Clearly, J.K. Rowling had Max3 in mind when she described the newspapers with
-moving pictures in Harry Potter.&lt;/p&gt;</description>
     </item>
     
   </channel>

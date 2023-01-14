@@ -6,7 +6,7 @@ tags  :
   - zsh
   - shell
 categories :
-  - terminal
+  - CLI
 ---
 
 I have been using `zsh` as my shell for almost 15 years. I spent ages

@@ -5,7 +5,7 @@ tags  :
   - slack
   - slack-term
 categories :
-  - Terminal
+  - CLI
 ---
 
 In rencent years, lot of my short conversations with my research lab has moved

@@ -49,5 +49,31 @@ for me.&lt;/p&gt;</description>
 I recently came across a recommendation for visidata in a thread of HackerNews, and it certainly looks like a program that I should checkout the next time I need to work through a big spreadsheet.</description>
     </item>
     
+    <item>
+      <title>Using Slack from the terminal</title>
+      <link>https://adityam.github.io/linux-blog/post/slack-tui/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/post/slack-tui/</guid>
+      <description>&lt;p&gt;In rencent years, lot of my short conversations with my research lab has moved
+to Slack. I am not a big fan of closed protocol communication clients, but
+Slack has the advantage that it is relatively easy to use. Well, it seems that
+it relatively easy to use for everyone except me.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Trying Fish Shell</title>
+      <link>https://adityam.github.io/linux-blog/post/trying-fish/</link>
+      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/post/trying-fish/</guid>
+      <description>&lt;p&gt;I have been using &lt;code&gt;zsh&lt;/code&gt; as my shell for almost 15 years. I spent ages
+configuring it in the beginning and for the most part I have been happy with
+my setup. Lately, I saw multiple suggestions for
+&lt;a href=&#34;https://github.com/zsh-users/zsh-autosuggestions&#34;&gt;zsh-autosuggestions&lt;/a&gt;, which
+has a tag-line &amp;ldquo;Fish-like autosuggestions for zsh&amp;rdquo;. Imitation is the best form
+of flattery. So, I thought of giving fish a shot.&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>
