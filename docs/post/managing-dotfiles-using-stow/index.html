@@ -99,7 +99,7 @@ with the desired contents of <code>~/.config/kitty.conf</code></li>
 <code>dot-filename</code> and <code>dot-dirname</code>.</li>
 </ol>
 <p>Then run the command</p>
-<pre tabindex="0"><code>stow -t $HOME -v package
+<pre tabindex="0"><code>stow --target $HOME --dotfiles --verbose package
 </code></pre><p>for each package, which creates the appropriate symlinks. That&rsquo;s it!</p>
 <p>Well almost. There is currently a <a href="https://github.com/aspiers/stow/issues/33">bug</a> in stow, due to which <code>--dotfiles</code>
 option does not work with directories. Fortunately, there is an AUR package
@@ -107,7 +107,7 @@ option does not work with directories. Fortunately, there is an AUR package
 upstream.</p>
 <p>It can be tedious to link each package one by one. If so, we can stow all
 packages at once using</p>
-<pre tabindex="0"><code>find . -mindepth 1 -maxdepth 1 -typed -printf &#39;%f &#39; | xargs stow -t $HOME --dotfiles -v
+<pre tabindex="0"><code>find . -mindepth 1 -maxdepth 1 -typed -printf &#39;%f &#39; | xargs stow --target $HOME --dotfiles --verbose
 </code></pre>
 
 <hr />

@@ -36,7 +36,7 @@ following.
 Then run the command
 
 ```
-stow -t $HOME -v package
+stow --target $HOME --dotfiles --verbose package
 ```
 
 for each package, which creates the appropriate symlinks. That's it!
@@ -52,7 +52,7 @@ It can be tedious to link each package one by one. If so, we can stow all
 packages at once using
 
 ```
-find . -mindepth 1 -maxdepth 1 -typed -printf '%f ' | xargs stow -t $HOME --dotfiles -v
+find . -mindepth 1 -maxdepth 1 -typed -printf '%f ' | xargs stow --target $HOME --dotfiles --verbose
 ```
 
 
