@@ -107,7 +107,7 @@ option does not work with directories. Fortunately, there is an AUR package
 upstream.</p>
 <p>It can be tedious to link each package one by one. If so, we can stow all
 packages at once using</p>
-<pre tabindex="0"><code>find . -mindepth 1 -maxdepth 1 -typed -printf &#39;%f &#39; | xargs stow --target $HOME --dotfiles --verbose
+<pre tabindex="0"><code>find . -mindepth 1 -maxdepth 1 -type d -printf &#39;%f &#39; | xargs stow --target $HOME --dotfiles --verbose
 </code></pre>
 
 <hr />

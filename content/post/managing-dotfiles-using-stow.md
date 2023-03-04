@@ -52,7 +52,7 @@ It can be tedious to link each package one by one. If so, we can stow all
 packages at once using
 
 ```
-find . -mindepth 1 -maxdepth 1 -typed -printf '%f ' | xargs stow --target $HOME --dotfiles --verbose
+find . -mindepth 1 -maxdepth 1 -type d -printf '%f ' | xargs stow --target $HOME --dotfiles --verbose
 ```
 
 
