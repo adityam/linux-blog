@@ -48,7 +48,7 @@ Thus, for my first two use cases, I can use:
 
 For the third use case:
 
-    z luametatex && sudo pamcan -U *(.om[1])
+    z luametatex && sudo pacman -U *(.om[1])
 
 Sometimes, I want to use the latest file matching a particular pattern (say,
 the latest PDF file with `pattern` in the title). In such cases, I can use:
