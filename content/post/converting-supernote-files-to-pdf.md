@@ -15,11 +15,11 @@ categories :
 
 Writing is my primary mode of note taking and at the beginning of the
 pandemic, I switched from paper notebooks to digital notebooks. My primary
-notetaking devices are SuperNote A6X, Boox Max3, and iPad Pro using Notability
+note taking devices are SuperNote A6X, Boox Max3, and iPad Pro using Notability
 App (in that order,
 though I do prefer iPad for reviewing papers etc. because of the speed). I
 prefer the writing experience on Supernote, but I do miss one of the software
-features of Boox: In Boox, everytime I save a note file, it is automatically
+features of Boox: In Boox, every time I save a note file, it is automatically
 converted to PDF and stored in a pdf directory which mirrors the layout of the
 notes directory. There is no such feature in SuperNote. Notes have to
 converted manually and get exported to a flat directory. 
@@ -28,7 +28,7 @@ converted manually and get exported to a flat directory.
 
 Now, the reason that I want automatic pdf conversion is that PDF is a
 universal format and can be read on any device. In contrast, all the digital
-notebook devices or apps use a propriaty format, which cannot be read easily
+notebook devices or apps use a propriety format, which cannot be read easily
 on other devices. That's why I like the automatic conversion on Boox. That
 (along with DropSync to instantly sync the converted file) means that I always
 have access to the latest version of my notebooks everywhere. On SuperNote, I
