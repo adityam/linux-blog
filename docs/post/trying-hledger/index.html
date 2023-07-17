@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Tinkering with Linux </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Aditya Mahajan" />
+  <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/styles.css" type="text/css" />
+  <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/paperclear.css" type="text/css" />
+  
+  <script type="module" defer
+    src="//instant.page/3.0.0"
+    integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1">
+  </script>
+
+  <script data-goatcounter="https://adityam.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  
+  
+  
+  <div id="container">
+    <div id="header" role="banner">
+      <span id="title"><a href="https://adityam.github.io/linux-blog">Tinkering with Linux</a></span><br />
+      
+    </div>
+    
+    
+    
+    <div id="menu" role="navigation">
+      <ul class="nav tree">
+        <li>
+        <strong>Recent Posts</strong>
+          <ul>
+            
+            
+            
+            <li><a href="/linux-blog/post/trying-hledger/">Trying out hledger</a></li>
+            
+            
+            
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/managing-dotfiles-using-stow/">Managing dotfiles using stow</a></li>
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/converting-supernote-files-to-pdf/">Converting SuperNote files to PDF</a></li>
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/signing-pdf/">Signing PDFs via command line</a></li>
+            
+            
+            
+            
+            <li><a href="/linux-blog/post/kitty-local-config/">Local config for kitty</a></li>
+            
+            
+          </ul>
+        </li>
+        <li><strong><a href="https://adityam.github.io/linux-blog/post">All Posts</a></strong></li>
+      </ul>
+    </div>
+    
+    
+    
+    <div id="content" role="main">
+
+
+<h1>Trying out hledger</h1>
+<p class="post-time">Posted on July 15, 2023</p>
+
+<p>As an academic, I need to track research funds: what is the remaining balance of each grant, how much I have committed for student stipends, what are anticipated expenditures for conference travel, etc. Like everyone else, I used to do this via a spreadsheet, but my spreadsheet was becoming a bit too complicated. So, I decided to try plain text accounting, and use <a href="https://hledger.org/">hledger</a> to keep tracks of research funds.</p>
+<!-- more -->
+<p><code>hledger</code> may be considered as a Haskell port of <a href="https://ledger-cli.org/">ledger</a>, though there are a few subtle <a href="https://hledger.org/ledger.html">differences</a> between the two.</p>
+<p>For my purposes, I created a <code>grants.journal</code> file which looks something like this:</p>
+<ul>
+<li>
+<p>First set the formatting options. I want to use commas as thousand separators and am happy to round amounts to the nearest dollar.</p>
+<pre tabindex="0"><code>decimal-mark .
+commodity 1,000. CAD
+</code></pre></li>
+<li>
+<p>Then define accounts for each grant and each category of expense. I also create a new <code>eXpense</code> category called <code>stipend</code> so that I can type <code>stipend:student1</code> instead of <code>expenses:stipend:student1</code>. Strictly speaking, I don&rsquo;t need to define these accounts as they can be inferred from the journal file, but it helps with autocomplete etc.</p>
+<pre tabindex="0"><code>account assets:grant1
+account assets:grant2
+account assets:grant3
+
+account expenses:conferences
+account expenses:memberships
+account expenses:supplies
+
+account stipend:student1; type: X
+account stipend:student2; type: X
+account stipend:student3; type: X
+account stipend:student4; type: X
+</code></pre></li>
+<li>
+<p>Then create opening balances for each grant at the beginning of the financial year.</p>
+<pre tabindex="0"><code>2023-05-01 Opening balances
+  assets:grant1     40,000 CAD
+  assets:grant2     60,000 CAD
+  assets:grant3     52,000 CAD
+  equity:opening/closing balances
+</code></pre></li>
+<li>
+<p>Next add the yearly allocation for the different grants, which may occur and different dates. Moreover, the grants might have different duration, so some finish earlier than others.</p>
+<pre tabindex="0"><code>2024-05-01 Yearly grant allocations
+  assets:grant1     40,000 CAD
+  assets:grant2     40,000 CAD
+  equity:grants
+
+2024-06-01 Yearly allocation (at a different date)
+  assets:grant3     40,000 CAD
+  equity:grants
+
+
+2025-05-01 Yearly grant allocations
+  assets:grant2     40,000 CAD
+  equity:grants
+
+2025-06-01 Yearly allocation (at a different date)
+  assets:grant3     40,000 CAD
+  equity:grants
+</code></pre><p>In principle, it is possible to cature this with <em>periodic entries</em>, but in my experiments, periodic entries don&rsquo;t play well with <code>hledger-ui</code>, so I decided not to use them and manually add an entry for each year.</p>
+</li>
+<li>
+<p>Then indicate the yearly stipends of students. Note that some students (like <code>Student 1</code> in the example below) receive partial funding from the university and I only pay part of the stipend. Others are co-supervised, so I pay half the stipend (like <code>Student 2</code> below).</p>
+<pre tabindex="0"><code>2023-09-01 Student 1 Fellowship Stipend
+  stipend:student1   20,000 CAD
+  assets:grant2
+
+2024-09-01 Student 1 Fellowship Stipend
+  stipend:student1   20,000 CAD
+  assets:grant2
+
+2025-09-01 Student 1 Fellowship Stipend
+  stipend:student1   20,000 CAD
+  assets:grant2
+
+2026-09-01 Student 1 PhD Stipend
+  stipend:student1   30,000 CAD
+  assets:grant2
+
+2027-09-01 Student 1 PhD Stipend
+  stipend:student1   30,000 CAD
+  assets:grant2
+
+2023-09-01 Student 2 Fellowship Stipend (co-supervised)
+  stipend:student2   10,000 CAD
+  assets:grant1
+
+2024-09-01 Student 2 Fellowship Stipend
+  stipend:student2   10,000 CAD
+  assets:grant1
+
+2025-09-01 Student 2 Fellowship Stipend
+  stipend:student2   10,000 CAD
+  assets:grant1
+
+2026-09-01 Student 2 PhD Stipend
+  stipend:student2   15,000 CAD
+  assets:grant1
+
+2027-09-01 Student 2 PhD Stipend
+  stipend:student2   15,000 CAD
+  assets:grant1
+
+2023-09-01 Student 3 PhD Stipend (had started in 2021, no fellowship)
+  stipend:student3   30,000 CAD
+  assets:grant3
+
+2024-09-01 Student 3 PhD Stipend
+  stipend:student3   30,000 CAD
+  assets:grant3
+
+2025-09-01 Student 3 PhD Stipend
+  stipend:student3   30,000 CAD
+  assets:grant3
+</code></pre><p>This is verbose. In principle, some of it can be shortened by using periodic transactions, but I had some issues in using periodic transactions in <code>hledger-ui</code>. Since this needs to be updated only once or twice a year, I don&rsquo;t mind the verbose format.</p>
+</li>
+<li>
+<p>Similarly, add expenses for conferences:</p>
+<pre tabindex="0"><code>2023-05-24 Conference 1
+  expenses:conferences:conf1:travel     500 CAD
+  expenses:conferences:conf1:hotel      800 CAD
+  expenses:conferences:conf1:food       200 CAD
+  assets:grant3 
+
+2023-12-15 Conference 2
+  ! expenses:conferences:conf2:travel     1,500 CAD
+  ! expenses:conferences:conf2:hotel      1,200 CAD
+  ! expenses:conferences:conf2:food         300 CAD
+  ! assets:grant1 
+</code></pre><p>Note that the second conference is something in the future, so I use <code>!</code> to indicate that it is a <em>pending</em> transaction. This helps in filtering later.</p>
+</li>
+</ul>
+<p>That&rsquo;s it. I also have similar entries for <code>expenses:supplies</code> and <code>expenses:memberships</code>. For the sake of brevity, I&rsquo;ll not go into the detail for those.</p>
+<p>To view the journal file, I use <code>hledger-ui</code>. I have the following in my <code>.zshrc</code> file:</p>
+<pre tabindex="0"><code>alias hl=&#34;hledger-ui --tree --depth=2 --cost --empty --period=&#39;2023&#39; --change --forecast -f blog.journal --all not:equity&#34;
+</code></pre><p>This launches <code>hledger-ui</code> to view the file <code>blog.journal</code> (which we created above) for the period of 2023. The other flags change the defaults of <code>hledger-ui</code> to my preference.</p>
+<p>Here is a screencast of <code>hledger-ui</code> in action:</p>
+<script async id="asciicast-597308" src="https://asciinema.org/a/597308.js" data-startAt="15.0"></script>
+
+
+<hr />
+
+<p class="nav">
+
+<a href="/linux-blog/post/managing-dotfiles-using-stow/">&nbsp;&lt;Managing dotfiles using stow</a>
+
+
+</p>
+
+<p>
+This entry was posted in 
+
+<a href="https://adityam.github.io/linux-blog/categories/cli">
+  CLI</a> 
+and tagged 
+
+<a href="https://adityam.github.io/linux-blog/tags/plain-text-accounting">plain text accounting</a>,
+<a href="https://adityam.github.io/linux-blog/tags/hledger">hledger</a>.
+ 
+</p>
+
+<div id="disqus_thread"></div>
+<div id="disqus_comments">
+  <button onclick="load_disqus()">Show Comments</button>
+</div>
+<script>
+    function load_disqus() { 
+        var d = document, s = d.createElement('script');
+        s.src = '//adi-linux-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        var load_button = document.getElementById('disqus_comments');
+        load_button.parentNode.removeChild(load_button);
+    };
+   (function () {
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//adi-linux-blog.disqus.com/count.js';
+        (d.head || d.body).appendChild(s);
+    }()); 
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+    </div>
+    
+    
+    
+    <div id="pied" role="contentinfo">
+      Content distributed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license
+    </div>
+  </div>
+</body>
+</html>
+
+

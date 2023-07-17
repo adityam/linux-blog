@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Tinkering with Linux</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trying out hledger</title>
+      <link>https://adityam.github.io/linux-blog/post/trying-hledger/</link>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://adityam.github.io/linux-blog/post/trying-hledger/</guid>
+      <description>As an academic, I need to track research funds: what is the remaining balance of each grant, how much I have committed for student stipends, what are anticipated expenditures for conference travel, etc. Like everyone else, I used to do this via a spreadsheet, but my spreadsheet was becoming a bit too complicated. So, I decided to try plain text accounting, and use hledger to keep tracks of research funds.</description>
+    </item>
+    
     <item>
       <title>Managing dotfiles using stow</title>
       <link>https://adityam.github.io/linux-blog/post/managing-dotfiles-using-stow/</link>
@@ -112,23 +121,6 @@ it relatively easy to use for everyone except me.&lt;/p&gt;</description>
       <guid>https://adityam.github.io/linux-blog/post/accessing-newest-file-in-directory/</guid>
       <description>&lt;p&gt;There are many instances where I want to access the most recent file in a
 directory:&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Backup up data</title>
-      <link>https://adityam.github.io/linux-blog/post/backing-up-data/</link>
-      <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://adityam.github.io/linux-blog/post/backing-up-data/</guid>
-      <description>&lt;p&gt;For about 10 years now, I have been using Dropbox as a tool to synchronize data
-between my work desktop and my laptop. I do a local backup using
-&lt;a href=&#34;https://rsnapshot.org&#34;&gt;&lt;code&gt;rsnapshot&lt;/code&gt;&lt;/a&gt;, but they were only stored locally on my desktop. So,
-effectively, I had been relying on Dropbox as a backup solution. Every so
-often, I read horror stories that &lt;a href=&#34;https://duckduckgo.com/?q=dropbox+is+not+a+backup+solution&#34;&gt;Dropbox is not a backup solution&lt;/a&gt;.
-And every time I would read one of these reports, I would think, &amp;ldquo;Hmm&amp;hellip; maybe
-I should start using a proper backup solution.&amp;rdquo; I finally bit the bullet and
-purchased some storage from &lt;a href=&#34;http://rsync.net&#34;&gt;rsync.net&lt;/a&gt; and set up a back up
-system. Yay!&lt;/p&gt;</description>
     </item>
     
   </channel>
