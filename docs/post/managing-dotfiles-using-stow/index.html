@@ -7,8 +7,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="Aditya Mahajan" />
-  <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/styles.css" type="text/css" />
-  <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/paperclear.css" type="text/css" />
+  <link rel="stylesheet" href="https://adityam.github.io/linux-blog//css/styles.css" type="text/css" />
+  <link rel="stylesheet" href="https://adityam.github.io/linux-blog//css/paperclear.css" type="text/css" />
   
   <script type="module" defer
     src="//instant.page/3.0.0"
@@ -24,7 +24,7 @@
   
   <div id="container">
     <div id="header" role="banner">
-      <span id="title"><a href="https://adityam.github.io/linux-blog">Tinkering with Linux</a></span><br />
+      <span id="title"><a href="https://adityam.github.io/linux-blog/">Tinkering with Linux</a></span><br />
       
     </div>
     
@@ -66,7 +66,7 @@
             
           </ul>
         </li>
-        <li><strong><a href="https://adityam.github.io/linux-blog/post">All Posts</a></strong></li>
+        <li><strong><a href="https://adityam.github.io/linux-blog//post">All Posts</a></strong></li>
       </ul>
     </div>
     
@@ -103,8 +103,9 @@ with the desired contents of <code>~/.config/kitty.conf</code></li>
 </code></pre><p>for each package, which creates the appropriate symlinks. That&rsquo;s it!</p>
 <p>Well almost. There is currently a <a href="https://github.com/aspiers/stow/issues/33">bug</a> in stow, due to which <code>--dotfiles</code>
 option does not work with directories. Fortunately, there is an AUR package
-<code>show-dotfiles-git</code> which provides a fix, at least until the fix is merged
+<code>stow-dotfiles-git</code> which provides a fix, at least until the fix is merged
 upstream.</p>
+<p><strong>Update (28 Jan 2025):</strong> The bug has been resolved. So, there is no need to install <code>stow-dotfiles-git</code>.</p>
 <p>It can be tedious to link each package one by one. If so, we can stow all
 packages at once using</p>
 <pre tabindex="0"><code>find . -mindepth 1 -maxdepth 1 -type d -printf &#39;%f &#39; | xargs stow --target $HOME --dotfiles --verbose

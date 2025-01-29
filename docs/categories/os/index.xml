@@ -4,33 +4,23 @@
     <title>OS on Tinkering with Linux</title>
     <link>https://adityam.github.io/linux-blog/categories/os/</link>
     <description>Recent content in OS on Tinkering with Linux</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/categories/os/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://adityam.github.io/linux-blog/categories/os/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Managing dotfiles using stow</title>
       <link>https://adityam.github.io/linux-blog/post/managing-dotfiles-using-stow/</link>
       <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/managing-dotfiles-using-stow/</guid>
-      <description>&lt;p&gt;One of my new year&amp;rsquo;s resolutions was to come up with a sensible way to manage
-my dotfiles. I evaluated a few solutions and finally settled on &lt;a href=&#34;https://www.gnu.org/software/stow/&#34;&gt;GNU
-stow&lt;/a&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;One of my new year&amp;rsquo;s resolutions was to come up with a sensible way to manage&#xA;my dotfiles. I evaluated a few solutions and finally settled on &lt;a href=&#34;https://www.gnu.org/software/stow/&#34;&gt;GNU&#xA;stow&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Installing and using multiple versions of a library</title>
       <link>https://adityam.github.io/linux-blog/post/multiple-versions-of-a-library/</link>
       <pubDate>Wed, 13 May 2020 13:07:31 -0400</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/multiple-versions-of-a-library/</guid>
-      <description>&lt;p&gt;I use a Haskell static website generator called &lt;a href=&#34;https://github.com/jgm/yst&#34;&gt;yst&lt;/a&gt; for generating my
-homepage. Why? Partly because when I first created my professional webpage, I
-was a Haskell enthusiast and &lt;a href=&#34;https://github.com/jgm/yst&#34;&gt;yst&lt;/a&gt; seemed cool. After a while, I got
-frustrated with Haskell (I use Arch Linux, and it seemed that each upgrade
-would break Haskell install) and moved on. I haven&amp;rsquo;t used Haskell for a while
-now.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I use a Haskell static website generator called &lt;a href=&#34;https://github.com/jgm/yst&#34;&gt;yst&lt;/a&gt; for generating my&#xA;homepage. Why? Partly because when I first created my professional webpage, I&#xA;was a Haskell enthusiast and &lt;a href=&#34;https://github.com/jgm/yst&#34;&gt;yst&lt;/a&gt; seemed cool. After a while, I got&#xA;frustrated with Haskell (I use Arch Linux, and it seemed that each upgrade&#xA;would break Haskell install) and moved on. I haven&amp;rsquo;t used Haskell for a while&#xA;now.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

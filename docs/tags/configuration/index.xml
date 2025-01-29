@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>configuration on Tinkering with Linux</title>
+    <title>Configuration on Tinkering with Linux</title>
     <link>https://adityam.github.io/linux-blog/tags/configuration/</link>
-    <description>Recent content in configuration on Tinkering with Linux</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Configuration on Tinkering with Linux</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/configuration/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://adityam.github.io/linux-blog/tags/configuration/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Local config for kitty</title>
       <link>https://adityam.github.io/linux-blog/post/kitty-local-config/</link>
       <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/kitty-local-config/</guid>
-      <description>As I mentioned in the last post, I am testing out kitty as my terminal emulator instead of UXTerm. So for everything has been smooth sailing except for one minor issue. On my work desktop, I want fontsize 11 but on my laptop, I want fontsize 14. This is a combination of resolution and physical size of the two monitors. Reading the documentation of kitty.conf, it was not clear how to set conditional values for the variables.</description>
+      <description>&lt;p&gt;As I mentioned in the last &lt;a href=&#34;../changing-terminal-and-browser&#34;&gt;post&lt;/a&gt;, I am&#xA;testing out &lt;a href=&#34;https://sw.kovidgoyal.net/kitty/&#34;&gt;kitty&lt;/a&gt; as my terminal emulator instead of UXTerm. So for&#xA;everything has been smooth sailing except for one minor issue. On my work&#xA;desktop, I want fontsize 11 but on my laptop, I want fontsize 14. This is a combination of resolution and physical size of the two monitors. Reading the documentation of kitty.conf, it was not clear how to set conditional values for the variables.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

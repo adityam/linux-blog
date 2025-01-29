@@ -46,6 +46,8 @@ option does not work with directories. Fortunately, there is an AUR package
 `stow-dotfiles-git` which provides a fix, at least until the fix is merged
 upstream. 
 
+**Update (28 Jan 2025):** The bug has been resolved. So, there is no need to install `stow-dotfiles-git`. 
+
 [bug]: https://github.com/aspiers/stow/issues/33
 
 It can be tedious to link each package one by one. If so, we can stow all

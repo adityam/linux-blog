@@ -4,80 +4,65 @@
     <title>Categories on Tinkering with Linux</title>
     <link>https://adityam.github.io/linux-blog/categories/</link>
     <description>Recent content in Categories on Tinkering with Linux</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://adityam.github.io/linux-blog/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CLI</title>
       <link>https://adityam.github.io/linux-blog/categories/cli/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/categories/cli/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>OS</title>
       <link>https://adityam.github.io/linux-blog/categories/os/</link>
       <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/categories/os/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>eink</title>
+      <title>Eink</title>
       <link>https://adityam.github.io/linux-blog/categories/eink/</link>
       <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/categories/eink/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>web-browser</title>
+      <title>Web-Browser</title>
       <link>https://adityam.github.io/linux-blog/categories/web-browser/</link>
       <pubDate>Tue, 21 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/categories/web-browser/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Terminal</title>
       <link>https://adityam.github.io/linux-blog/categories/terminal/</link>
       <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/categories/terminal/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>backup</title>
+      <title>Backup</title>
       <link>https://adityam.github.io/linux-blog/categories/backup/</link>
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/categories/backup/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>syncronization</title>
+      <title>Syncronization</title>
       <link>https://adityam.github.io/linux-blog/categories/syncronization/</link>
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/categories/syncronization/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>efficiency</title>
+      <title>Efficiency</title>
       <link>https://adityam.github.io/linux-blog/categories/efficiency/</link>
       <pubDate>Sat, 09 May 2020 00:00:51 -0400</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/categories/efficiency/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

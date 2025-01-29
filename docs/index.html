@@ -3,13 +3,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.112.1">
+	<meta name="generator" content="Hugo 0.139.0">
   <title>Tinkering with Linux </title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="Aditya Mahajan" />
-  <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/styles.css" type="text/css" />
-  <link rel="stylesheet" href="https://adityam.github.io/linux-blog/css/paperclear.css" type="text/css" />
+  <link rel="stylesheet" href="https://adityam.github.io/linux-blog//css/styles.css" type="text/css" />
+  <link rel="stylesheet" href="https://adityam.github.io/linux-blog//css/paperclear.css" type="text/css" />
   <link rel="alternate" type="application/rss+xml" href="https://adityam.github.io/linux-blog/index.xml" title="Tinkering with Linux" />
   
   <script type="module" defer
@@ -26,7 +26,7 @@
   
   <div id="container">
     <div id="header" role="banner">
-      <span id="title"><a href="https://adityam.github.io/linux-blog">Tinkering with Linux</a></span><br />
+      <span id="title"><a href="https://adityam.github.io/linux-blog/">Tinkering with Linux</a></span><br />
       
     </div>
     
@@ -68,7 +68,7 @@
             
           </ul>
         </li>
-        <li><strong><a href="https://adityam.github.io/linux-blog/post">All Posts</a></strong></li>
+        <li><strong><a href="https://adityam.github.io/linux-blog//post">All Posts</a></strong></li>
       </ul>
     </div>
     
@@ -96,7 +96,9 @@
         </p>
 
         <div class="post-content">
-            <p>As an academic, I need to track research funds: what is the remaining balance of each grant, how much I have committed for student stipends, what are anticipated expenditures for conference travel, etc. Like everyone else, I used to do this via a spreadsheet, but my spreadsheet was becoming a bit too complicated. So, I decided to try plain text accounting, and use hledger to keep tracks of research funds.</p>
+            <p><p>As an academic, I need to track research funds: what is the remaining balance of each grant, how much I have committed for student stipends, what are anticipated expenditures for conference travel, etc. Like everyone else, I used to do this via a spreadsheet, but my spreadsheet was becoming a bit too complicated. So, I decided to try plain text accounting, and use <a href="https://hledger.org/">hledger</a> to keep tracks of research funds.</p>
+<!-- more -->
+<p><code>hledger</code> may be considered as a Haskell port of <a href="https://ledger-cli.org/">ledger</a>, though there are a few subtle <a href="https://hledger.org/ledger.html">differences</a> between the two.</p></p>
             <a class="btn btn-default" href="/linux-blog/post/trying-hledger/" id="read-more-button">
                 Read more >
             </a>
@@ -222,7 +224,10 @@ for me.</p></p>
         </p>
 
         <div class="post-content">
-            <p>As I mentioned in the last post, I am testing out kitty as my terminal emulator instead of UXTerm. So for everything has been smooth sailing except for one minor issue. On my work desktop, I want fontsize 11 but on my laptop, I want fontsize 14. This is a combination of resolution and physical size of the two monitors. Reading the documentation of kitty.conf, it was not clear how to set conditional values for the variables.</p>
+            <p><p>As I mentioned in the last <a href="../changing-terminal-and-browser">post</a>, I am
+testing out <a href="https://sw.kovidgoyal.net/kitty/">kitty</a> as my terminal emulator instead of UXTerm. So for
+everything has been smooth sailing except for one minor issue. On my work
+desktop, I want fontsize 11 but on my laptop, I want fontsize 14. This is a combination of resolution and physical size of the two monitors. Reading the documentation of kitty.conf, it was not clear how to set conditional values for the variables.</p></p>
             <a class="btn btn-default" href="/linux-blog/post/kitty-local-config/" id="read-more-button">
                 Read more >
             </a>
@@ -250,7 +255,12 @@ for me.</p></p>
         </p>
 
         <div class="post-content">
-            <p>I spend a lot of time on the terminal: using alpine to send emails and using vim/neovim to edit tex files and code. For at least a decade if not longer, I have been using UXTerm as my terminal emulator. At some stage I spent some time configuring UXTerm fonts and color schemes to what I like, and I have been using it ever since. Recently, I started experiencing some weird issues with UXTerm, which forced me down a rabbit hole.</p>
+            <p><p>I spend a lot of time on the terminal: using alpine to send emails and using
+vim/neovim to edit tex files and code. For at least a decade if not longer, I
+have been using UXTerm as my terminal emulator. At some stage I spent some
+time configuring UXTerm fonts and color schemes to what I like, and I have
+been using it ever since. Recently, I started experiencing some weird issues
+with UXTerm, which forced me down a rabbit hole.</p></p>
             <a class="btn btn-default" href="/linux-blog/post/changing-terminal-and-browser/" id="read-more-button">
                 Read more >
             </a>
@@ -275,8 +285,14 @@ for me.</p></p>
         </p>
 
         <div class="post-content">
-            <p>Normally, I don&rsquo;t have to deal with large spreadsheets. I do use simple spreadsheets for keeping track of budgets/investments/taxes etc., but the only big spreadsheets I encounter are sifting through all applicants for hiring students and assigning grades to students. I struggle through OpenOffice Calc to work through these, because navigating spreadsheets is too slow.
-I recently came across a recommendation for visidata in a thread of HackerNews, and it certainly looks like a program that I should checkout the next time I need to work through a big spreadsheet.</p>
+            <p><p>Normally, I don&rsquo;t have to deal with large spreadsheets. I do use simple
+spreadsheets for keeping track of budgets/investments/taxes etc., but the only
+big spreadsheets I encounter are sifting through all applicants for hiring
+students and assigning grades to students. I struggle through OpenOffice Calc
+to work through these, because navigating spreadsheets is too slow.</p>
+<p>I recently came across a recommendation for <a href="https://www.visidata.org/">visidata</a> in a thread of
+HackerNews, and it certainly looks like a program that I should checkout the
+next time I need to work through a big spreadsheet.</p></p>
             <a class="btn btn-default" href="/linux-blog/post/visidata/" id="read-more-button">
                 Read more >
             </a>

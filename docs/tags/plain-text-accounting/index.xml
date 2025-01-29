@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>plain text accounting on Tinkering with Linux</title>
+    <title>Plain Text Accounting on Tinkering with Linux</title>
     <link>https://adityam.github.io/linux-blog/tags/plain-text-accounting/</link>
-    <description>Recent content in plain text accounting on Tinkering with Linux</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Plain Text Accounting on Tinkering with Linux</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/plain-text-accounting/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://adityam.github.io/linux-blog/tags/plain-text-accounting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Trying out hledger</title>
       <link>https://adityam.github.io/linux-blog/post/trying-hledger/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/trying-hledger/</guid>
-      <description>As an academic, I need to track research funds: what is the remaining balance of each grant, how much I have committed for student stipends, what are anticipated expenditures for conference travel, etc. Like everyone else, I used to do this via a spreadsheet, but my spreadsheet was becoming a bit too complicated. So, I decided to try plain text accounting, and use hledger to keep tracks of research funds.</description>
+      <description>&lt;p&gt;As an academic, I need to track research funds: what is the remaining balance of each grant, how much I have committed for student stipends, what are anticipated expenditures for conference travel, etc. Like everyone else, I used to do this via a spreadsheet, but my spreadsheet was becoming a bit too complicated. So, I decided to try plain text accounting, and use &lt;a href=&#34;https://hledger.org/&#34;&gt;hledger&lt;/a&gt; to keep tracks of research funds.&lt;/p&gt;&#xA;&lt;!-- more --&gt;&#xA;&lt;p&gt;&lt;code&gt;hledger&lt;/code&gt; may be considered as a Haskell port of &lt;a href=&#34;https://ledger-cli.org/&#34;&gt;ledger&lt;/a&gt;, though there are a few subtle &lt;a href=&#34;https://hledger.org/ledger.html&#34;&gt;differences&lt;/a&gt; between the two.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

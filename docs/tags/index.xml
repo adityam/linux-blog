@@ -4,98 +4,79 @@
     <title>Tags on Tinkering with Linux</title>
     <link>https://adityam.github.io/linux-blog/tags/</link>
     <description>Recent content in Tags on Tinkering with Linux</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://adityam.github.io/linux-blog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>hledger</title>
+      <title>Hledger</title>
       <link>https://adityam.github.io/linux-blog/tags/hledger/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/tags/hledger/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>plain text accounting</title>
+      <title>Plain Text Accounting</title>
       <link>https://adityam.github.io/linux-blog/tags/plain-text-accounting/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/tags/plain-text-accounting/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>dotfile</title>
+      <title>Dotfile</title>
       <link>https://adityam.github.io/linux-blog/tags/dotfile/</link>
       <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/tags/dotfile/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>stow</title>
+      <title>Stow</title>
       <link>https://adityam.github.io/linux-blog/tags/stow/</link>
       <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/tags/stow/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>A6X</title>
       <link>https://adityam.github.io/linux-blog/tags/a6x/</link>
       <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/tags/a6x/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>boox</title>
+      <title>Boox</title>
       <link>https://adityam.github.io/linux-blog/tags/boox/</link>
       <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/tags/boox/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>cron</title>
+      <title>Cron</title>
       <link>https://adityam.github.io/linux-blog/tags/cron/</link>
       <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/tags/cron/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Max3</title>
       <link>https://adityam.github.io/linux-blog/tags/max3/</link>
       <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/tags/max3/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>rake</title>
+      <title>Rake</title>
       <link>https://adityam.github.io/linux-blog/tags/rake/</link>
       <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/tags/rake/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>supernote</title>
+      <title>Supernote</title>
       <link>https://adityam.github.io/linux-blog/tags/supernote/</link>
       <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/tags/supernote/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

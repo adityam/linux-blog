@@ -1,46 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>cron on Tinkering with Linux</title>
+    <title>Cron on Tinkering with Linux</title>
     <link>https://adityam.github.io/linux-blog/tags/cron/</link>
-    <description>Recent content in cron on Tinkering with Linux</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Cron on Tinkering with Linux</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/cron/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://adityam.github.io/linux-blog/tags/cron/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Converting SuperNote files to PDF</title>
       <link>https://adityam.github.io/linux-blog/post/converting-supernote-files-to-pdf/</link>
       <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/converting-supernote-files-to-pdf/</guid>
-      <description>&lt;p&gt;Writing is my primary mode of note taking and at the beginning of the
-pandemic, I switched from paper notebooks to digital notebooks. My primary
-note taking devices are SuperNote A6X, Boox Max3, and iPad Pro using Notability
-App (in that order,
-though I do prefer iPad for reviewing papers etc. because of the speed). I
-prefer the writing experience on Supernote, but I do miss one of the software
-features of Boox: In Boox, every time I save a note file, it is automatically
-converted to PDF and stored in a pdf directory which mirrors the layout of the
-notes directory. There is no such feature in SuperNote. Notes have to
-converted manually and get exported to a flat directory.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Writing is my primary mode of note taking and at the beginning of the&#xA;pandemic, I switched from paper notebooks to digital notebooks. My primary&#xA;note taking devices are SuperNote A6X, Boox Max3, and iPad Pro using Notability&#xA;App (in that order,&#xA;though I do prefer iPad for reviewing papers etc. because of the speed). I&#xA;prefer the writing experience on Supernote, but I do miss one of the software&#xA;features of Boox: In Boox, every time I save a note file, it is automatically&#xA;converted to PDF and stored in a pdf directory which mirrors the layout of the&#xA;notes directory. There is no such feature in SuperNote. Notes have to&#xA;converted manually and get exported to a flat directory.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Backup up data</title>
       <link>https://adityam.github.io/linux-blog/post/backing-up-data/</link>
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/backing-up-data/</guid>
-      <description>&lt;p&gt;For about 10 years now, I have been using Dropbox as a tool to synchronize data
-between my work desktop and my laptop. I do a local backup using
-&lt;a href=&#34;https://rsnapshot.org&#34;&gt;&lt;code&gt;rsnapshot&lt;/code&gt;&lt;/a&gt;, but they were only stored locally on my desktop. So,
-effectively, I had been relying on Dropbox as a backup solution. Every so
-often, I read horror stories that &lt;a href=&#34;https://duckduckgo.com/?q=dropbox+is+not+a+backup+solution&#34;&gt;Dropbox is not a backup solution&lt;/a&gt;.
-And every time I would read one of these reports, I would think, &amp;ldquo;Hmm&amp;hellip; maybe
-I should start using a proper backup solution.&amp;rdquo; I finally bit the bullet and
-purchased some storage from &lt;a href=&#34;http://rsync.net&#34;&gt;rsync.net&lt;/a&gt; and set up a back up
-system. Yay!&lt;/p&gt;</description>
+      <description>&lt;p&gt;For about 10 years now, I have been using Dropbox as a tool to synchronize data&#xA;between my work desktop and my laptop. I do a local backup using&#xA;&lt;a href=&#34;https://rsnapshot.org&#34;&gt;&lt;code&gt;rsnapshot&lt;/code&gt;&lt;/a&gt;, but they were only stored locally on my desktop. So,&#xA;effectively, I had been relying on Dropbox as a backup solution. Every so&#xA;often, I read horror stories that &lt;a href=&#34;https://duckduckgo.com/?q=dropbox+is+not+a+backup+solution&#34;&gt;Dropbox is not a backup solution&lt;/a&gt;.&#xA;And every time I would read one of these reports, I would think, &amp;ldquo;Hmm&amp;hellip; maybe&#xA;I should start using a proper backup solution.&amp;rdquo; I finally bit the bullet and&#xA;purchased some storage from &lt;a href=&#34;http://rsync.net&#34;&gt;rsync.net&lt;/a&gt; and set up a back up&#xA;system. Yay!&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

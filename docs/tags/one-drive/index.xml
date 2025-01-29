@@ -1,28 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>one-drive on Tinkering with Linux</title>
+    <title>One-Drive on Tinkering with Linux</title>
     <link>https://adityam.github.io/linux-blog/tags/one-drive/</link>
-    <description>Recent content in one-drive on Tinkering with Linux</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in One-Drive on Tinkering with Linux</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/one-drive/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://adityam.github.io/linux-blog/tags/one-drive/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Syncing using rclone</title>
       <link>https://adityam.github.io/linux-blog/post/syncing-using-rclone/</link>
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/syncing-using-rclone/</guid>
-      <description>&lt;p&gt;I have been a Dropbox user for over a decade. Part of the attraction for me
-was that it is one of the few synchronization services that fully supports
-Linux. I had it installed on two servers, my office desktop, my laptop, and
-most of my mobile devices. Couple of years ago, my employer moved most of its
-IT services with Microsoft 365, which gives me access to storage space on
-Microsoft OneDrive as well. Plus, I have purchased additional storage on
-Google (for backing up my personal photos). But I never seriously used
-Microsoft OneDrive or Google Drive for synchronization because all my computers
-run Linux and neither of these services had a Linux client.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I have been a Dropbox user for over a decade. Part of the attraction for me&#xA;was that it is one of the few synchronization services that fully supports&#xA;Linux. I had it installed on two servers, my office desktop, my laptop, and&#xA;most of my mobile devices. Couple of years ago, my employer moved most of its&#xA;IT services with Microsoft 365, which gives me access to storage space on&#xA;Microsoft OneDrive as well. Plus, I have purchased additional storage on&#xA;Google (for backing up my personal photos). But I never seriously used&#xA;Microsoft OneDrive or Google Drive for synchronization because all my computers&#xA;run Linux and neither of these services had a Linux client.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

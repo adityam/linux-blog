@@ -4,29 +4,23 @@
     <title>Terminal on Tinkering with Linux</title>
     <link>https://adityam.github.io/linux-blog/categories/terminal/</link>
     <description>Recent content in Terminal on Tinkering with Linux</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/categories/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://adityam.github.io/linux-blog/categories/terminal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Accessing newest file in a directory</title>
       <link>https://adityam.github.io/linux-blog/post/accessing-newest-file-in-directory/</link>
       <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/accessing-newest-file-in-directory/</guid>
-      <description>&lt;p&gt;There are many instances where I want to access the most recent file in a
-directory:&lt;/p&gt;</description>
+      <description>&lt;p&gt;There are many instances where I want to access the most recent file in a&#xA;directory:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Back to ZSH</title>
       <link>https://adityam.github.io/linux-blog/post/back-to-zsh/</link>
       <pubDate>Thu, 03 Sep 2020 17:53:52 -0400</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/back-to-zsh/</guid>
-      <description>As I mentioned in a previous post, I started using fish after using zsh for about 15 years. After working exclusively on fish for about 3 months, I am now back to zsh.
-In the end, there was nothing inherently missing in fish, but fish just did a few minor things differently which began to get annoying.
-Fish&amp;rsquo;s tab-completion first shows a short list of option (top 10 or so) and you have to press tab twice to see the whole list.</description>
+      <description>&lt;p&gt;As I mentioned in &lt;a href=&#34;https://adityam.github.io/linux-blog/post/trying-fish/&#34;&gt;a previous post&lt;/a&gt;, I started using fish after using&#xA;zsh for about 15 years. After working exclusively on fish for about 3 months,&#xA;I am now back to zsh.&lt;/p&gt;&#xA;&lt;p&gt;In the end, there was nothing inherently missing in fish, but fish just did a&#xA;few minor things differently which began to get annoying.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Fish&amp;rsquo;s tab-completion first shows a short list of option (top 10 or so) and&#xA;you have to press tab twice to see the whole list. I found that I was almost&#xA;always pressing tab twice.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

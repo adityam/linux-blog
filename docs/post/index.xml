@@ -4,124 +4,79 @@
     <title>Posts on Tinkering with Linux</title>
     <link>https://adityam.github.io/linux-blog/post/</link>
     <description>Recent content in Posts on Tinkering with Linux</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://adityam.github.io/linux-blog/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Trying out hledger</title>
       <link>https://adityam.github.io/linux-blog/post/trying-hledger/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/trying-hledger/</guid>
-      <description>As an academic, I need to track research funds: what is the remaining balance of each grant, how much I have committed for student stipends, what are anticipated expenditures for conference travel, etc. Like everyone else, I used to do this via a spreadsheet, but my spreadsheet was becoming a bit too complicated. So, I decided to try plain text accounting, and use hledger to keep tracks of research funds.</description>
+      <description>&lt;p&gt;As an academic, I need to track research funds: what is the remaining balance of each grant, how much I have committed for student stipends, what are anticipated expenditures for conference travel, etc. Like everyone else, I used to do this via a spreadsheet, but my spreadsheet was becoming a bit too complicated. So, I decided to try plain text accounting, and use &lt;a href=&#34;https://hledger.org/&#34;&gt;hledger&lt;/a&gt; to keep tracks of research funds.&lt;/p&gt;&#xA;&lt;!-- more --&gt;&#xA;&lt;p&gt;&lt;code&gt;hledger&lt;/code&gt; may be considered as a Haskell port of &lt;a href=&#34;https://ledger-cli.org/&#34;&gt;ledger&lt;/a&gt;, though there are a few subtle &lt;a href=&#34;https://hledger.org/ledger.html&#34;&gt;differences&lt;/a&gt; between the two.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Managing dotfiles using stow</title>
       <link>https://adityam.github.io/linux-blog/post/managing-dotfiles-using-stow/</link>
       <pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/managing-dotfiles-using-stow/</guid>
-      <description>&lt;p&gt;One of my new year&amp;rsquo;s resolutions was to come up with a sensible way to manage
-my dotfiles. I evaluated a few solutions and finally settled on &lt;a href=&#34;https://www.gnu.org/software/stow/&#34;&gt;GNU
-stow&lt;/a&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;One of my new year&amp;rsquo;s resolutions was to come up with a sensible way to manage&#xA;my dotfiles. I evaluated a few solutions and finally settled on &lt;a href=&#34;https://www.gnu.org/software/stow/&#34;&gt;GNU&#xA;stow&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Converting SuperNote files to PDF</title>
       <link>https://adityam.github.io/linux-blog/post/converting-supernote-files-to-pdf/</link>
       <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/converting-supernote-files-to-pdf/</guid>
-      <description>&lt;p&gt;Writing is my primary mode of note taking and at the beginning of the
-pandemic, I switched from paper notebooks to digital notebooks. My primary
-note taking devices are SuperNote A6X, Boox Max3, and iPad Pro using Notability
-App (in that order,
-though I do prefer iPad for reviewing papers etc. because of the speed). I
-prefer the writing experience on Supernote, but I do miss one of the software
-features of Boox: In Boox, every time I save a note file, it is automatically
-converted to PDF and stored in a pdf directory which mirrors the layout of the
-notes directory. There is no such feature in SuperNote. Notes have to
-converted manually and get exported to a flat directory.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Writing is my primary mode of note taking and at the beginning of the&#xA;pandemic, I switched from paper notebooks to digital notebooks. My primary&#xA;note taking devices are SuperNote A6X, Boox Max3, and iPad Pro using Notability&#xA;App (in that order,&#xA;though I do prefer iPad for reviewing papers etc. because of the speed). I&#xA;prefer the writing experience on Supernote, but I do miss one of the software&#xA;features of Boox: In Boox, every time I save a note file, it is automatically&#xA;converted to PDF and stored in a pdf directory which mirrors the layout of the&#xA;notes directory. There is no such feature in SuperNote. Notes have to&#xA;converted manually and get exported to a flat directory.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Signing PDFs via command line</title>
       <link>https://adityam.github.io/linux-blog/post/signing-pdf/</link>
       <pubDate>Thu, 25 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/signing-pdf/</guid>
-      <description>&lt;p&gt;Signing PDFs in Linux is always a PITA. Part of the reason is that Adobe
-stopped the development of a linux port of Adobe Reader since adobe reader v9.
-Some of the newer PDFs require features which are newer than acrobat v9 and
-cannot be opened or signed with acrobat v9.&lt;/p&gt;
-&lt;p&gt;In this page, I summarize some of the options for signing PDF that have worked
-for me.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Signing PDFs in Linux is always a PITA. Part of the reason is that Adobe&#xA;stopped the development of a linux port of Adobe Reader since adobe reader v9.&#xA;Some of the newer PDFs require features which are newer than acrobat v9 and&#xA;cannot be opened or signed with acrobat v9.&lt;/p&gt;&#xA;&lt;p&gt;In this page, I summarize some of the options for signing PDF that have worked&#xA;for me.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Local config for kitty</title>
       <link>https://adityam.github.io/linux-blog/post/kitty-local-config/</link>
       <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/kitty-local-config/</guid>
-      <description>As I mentioned in the last post, I am testing out kitty as my terminal emulator instead of UXTerm. So for everything has been smooth sailing except for one minor issue. On my work desktop, I want fontsize 11 but on my laptop, I want fontsize 14. This is a combination of resolution and physical size of the two monitors. Reading the documentation of kitty.conf, it was not clear how to set conditional values for the variables.</description>
+      <description>&lt;p&gt;As I mentioned in the last &lt;a href=&#34;../changing-terminal-and-browser&#34;&gt;post&lt;/a&gt;, I am&#xA;testing out &lt;a href=&#34;https://sw.kovidgoyal.net/kitty/&#34;&gt;kitty&lt;/a&gt; as my terminal emulator instead of UXTerm. So for&#xA;everything has been smooth sailing except for one minor issue. On my work&#xA;desktop, I want fontsize 11 but on my laptop, I want fontsize 14. This is a combination of resolution and physical size of the two monitors. Reading the documentation of kitty.conf, it was not clear how to set conditional values for the variables.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Changing terminal and browser</title>
       <link>https://adityam.github.io/linux-blog/post/changing-terminal-and-browser/</link>
       <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/changing-terminal-and-browser/</guid>
-      <description>I spend a lot of time on the terminal: using alpine to send emails and using vim/neovim to edit tex files and code. For at least a decade if not longer, I have been using UXTerm as my terminal emulator. At some stage I spent some time configuring UXTerm fonts and color schemes to what I like, and I have been using it ever since. Recently, I started experiencing some weird issues with UXTerm, which forced me down a rabbit hole.</description>
+      <description>&lt;p&gt;I spend a lot of time on the terminal: using alpine to send emails and using&#xA;vim/neovim to edit tex files and code. For at least a decade if not longer, I&#xA;have been using UXTerm as my terminal emulator. At some stage I spent some&#xA;time configuring UXTerm fonts and color schemes to what I like, and I have&#xA;been using it ever since. Recently, I started experiencing some weird issues&#xA;with UXTerm, which forced me down a rabbit hole.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Testing out Visidata</title>
       <link>https://adityam.github.io/linux-blog/post/visidata/</link>
       <pubDate>Fri, 11 Feb 2022 12:35:13 -0500</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/visidata/</guid>
-      <description>Normally, I don&amp;rsquo;t have to deal with large spreadsheets. I do use simple spreadsheets for keeping track of budgets/investments/taxes etc., but the only big spreadsheets I encounter are sifting through all applicants for hiring students and assigning grades to students. I struggle through OpenOffice Calc to work through these, because navigating spreadsheets is too slow.
-I recently came across a recommendation for visidata in a thread of HackerNews, and it certainly looks like a program that I should checkout the next time I need to work through a big spreadsheet.</description>
+      <description>&lt;p&gt;Normally, I don&amp;rsquo;t have to deal with large spreadsheets. I do use simple&#xA;spreadsheets for keeping track of budgets/investments/taxes etc., but the only&#xA;big spreadsheets I encounter are sifting through all applicants for hiring&#xA;students and assigning grades to students. I struggle through OpenOffice Calc&#xA;to work through these, because navigating spreadsheets is too slow.&lt;/p&gt;&#xA;&lt;p&gt;I recently came across a recommendation for &lt;a href=&#34;https://www.visidata.org/&#34;&gt;visidata&lt;/a&gt; in a thread of&#xA;HackerNews, and it certainly looks like a program that I should checkout the&#xA;next time I need to work through a big spreadsheet.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Testing out qutebrowser</title>
       <link>https://adityam.github.io/linux-blog/post/qutebrowser/</link>
       <pubDate>Tue, 21 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/qutebrowser/</guid>
-      <description>&lt;p&gt;I have been cycling between web browsers for the last few years. I used to use
-Opera, but then it became a shell for Chrome, then I started using Chromium,
-but occasonally got huge memory consumption, then I started using Firefox, but
-lately it has become very laggy (to the extent that even scrolling was slow).
-So, after testing a bunch of less commonly used browsers, I have finally
-settled on &lt;a href=&#34;https://qutebrowser.org/&#34;&gt;qutebrowser&lt;/a&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I have been cycling between web browsers for the last few years. I used to use&#xA;Opera, but then it became a shell for Chrome, then I started using Chromium,&#xA;but occasonally got huge memory consumption, then I started using Firefox, but&#xA;lately it has become very laggy (to the extent that even scrolling was slow).&#xA;So, after testing a bunch of less commonly used browsers, I have finally&#xA;settled on &lt;a href=&#34;https://qutebrowser.org/&#34;&gt;qutebrowser&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Using Slack from the terminal</title>
       <link>https://adityam.github.io/linux-blog/post/slack-tui/</link>
       <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/slack-tui/</guid>
-      <description>&lt;p&gt;In rencent years, lot of my short conversations with my research lab has moved
-to Slack. I am not a big fan of closed protocol communication clients, but
-Slack has the advantage that it is relatively easy to use. Well, it seems that
-it relatively easy to use for everyone except me.&lt;/p&gt;</description>
+      <description>&lt;p&gt;In rencent years, lot of my short conversations with my research lab has moved&#xA;to Slack. I am not a big fan of closed protocol communication clients, but&#xA;Slack has the advantage that it is relatively easy to use. Well, it seems that&#xA;it relatively easy to use for everyone except me.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Accessing newest file in a directory</title>
       <link>https://adityam.github.io/linux-blog/post/accessing-newest-file-in-directory/</link>
       <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/accessing-newest-file-in-directory/</guid>
-      <description>&lt;p&gt;There are many instances where I want to access the most recent file in a
-directory:&lt;/p&gt;</description>
+      <description>&lt;p&gt;There are many instances where I want to access the most recent file in a&#xA;directory:&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

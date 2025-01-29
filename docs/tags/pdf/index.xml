@@ -4,22 +4,16 @@
     <title>PDF on Tinkering with Linux</title>
     <link>https://adityam.github.io/linux-blog/tags/pdf/</link>
     <description>Recent content in PDF on Tinkering with Linux</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/pdf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://adityam.github.io/linux-blog/tags/pdf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Signing PDFs via command line</title>
       <link>https://adityam.github.io/linux-blog/post/signing-pdf/</link>
       <pubDate>Thu, 25 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/signing-pdf/</guid>
-      <description>&lt;p&gt;Signing PDFs in Linux is always a PITA. Part of the reason is that Adobe
-stopped the development of a linux port of Adobe Reader since adobe reader v9.
-Some of the newer PDFs require features which are newer than acrobat v9 and
-cannot be opened or signed with acrobat v9.&lt;/p&gt;
-&lt;p&gt;In this page, I summarize some of the options for signing PDF that have worked
-for me.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Signing PDFs in Linux is always a PITA. Part of the reason is that Adobe&#xA;stopped the development of a linux port of Adobe Reader since adobe reader v9.&#xA;Some of the newer PDFs require features which are newer than acrobat v9 and&#xA;cannot be opened or signed with acrobat v9.&lt;/p&gt;&#xA;&lt;p&gt;In this page, I summarize some of the options for signing PDF that have worked&#xA;for me.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

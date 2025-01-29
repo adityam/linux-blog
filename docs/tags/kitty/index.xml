@@ -1,29 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>kitty on Tinkering with Linux</title>
+    <title>Kitty on Tinkering with Linux</title>
     <link>https://adityam.github.io/linux-blog/tags/kitty/</link>
-    <description>Recent content in kitty on Tinkering with Linux</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Kitty on Tinkering with Linux</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/kitty/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://adityam.github.io/linux-blog/tags/kitty/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Local config for kitty</title>
       <link>https://adityam.github.io/linux-blog/post/kitty-local-config/</link>
       <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/kitty-local-config/</guid>
-      <description>As I mentioned in the last post, I am testing out kitty as my terminal emulator instead of UXTerm. So for everything has been smooth sailing except for one minor issue. On my work desktop, I want fontsize 11 but on my laptop, I want fontsize 14. This is a combination of resolution and physical size of the two monitors. Reading the documentation of kitty.conf, it was not clear how to set conditional values for the variables.</description>
+      <description>&lt;p&gt;As I mentioned in the last &lt;a href=&#34;../changing-terminal-and-browser&#34;&gt;post&lt;/a&gt;, I am&#xA;testing out &lt;a href=&#34;https://sw.kovidgoyal.net/kitty/&#34;&gt;kitty&lt;/a&gt; as my terminal emulator instead of UXTerm. So for&#xA;everything has been smooth sailing except for one minor issue. On my work&#xA;desktop, I want fontsize 11 but on my laptop, I want fontsize 14. This is a combination of resolution and physical size of the two monitors. Reading the documentation of kitty.conf, it was not clear how to set conditional values for the variables.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Changing terminal and browser</title>
       <link>https://adityam.github.io/linux-blog/post/changing-terminal-and-browser/</link>
       <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/changing-terminal-and-browser/</guid>
-      <description>I spend a lot of time on the terminal: using alpine to send emails and using vim/neovim to edit tex files and code. For at least a decade if not longer, I have been using UXTerm as my terminal emulator. At some stage I spent some time configuring UXTerm fonts and color schemes to what I like, and I have been using it ever since. Recently, I started experiencing some weird issues with UXTerm, which forced me down a rabbit hole.</description>
+      <description>&lt;p&gt;I spend a lot of time on the terminal: using alpine to send emails and using&#xA;vim/neovim to edit tex files and code. For at least a decade if not longer, I&#xA;have been using UXTerm as my terminal emulator. At some stage I spent some&#xA;time configuring UXTerm fonts and color schemes to what I like, and I have&#xA;been using it ever since. Recently, I started experiencing some weird issues&#xA;with UXTerm, which forced me down a rabbit hole.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

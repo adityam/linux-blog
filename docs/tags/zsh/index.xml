@@ -1,46 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>zsh on Tinkering with Linux</title>
+    <title>Zsh on Tinkering with Linux</title>
     <link>https://adityam.github.io/linux-blog/tags/zsh/</link>
-    <description>Recent content in zsh on Tinkering with Linux</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Zsh on Tinkering with Linux</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/zsh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://adityam.github.io/linux-blog/tags/zsh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Accessing newest file in a directory</title>
       <link>https://adityam.github.io/linux-blog/post/accessing-newest-file-in-directory/</link>
       <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/accessing-newest-file-in-directory/</guid>
-      <description>&lt;p&gt;There are many instances where I want to access the most recent file in a
-directory:&lt;/p&gt;</description>
+      <description>&lt;p&gt;There are many instances where I want to access the most recent file in a&#xA;directory:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Back to ZSH</title>
       <link>https://adityam.github.io/linux-blog/post/back-to-zsh/</link>
       <pubDate>Thu, 03 Sep 2020 17:53:52 -0400</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/back-to-zsh/</guid>
-      <description>As I mentioned in a previous post, I started using fish after using zsh for about 15 years. After working exclusively on fish for about 3 months, I am now back to zsh.
-In the end, there was nothing inherently missing in fish, but fish just did a few minor things differently which began to get annoying.
-Fish&amp;rsquo;s tab-completion first shows a short list of option (top 10 or so) and you have to press tab twice to see the whole list.</description>
+      <description>&lt;p&gt;As I mentioned in &lt;a href=&#34;https://adityam.github.io/linux-blog/post/trying-fish/&#34;&gt;a previous post&lt;/a&gt;, I started using fish after using&#xA;zsh for about 15 years. After working exclusively on fish for about 3 months,&#xA;I am now back to zsh.&lt;/p&gt;&#xA;&lt;p&gt;In the end, there was nothing inherently missing in fish, but fish just did a&#xA;few minor things differently which began to get annoying.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Fish&amp;rsquo;s tab-completion first shows a short list of option (top 10 or so) and&#xA;you have to press tab twice to see the whole list. I found that I was almost&#xA;always pressing tab twice.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Trying Fish Shell</title>
       <link>https://adityam.github.io/linux-blog/post/trying-fish/</link>
       <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/trying-fish/</guid>
-      <description>&lt;p&gt;I have been using &lt;code&gt;zsh&lt;/code&gt; as my shell for almost 15 years. I spent ages
-configuring it in the beginning and for the most part I have been happy with
-my setup. Lately, I saw multiple suggestions for
-&lt;a href=&#34;https://github.com/zsh-users/zsh-autosuggestions&#34;&gt;zsh-autosuggestions&lt;/a&gt;, which
-has a tag-line &amp;ldquo;Fish-like autosuggestions for zsh&amp;rdquo;. Imitation is the best form
-of flattery. So, I thought of giving fish a shot.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I have been using &lt;code&gt;zsh&lt;/code&gt; as my shell for almost 15 years. I spent ages&#xA;configuring it in the beginning and for the most part I have been happy with&#xA;my setup. Lately, I saw multiple suggestions for&#xA;&lt;a href=&#34;https://github.com/zsh-users/zsh-autosuggestions&#34;&gt;zsh-autosuggestions&lt;/a&gt;, which&#xA;has a tag-line &amp;ldquo;Fish-like autosuggestions for zsh&amp;rdquo;. Imitation is the best form&#xA;of flattery. So, I thought of giving fish a shot.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

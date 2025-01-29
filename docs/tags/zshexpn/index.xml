@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>zshexpn on Tinkering with Linux</title>
+    <title>Zshexpn on Tinkering with Linux</title>
     <link>https://adityam.github.io/linux-blog/tags/zshexpn/</link>
-    <description>Recent content in zshexpn on Tinkering with Linux</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Zshexpn on Tinkering with Linux</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/zshexpn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://adityam.github.io/linux-blog/tags/zshexpn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Accessing newest file in a directory</title>
       <link>https://adityam.github.io/linux-blog/post/accessing-newest-file-in-directory/</link>
       <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/accessing-newest-file-in-directory/</guid>
-      <description>&lt;p&gt;There are many instances where I want to access the most recent file in a
-directory:&lt;/p&gt;</description>
+      <description>&lt;p&gt;There are many instances where I want to access the most recent file in a&#xA;directory:&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

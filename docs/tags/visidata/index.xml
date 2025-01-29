@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>visidata on Tinkering with Linux</title>
+    <title>Visidata on Tinkering with Linux</title>
     <link>https://adityam.github.io/linux-blog/tags/visidata/</link>
-    <description>Recent content in visidata on Tinkering with Linux</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Visidata on Tinkering with Linux</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Feb 2022 12:35:13 -0500</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/visidata/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Feb 2022 12:35:13 -0500</lastBuildDate>
+    <atom:link href="https://adityam.github.io/linux-blog/tags/visidata/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Testing out Visidata</title>
       <link>https://adityam.github.io/linux-blog/post/visidata/</link>
       <pubDate>Fri, 11 Feb 2022 12:35:13 -0500</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/visidata/</guid>
-      <description>Normally, I don&amp;rsquo;t have to deal with large spreadsheets. I do use simple spreadsheets for keeping track of budgets/investments/taxes etc., but the only big spreadsheets I encounter are sifting through all applicants for hiring students and assigning grades to students. I struggle through OpenOffice Calc to work through these, because navigating spreadsheets is too slow.
-I recently came across a recommendation for visidata in a thread of HackerNews, and it certainly looks like a program that I should checkout the next time I need to work through a big spreadsheet.</description>
+      <description>&lt;p&gt;Normally, I don&amp;rsquo;t have to deal with large spreadsheets. I do use simple&#xA;spreadsheets for keeping track of budgets/investments/taxes etc., but the only&#xA;big spreadsheets I encounter are sifting through all applicants for hiring&#xA;students and assigning grades to students. I struggle through OpenOffice Calc&#xA;to work through these, because navigating spreadsheets is too slow.&lt;/p&gt;&#xA;&lt;p&gt;I recently came across a recommendation for &lt;a href=&#34;https://www.visidata.org/&#34;&gt;visidata&lt;/a&gt; in a thread of&#xA;HackerNews, and it certainly looks like a program that I should checkout the&#xA;next time I need to work through a big spreadsheet.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

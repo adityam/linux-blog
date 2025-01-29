@@ -32,7 +32,7 @@ notebook devices or apps use a propriety format, which cannot be read easily
 on other devices. That's why I like the automatic conversion on Boox. That
 (along with DropSync to instantly sync the converted file) means that I always
 have access to the latest version of my notebooks everywhere. On SuperNote, I
-need to remember to manually convert the file. (And also manually since the
+need to remember to manually convert the file. (And also manually sync the
 device, but that's another story). 
 
 I recently discovered a script called

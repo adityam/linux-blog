@@ -1,50 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>boox on Tinkering with Linux</title>
+    <title>Boox on Tinkering with Linux</title>
     <link>https://adityam.github.io/linux-blog/tags/boox/</link>
-    <description>Recent content in boox on Tinkering with Linux</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Boox on Tinkering with Linux</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/tags/boox/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://adityam.github.io/linux-blog/tags/boox/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Converting SuperNote files to PDF</title>
       <link>https://adityam.github.io/linux-blog/post/converting-supernote-files-to-pdf/</link>
       <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/converting-supernote-files-to-pdf/</guid>
-      <description>&lt;p&gt;Writing is my primary mode of note taking and at the beginning of the
-pandemic, I switched from paper notebooks to digital notebooks. My primary
-note taking devices are SuperNote A6X, Boox Max3, and iPad Pro using Notability
-App (in that order,
-though I do prefer iPad for reviewing papers etc. because of the speed). I
-prefer the writing experience on Supernote, but I do miss one of the software
-features of Boox: In Boox, every time I save a note file, it is automatically
-converted to PDF and stored in a pdf directory which mirrors the layout of the
-notes directory. There is no such feature in SuperNote. Notes have to
-converted manually and get exported to a flat directory.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Writing is my primary mode of note taking and at the beginning of the&#xA;pandemic, I switched from paper notebooks to digital notebooks. My primary&#xA;note taking devices are SuperNote A6X, Boox Max3, and iPad Pro using Notability&#xA;App (in that order,&#xA;though I do prefer iPad for reviewing papers etc. because of the speed). I&#xA;prefer the writing experience on Supernote, but I do miss one of the software&#xA;features of Boox: In Boox, every time I save a note file, it is automatically&#xA;converted to PDF and stored in a pdf directory which mirrors the layout of the&#xA;notes directory. There is no such feature in SuperNote. Notes have to&#xA;converted manually and get exported to a flat directory.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Tale of two eink notebooks</title>
       <link>https://adityam.github.io/linux-blog/post/tale-of-two-eink-notebooks/</link>
       <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/tale-of-two-eink-notebooks/</guid>
-      <description>&lt;p&gt;I am a pen and paper person. On a typical day, I write about 10&amp;ndash;30
-handwritten pages. (I write on a half-folded printer paper, so it is actually
-only 7-15 pages &amp;ldquo;full&amp;rdquo; pages). For the last decade or so, I have written
-almost exclusively using fountain pens (Pelikan M200, Pilot Vanishing Point,
-and occasionally, Pilot Metropolitan).&lt;/p&gt;
-&lt;p&gt;To reduce the amount of time I state at a screen, I purchased a &lt;a href=&#34;https://onyxboox.com/boox_max3&#34;&gt;Oynx Boox
-Max3&lt;/a&gt; tablet almost a year ago, primarily to read academic PDFs. The
-13.3&amp;quot; screen of Max3 is perfect for reading dense IEEE formatted two-column
-PDFs. Max3 is an Android device and many Android apps work reasonably well on
-it. So, I ended up using it for internet browsing, reading emails and Slack
-messages, &lt;a href=&#34;https://www.reddit.com/r/ereader/comments/fnxkep/using_boox_max3_as_a_whiteboard_for_teaching/&#34;&gt;delivering zoom lectures&lt;/a&gt;, and even watching Youtube videos!
-Clearly, J.K. Rowling had Max3 in mind when she described the newspapers with
-moving pictures in Harry Potter.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I am a pen and paper person. On a typical day, I write about 10&amp;ndash;30&#xA;handwritten pages. (I write on a half-folded printer paper, so it is actually&#xA;only 7-15 pages &amp;ldquo;full&amp;rdquo; pages). For the last decade or so, I have written&#xA;almost exclusively using fountain pens (Pelikan M200, Pilot Vanishing Point,&#xA;and occasionally, Pilot Metropolitan).&lt;/p&gt;&#xA;&lt;p&gt;To reduce the amount of time I state at a screen, I purchased a &lt;a href=&#34;https://onyxboox.com/boox_max3&#34;&gt;Oynx Boox&#xA;Max3&lt;/a&gt; tablet almost a year ago, primarily to read academic PDFs. The&#xA;13.3&amp;quot; screen of Max3 is perfect for reading dense IEEE formatted two-column&#xA;PDFs. Max3 is an Android device and many Android apps work reasonably well on&#xA;it. So, I ended up using it for internet browsing, reading emails and Slack&#xA;messages, &lt;a href=&#34;https://www.reddit.com/r/ereader/comments/fnxkep/using_boox_max3_as_a_whiteboard_for_teaching/&#34;&gt;delivering zoom lectures&lt;/a&gt;, and even watching Youtube videos!&#xA;Clearly, J.K. Rowling had Max3 in mind when she described the newspapers with&#xA;moving pictures in Harry Potter.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

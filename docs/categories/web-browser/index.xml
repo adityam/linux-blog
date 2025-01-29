@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>web-browser on Tinkering with Linux</title>
+    <title>Web-Browser on Tinkering with Linux</title>
     <link>https://adityam.github.io/linux-blog/categories/web-browser/</link>
-    <description>Recent content in web-browser on Tinkering with Linux</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Web-Browser on Tinkering with Linux</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://adityam.github.io/linux-blog/categories/web-browser/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://adityam.github.io/linux-blog/categories/web-browser/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Testing out qutebrowser</title>
       <link>https://adityam.github.io/linux-blog/post/qutebrowser/</link>
       <pubDate>Tue, 21 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://adityam.github.io/linux-blog/post/qutebrowser/</guid>
-      <description>&lt;p&gt;I have been cycling between web browsers for the last few years. I used to use
-Opera, but then it became a shell for Chrome, then I started using Chromium,
-but occasonally got huge memory consumption, then I started using Firefox, but
-lately it has become very laggy (to the extent that even scrolling was slow).
-So, after testing a bunch of less commonly used browsers, I have finally
-settled on &lt;a href=&#34;https://qutebrowser.org/&#34;&gt;qutebrowser&lt;/a&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I have been cycling between web browsers for the last few years. I used to use&#xA;Opera, but then it became a shell for Chrome, then I started using Chromium,&#xA;but occasonally got huge memory consumption, then I started using Firefox, but&#xA;lately it has become very laggy (to the extent that even scrolling was slow).&#xA;So, after testing a bunch of less commonly used browsers, I have finally&#xA;settled on &lt;a href=&#34;https://qutebrowser.org/&#34;&gt;qutebrowser&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
