@@ -43,7 +43,7 @@ for each package, which creates the appropriate symlinks. That's it!
 
 Well almost. There is currently a [bug] in stow, due to which `--dotfiles`
 option does not work with directories. Fortunately, there is an AUR package
-`show-dotfiles-git` which provides a fix, at least until the fix is merged
+`stow-dotfiles-git` which provides a fix, at least until the fix is merged
 upstream. 
 
 [bug]: https://github.com/aspiers/stow/issues/33
